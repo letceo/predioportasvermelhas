@@ -577,7 +577,31 @@ Os miúdos continuam a conversa que o homem tenta despachar. Ouves um estridente
 [[=&gt; Continuar|1.f]]</tw-passagedata><tw-passagedata pid="29" name="2.0" tags="portas" position="1450,650" size="100,100">&lt;a data-passage=&quot;2.1&quot;&gt;&lt;img src=https://cdn.discordapp.com/attachments/954851768657928242/1105560629412102154/door1.png style=&quot;margin-left:2%&quot;&gt;&lt;/a&gt;&lt;a data-passage=&quot;2.2&quot;&gt;&lt;img src=https://cdn.discordapp.com/attachments/954851768657928242/1105560629634420827/door2.png&gt;&lt;/a&gt;&lt;a data-passage=&quot;2.3&quot;&gt;&lt;img src=https://cdn.discordapp.com/attachments/954851768657928242/1105560629881876562/door3.png&gt;&lt;/a&gt;&lt;a data-passage=&quot;2.4&quot;&gt;&lt;img src=https://cdn.discordapp.com/attachments/954851768657928242/1105560630112550932/door4.png style=&quot;margin-right:2%&quot;&gt;&lt;/a&gt;
 
 
-</tw-passagedata><tw-passagedata pid="30" name="2.1" tags="" position="1575,450" size="100,100">&quot;Porta da Família Carneiro&quot;</tw-passagedata><tw-passagedata pid="31" name="2.2" tags="" position="1575,575" size="100,100">&#39;&#39;Porta da Família Machado&#39;&#39;
+</tw-passagedata><tw-passagedata pid="30" name="2.1" tags="" position="1575,450" size="100,100">&lt;&lt;if visited(&quot;1.b&quot;)&gt;&gt;
+&quot;Porta da Família Carneiro&quot;
+
+Abres a porta com o número 1, entrando num apartamento espaçoso mas completamente degradado. A redução da quantidade de mobília ao mínimo indispensável e a ausência de decoração faz o espaço parecer ainda mais amplo, dando destaque à camada de sujidade acumulada em todas as superfícies. No canto da sala, 4 crianças brincam com um conjunto de lápis de cera, rindo-se dos rabiscos coloridos que fazem nas paredes da divisão.
+
+[[=&gt; Aproximas-te das crianças, que começaram a conversar alegremente|2.1.a]] 
+[[=&gt; Analisas os desenhos espalhados pelas paredes da sala|2.1.b]]
+[[=&gt; Abandonas a sala para explorar o resto do apartamento|2.1.c]]
+&lt;&lt;endif&gt;&gt;
+
+
+&lt;&lt;if visited(&quot;1.a&quot;)&gt;&gt;
+&quot;Porta da Família Carneiro&quot;
+
+Entras no apartamento espaçoso que anteriormente te conduziu ao caloroso debate entre Fátima e o seu acompanhante. No canto da sala, 4 crianças de cabelo muito escuro brincam com um conjunto de lápis de cera, rindo-se dos rabiscos coloridos que fazem nas paredes da divisão.
+
+[[=&gt; Aproximas-te das crianças, que começaram a conversar alegremente|2.1.a]] 
+[[=&gt; Analisas os desenhos espalhados pelas paredes da sala|2.1.b]]
+[[=&gt; Abandonas a sala para explorar o resto do apartamento|2.1.c]]
+&lt;&lt;endif&gt;&gt;
+
+
+
+
+</tw-passagedata><tw-passagedata pid="31" name="2.2" tags="" position="1575,575" size="100,100">&#39;&#39;Porta da Família Machado&#39;&#39;
 
 Ao abrires a porta n.º 2 do segundo andar, deparas-te com um espaço tão pequeno que te vês incapaz de transpores a porta cor de sangue, prenúncio de mau agoiro. No interior do apartamento, uma mulher, um homem e uma criança mantêm-se imóveis, com o olhar vago e inexpressivo, como se de uma pintura sem movimento se tratasse. Sentados numa cama que ocupa todo o espaço interior disponível, o único sinal de vida percetível é o discreto piscar de olhos e os silenciosos suspiros de três pessoas imersas nos seus próprios pensamentos.
 
@@ -634,7 +658,6 @@ Preferes:
 
 -Mas o que é que aquela tola pensa que está a fazer ali aos berros, tu imagina-me
 lá, que desde a mercearia até aqui conseguimos ouvir a histérica. Ivan, faz alguma coisa de jeito que não me serves para nada e vai ver o que se passa!
-
 -Ai que eu agora não faço nada! Ao menos não ando por aqui a partir coisas. A tua sorte é que ao menos lá em baixo não te ouço a reclamar então bem vou com toda a vontade. 
 
 Desviando a sua atenção da fotografia partida no chão, respondeu entre murmuros Ivan Grozny, o igualmente terrível e raivoso marido de Gloriana, que finalmente saiu da divisão, fechando a porta atrás de si com um estrondo.  Com uns passos pesados, ouvimos o homem praguejar com um sotaque russo carregado enquanto descia as escadas de madeira apressado, até que, degrau a degrau, o som começou a dissipar-te e a voz de Gloriana voltou a ficar em foco.
@@ -653,7 +676,6 @@ Gloriana suspirou só fundo, antes de soltar um grito estridente e atirar o que 
 
 - Está mas é caladinho e paga a renda, ou vais ver se a próxima comida que roubares não te cai mal. - respondeu Gloriana num tom agressivo, até quase.... ameaçador...
 
-[[=&gt; Descer e acompanhar Ivan |2.4.e]] 
 [[=&gt; Continuar a investigar a Porta 4 |2.4.f]]
 
 </tw-passagedata><tw-passagedata pid="35" name="2.4.b" tags="" position="1550,950" size="100,100">Decides tentar aproximar-te do curioso homem de forte sotaque russo. Pálido de aparência e feições fortes, cabelo curto, quase rapado a pente 2, e uma aparência forte, retângular e com uma cicatriz na cara. 
@@ -661,25 +683,42 @@ Gloriana suspirou só fundo, antes de soltar um grito estridente e atirar o que 
 Só a primeira impressão passava a imagem de um homem misterioso e forte, mas quando a voz profunda e arranhada do homem se tornou mais alta, a sensação de perigo também parecia ter crescido. Falava num português correto e bem estruturado, mas a pronúncia mais arrastada denunciava a sua origem eslava.
 
 - &quot;Zólattse mayó&quot; vai ver o que é a gritaria que eu não aguento mais 
-
 - Também nunca és capaz de fazer nada tu também.
+Gloriana suspirou só fundo, antes de soltar um grito estridente e atirar o que restava da vassoura ao chão. 
 
-- E vocês aí estão sentadinhos no sofá porquê? Não vêm as vossas porcarias no chão? Para além de mal conseguirem pagar renda e roubarem a comida toda, ainda ficam aí especados? Levantem-se antes que eu vá aí. Ainda são piores que o mandrião do Azeredo.
+-Não aguento estar mais aqui. Vou lá ver que milagre é que a Maria de Fátima fez desta vez para estar ali aos gritos… será que conseguiu outro filho totalmente diferente do pai?
 
-- Calma aí, nós também pagamos renda temos os mesmos direitos que vocês. Ao menos não andamos a atirar tudo ao chão e a partir coisas! 
+- E vocês aí estão sentadinhos no sofá porquê? Não vêm as vossas porcarias no chão? Para além de mal conseguirem pagar renda e roubarem a comida toda, ainda ficam aí especados? Levantem-se antes que eu vá aí. Ainda são piores que o mandrião do Azeredo ou a invejosa da Amanda, juro… 
 
-- O que é que tu disseste &quot;mudak&quot;? Queres mesmo começar com isso agora? 
+As palavras agressivas saíram da boca de Ivan, irritado com a passividade dos 3 irmãos Carlos, os gulosos colegas de casa que nada mais faziam do que ficar sentados no sofá a comer sandes de presunto e deixar lixo e restos de comida e embalagens por toda a casa. Mas o que mais chateadva o russo era os atrasos na renda: o dinheiro que mal tinham para os custos da casa, ia todo para comida que desaparecia num fechar de olhos, e que nem se dignavam a partilhar com o restante da habitação!
 
+- Calma aí, nós também pagamos renda! Temos os mesmos direitos que vocês. Ao menos não andamos a atirar tudo ao chão e a partir coisas! 
+- O que é que tu disseste &quot;mudak&quot;? Queres mesmo começar com isso agora? Ao menos eu e a  Glorinha pagamos as coisas a tempo seus...
 
-[[=&gt; Descer e acompanhar Gloriana |2.4.e]] 
+E após uma respiração a fundo, para controlar a raiva que teimava em dominá-lo, lançou um olhar agressivo e murmurou em jeito sério:
+
+-Maldito o dia em que decidimos encontrar pessoas para partilhar a casa. Já não bastava ali o louco ali falar sozinho a chamar-se de assassino, e ainda vos tenho de aturar a vocês…eu juro. Tenham cuidadinho que eu arranjo forma de vos pôr lá para fora. Aliás, até já faltou menos. 
+
 [[=&gt; Continuar a investigar a Porta 4 |2.4.f]]
-</tw-passagedata><tw-passagedata pid="36" name="2.4.c" tags="" position="1675,950" size="100,100">[[=&gt; Continuar a investigar a Porta 4 |2.4.f]]</tw-passagedata><tw-passagedata pid="37" name="2.4.d" tags="" position="1800,950" size="100,100">[[=&gt; Continuar a investigar a Porta 4 |2.4.f]]</tw-passagedata><tw-passagedata pid="38" name="2.4.e" tags="" position="1450,1100" size="100,100">Cansado de ouvir as discussões na Porta 4, optas por seguir Ivan e retomar à mercearia onde o assalto se tinha desenrolado. 
-
-</tw-passagedata><tw-passagedata pid="39" name="2.4.f" tags="" position="1600,1100" size="100,100">Depois da explosão e agora sem vassoura, Gloriana olhou só para os seus 4 colegas de casa, contemplando-os de forma derrotada.
+</tw-passagedata><tw-passagedata pid="36" name="2.4.c" tags="" position="1675,950" size="100,100">[[=&gt; Continuar a investigar a Porta 4 |2.4.f]]</tw-passagedata><tw-passagedata pid="37" name="2.4.d" tags="" position="1800,950" size="100,100">[[=&gt; Continuar a investigar a Porta 4 |2.4.f]]</tw-passagedata><tw-passagedata pid="38" name="2.4.f" tags="" position="1600,1100" size="100,100">&lt;&lt;if visited(&quot;2.4.a&quot;)&gt;&gt;
+Depois da explosão e agora sem vassoura, Gloriana olhou só para os seus 4 colegas de casa, contemplando-os de forma derrotada.
 
 - Eu não consigo lidar mais com vocês. Tentem só não fazer MAIS lixo POR FAVOR.
 
-E abandonou,  decidindo juntar-se ao marido na tarefa de descobrir o que se passava na mercearia e batendo a porta vermelha com tal força que o mundo pareceu abanar.  Pelo ruído exterior que se ouvia na Porta Número 4, mais pessoas se tinham juntando à discussão, e já não era só a D.ª Maria de Fátima a gritar, mas uma mixórdia de vozes, tanto masculinas como femininas, que expandiram a confusão.
+E abandonou,  decidindo juntar-se ao marido na tarefa de descobrir o que se passava na mercearia e batendo a porta vermelha com tal força que o mundo pareceu abanar. 
+
+&lt;&lt;else if visited(&quot;2.4.b&quot;)&gt;&gt;
+Após a explosão de raiva, Ivan olhou só para os seus 4 colegas de casa, contemplando-os de forma derrotada.
+
+-Idi na khuy, murmurou em russo, e abandonou,  decidindo juntar-se a Gloriana na tarefa de descobrir o que se passava na mercearia e batendo a porta vermelha com tal força que o mundo pareceu abanar. 
+
+&lt;&lt;else&gt;&gt;
+
+
+&lt;&lt;endif&gt;&gt;
+
+
+Pelo ruído exterior que se ouvia na Porta Número 4, mais pessoas se tinham juntando à discussão, e já não era só a D.ª Maria de Fátima a gritar, mas uma mixórdia de vozes, tanto masculinas como femininas, que expandiram a confusão.
 
 A intriga só aumentava, mas nem por isso os 3 Carlos se mexeram, continuando no sofá a empanturrarem-se de sandes de presunto e cerveja, completamente alheios ao que se passava no exterior.
 
@@ -693,7 +732,7 @@ Já Magalhães, escondido no corredor com um caderno na mão, apontava só para 
 [[=&gt; Questionar Magalhães |2.4.h]]
 [[=&gt; Pegar na Moldura |2.4.i]]
 
-</tw-passagedata><tw-passagedata pid="40" name="2.4.g" tags="em-falta" position="1425,1250" size="100,100">[[=&gt; Pegar na Moldura |2.4.i]]</tw-passagedata><tw-passagedata pid="41" name="2.4.i" tags="letras" position="1550,1250" size="100,100">Sem saber exatamente a quem Magalhães se dirigia, esperas um pouco para ver se algo acontecia, mas toda a gente na sala ignorou as suas palavras misteriosas e o homem decidiu abandonar o apartamento e continuar a sua intriga.
+</tw-passagedata><tw-passagedata pid="39" name="2.4.g" tags="em-falta" position="1425,1250" size="100,100">[[=&gt; Pegar na Moldura |2.4.i]]</tw-passagedata><tw-passagedata pid="40" name="2.4.i" tags="letras" position="1550,1250" size="100,100">Sem saber exatamente a quem Magalhães se dirigia, esperas um pouco para ver se algo acontecia, mas toda a gente na sala ignorou as suas palavras misteriosas e o homem decidiu abandonar o apartamento e continuar a sua intriga.
 
 Decides seguir na mesma as suas instruções, afastando os estilhaços e pegando na Moldura e na fotografia que se escondia debaixo dela.
 
@@ -707,7 +746,19 @@ Aproveitas para virar a imagem, em busca de mais algum resquício de pistas que 
 
 Sem saber exatamente o seu significado, decides guardá-la. Quem sabe, talvez possa ter alguma utilidade no futuro...
 
-[[=&gt; Investigar o resto do prédio |2.0]]</tw-passagedata><tw-passagedata pid="42" name="2.4.h" tags="em-falta" position="1675,1250" size="100,100">[[=&gt; Pegar na Moldura |2.4.i]]</tw-passagedata><tw-passagedata pid="43" name="cadernomagalhaes" tags="final" position="1375,1800" size="100,100"></tw-passagedata><tw-passagedata pid="44" name="7.0default" tags="final" position="1500,1800" size="100,100">Ao colocares a última letra na porta ouves um “click” e reparas que o cadeado está aberto, permitindo-te entrar. Olhas sobre o ombro direito e tentas absorver todas as sensações que te rodeiam, tentando memorizar, uma vez mais, todo o ambiente que estiveste a investigar nas últimas horas.
+[[=&gt; Investigar o resto do prédio |2.0]]</tw-passagedata><tw-passagedata pid="41" name="2.4.h" tags="em-falta" position="1675,1250" size="100,100">[[=&gt; Pegar na Moldura |2.4.i]]</tw-passagedata><tw-passagedata pid="42" name="cadernomagalhaes" tags="final" position="1375,1800" size="100,100">Ao colocares a última letra na porta ouves um “click” e reparas que o cadeado está aberto, permitindo-te entrar. Magalhães abre a porta e atravessa a entrada, dirigindo-se ao fundo da sala, sem esperar que o sigas.
+
+Entras cautelosamente na divisão estranhamente espaçosa. Depressa te apercebes que a sensação de espaço é uma mera ilusão resultante do facto de a única mobília presente ser a secretária sobre a qual Magalhães se debruça e a respetiva cadeira, encostadas na parede mais afastada. O ambiente é sombrio e o chão está coberto de pó, como se não fosse pisado há décadas.
+
+Atravessas a divisão na direção da secretária, perto da qual o velho louco remexe freneticamente num conjunto de papéis soltos. A primeira coisa que te chama à atenção é a claridade que circunda uma velha máquina de escrever, um círculo áureo sem origem aparente, uma vez que a divisão não tem qualquer janela. Quando os teus olhos se habituam à luz, reparas numa folha velha encravada na máquina. Pegas nela e lês em voz alta as palavras que tem escrita:
+
+Mais uma década, mais uma versão deste prédio, mais um fim, igual a todos os outros. As chances de redenção acabaram e os moradores estão, como sempre, à beira do colapso. Qualquer pequeno distúrbio irá levantar intrigas, gerar o caos, acabar com tudo. Só há uma questão: o que vou fazer? 
+M.
+
+Quando acabas de ler a mensagem do antigo dono do prédio, voltas a tua atenção para Magalhães, que ainda está focado no pequeno conjunto de folhas soltas que encontrou na secretária. Com a folha que arrancaste ainda na mão, diriges-te a Magalhães:
+
+[[=&gt; Porque estás tão interessado nessas folhas? |8.a]]
+[[=&gt; Foste tu que escreveste isto?  |8.b]]</tw-passagedata><tw-passagedata pid="43" name="7.0default" tags="final" position="1500,1800" size="100,100">Ao colocares a última letra na porta ouves um “click” e reparas que o cadeado está aberto, permitindo-te entrar. Olhas sobre o ombro direito e tentas absorver todas as sensações que te rodeiam, tentando memorizar, uma vez mais, todo o ambiente que estiveste a investigar nas últimas horas.
 
 Não sabias exatamente porquê, mas desde o momento em que abriste a porta, um peso tinha-se formado sobre o teu coração, talvez um agouro do que pudesse vir depois? Olhas em volta em jeito de captar todos os últimos pormenores, a tinta acizentada da parede decrépita, que denunciava mais anos e ciclos do que podias contar, o tom vibrante das portas vermelhas, e a palavra ORGULHO bem vísivel no topo da porta, os sons das crianças que no andar de baixo soltavam gritos animados enquanto corriam atrás das galinhas, os murmúrios, grunhos e discussões que conseguias ouvir por todo o prédio. Todo um conjunto de vidas e memórias que algo dentro de ti dizia para contemplares, quase como um sussurro de uma idosa a espreitar que te murmurava “Outro ciclo prestes a fechar...”
 
@@ -728,7 +779,7 @@ Mas sem alguém a levantar-te a esperança e a questionar a moralidade das tuas 
 
 As palavras que acabaste de escrever ganham forma no papel que contava toda a história, das vidas, relações, memórias e detalhes dos habitantes do prédio.
 
-‘[[=&gt; Assaltar a mercearia |7.1]]’</tw-passagedata><tw-passagedata pid="45" name="6.0sebastiana" tags="final" position="1625,1800" size="100,100">Ao colocares a última letra na porta ouves um “click” e reparas que o cadeado está aberto, permitindo-te entrar. Olhas sobre o ombro direito para confirmares que a Sebastiana ainda se encontra atrás de ti e verificas que esta não se moveu um milímetro. A sua expressão misteriosa transforma-se pela primeira vez num sorriso bondoso e a mulher incita-te a entrar na habitação, indicando a porta vermelha com a mão.
+‘[[=&gt; Assaltar a mercearia |7.1]]’</tw-passagedata><tw-passagedata pid="44" name="6.0sebastiana" tags="final" position="1625,1800" size="100,100">Ao colocares a última letra na porta ouves um “click” e reparas que o cadeado está aberto, permitindo-te entrar. Olhas sobre o ombro direito para confirmares que a Sebastiana ainda se encontra atrás de ti e verificas que esta não se moveu um milímetro. A sua expressão misteriosa transforma-se pela primeira vez num sorriso bondoso e a mulher incita-te a entrar na habitação, indicando a porta vermelha com a mão.
 
 Abres a porta e entras cautelosamente numa divisão estranhamente espaçosa. Depressa te apercebes que a sensação de espaço é uma mera ilusão resultante do facto de a única mobília presente ser uma secretária com uma máquina de escrever e a respetiva cadeira, encostadas na parede mais afastada. O ambiente é sombrio e o chão está coberto de pó, como se não fosse pisado há décadas.
 
@@ -750,13 +801,13 @@ Olhas uma vez mais para a folha e pensas novamente: o que vou fazer? Colocas o p
 
 
 [[=&gt; Assaltar a mercearia |7.1]]
-[[=&gt; Deixar os residentes em paz |6.b]]</tw-passagedata><tw-passagedata pid="46" name="apanhar_caderno" tags="" position="1325,1625" size="100,100"></tw-passagedata><tw-passagedata pid="47" name="desbloquear_porta" tags="" position="1425,1500" size="100,100"></tw-passagedata><tw-passagedata pid="48" name="escolheste_sebastiana" tags="" position="1600,1675" size="100,100"></tw-passagedata><tw-passagedata pid="49" name="falaste_sebastiana3vezes" tags="" position="1575,1550" size="100,100"></tw-passagedata><tw-passagedata pid="50" name="7.1" tags="" position="1550,1950" size="100,100">Assim que a última letra acaba de ser marcada no papel, a sala passa de vazia a completamente cheia. Estás rodeado pelos produtos da loja do Sr. Bernardo e o tumulto nas restantes casas do prédio é evidente. Olhas em volta, mas a Sebastiana já não está contigo. Sabes que cumpriu a sua palavra e que tanto as crianças como o Magalhães também já não estão no prédio. 
+[[=&gt; Deixar os residentes em paz |6.b]]</tw-passagedata><tw-passagedata pid="45" name="apanhar_caderno" tags="" position="1325,1625" size="100,100"></tw-passagedata><tw-passagedata pid="46" name="desbloquear_porta" tags="" position="1425,1500" size="100,100"></tw-passagedata><tw-passagedata pid="47" name="escolheste_sebastiana" tags="" position="1600,1675" size="100,100"></tw-passagedata><tw-passagedata pid="48" name="falaste_sebastiana3vezes" tags="" position="1575,1550" size="100,100"></tw-passagedata><tw-passagedata pid="49" name="7.1" tags="" position="1550,1925" size="100,100">Assim que a última letra acaba de ser marcada no papel, a sala passa de vazia a completamente cheia. Estás rodeado pelos produtos da loja do Sr. Bernardo e o tumulto nas restantes casas do prédio é evidente. Olhas em volta, mas a Sebastiana já não está contigo. Sabes que cumpriu a sua palavra e que tanto as crianças como o Magalhães também já não estão no prédio. 
 
 Deixas o quarto para trás e atravessas o corredor do primeiro andar, onde os vizinhos discutem agressivamente sem qualquer sentido. Quando sais para a rua a tabuleta da entrada parece mais descaída, mais torta, prestes a colapsar. 
 
 Aprecias uma última vez a fachada do Prédio das Portas Vermelhas, de onde se soltam gritos de vozes angustiadas, tal e qual um transporte direto para o Inferno, a arder em pecados. O teu trabalho está feito. Em breve os sons morrerão e o prédio ficará vazio até um novo conjunto de pecadores o vir habitar e tu ditares o seu destino.
 
-</tw-passagedata><tw-passagedata pid="51" name="6.b" tags="" position="1675,1950" size="100,100">Escreves as palavras apressadamente na máquina, decidido a mudar o desfecho habitual do jogo que tens vindo a conduzir nas últimas décadas. 
+</tw-passagedata><tw-passagedata pid="50" name="6.b" tags="" position="1675,1950" size="100,100">Escreves as palavras apressadamente na máquina, decidido a mudar o desfecho habitual do jogo que tens vindo a conduzir nas últimas décadas. 
 
 Quando terminas de escrever, nada acontece. Não te consegues mexer e o silêncio que te rodeia é horrorizante. Esperas desesperado por um sinal que te indique que tudo mudou. Quando sentes a mão da Sebastiana pousar no teu ombro, toda a tensão desaparece e uma sensação desconhecida percorre o teu corpo.
 
@@ -765,22 +816,22 @@ Estás livre, M., tu e todos eles. Fizeste a escolha certa.
 [[=&gt; Como sabias que o que ia fazer? |6.c]]
 [[=&gt; Porque está tudo em silêncio, onde está toda a gente? |6.d]]
 
-</tw-passagedata><tw-passagedata pid="52" name="6.c" tags="" position="1675,2075" size="100,100">Não sabia. Como te disse, a decisão era unicamente tua. Deixa a máquina, agora que os libertaste eu tomarei conta do resto. Sabes que estão em boas mãos.
+</tw-passagedata><tw-passagedata pid="51" name="6.c" tags="" position="1675,2075" size="100,100">Não sabia. Como te disse, a decisão era unicamente tua. Deixa a máquina, agora que os libertaste eu tomarei conta do resto. Sabes que estão em boas mãos.
 
 [[=&gt; Avançar |6.e]]
 
-</tw-passagedata><tw-passagedata pid="53" name="6.d" tags="" position="1800,2075" size="100,100">Não te preocupes com o silêncio, os moradores estão bem e com o tempo expiarão os seus pecados. Deixa a máquina, agora que os libertaste eu tomarei conta do resto. Sabes que estão em boas mãos.
+</tw-passagedata><tw-passagedata pid="52" name="6.d" tags="" position="1800,2075" size="100,100">Não te preocupes com o silêncio, os moradores estão bem e com o tempo expiarão os seus pecados. Deixa a máquina, agora que os libertaste eu tomarei conta do resto. Sabes que estão em boas mãos.
 
-[[=&gt; Avançar |6.e]]</tw-passagedata><tw-passagedata pid="54" name="6.e" tags="" position="1675,2200" size="100,100">Ao abandonares o quarto, notas que o nível de claridade no interior do prédio é maior do que te lembravas. À medida que passas pelos apartamentos, apanhas conversas indistintas, em vozes muito menos revoltosas que anteriormente, embora ainda agitadas. Lembras-te das palavras de Sebastiana e sabes que, com o tempo, tudo irá ao sítio. Muito do mal que fizeste tem ainda de ser desfeito.
+[[=&gt; Avançar |6.e]]</tw-passagedata><tw-passagedata pid="53" name="6.e" tags="" position="1675,2200" size="100,100">Ao abandonares o quarto, notas que o nível de claridade no interior do prédio é maior do que te lembravas. À medida que passas pelos apartamentos, apanhas conversas indistintas, em vozes muito menos revoltosas que anteriormente, embora ainda agitadas. Lembras-te das palavras de Sebastiana e sabes que, com o tempo, tudo irá ao sítio. Muito do mal que fizeste tem ainda de ser desfeito.
 
 Quando sais para a rua a tabuleta da entrada captura a tua atenção. Diriges-te a ela e puxas a ponta descaída para cima, na tentativa de a endireitar. Admiras uma última vez a fachada do Prédio das Portas Vermelhas, nostálgico, pois sabes que não voltarás a cruzar a sua entrada. A partir de agora, apenas irás ditar o teu próprio 
-</tw-passagedata><tw-passagedata pid="55" name="2.2.a" tags="" position="1800,400" size="100,100">- Já não basta vivermos neste cubículo e ainda temos de ouvir a barulheira dos outros. – disse Amanda a Pedro, quando por todo o prédio ecoava o burburinho de vozes exaltadas vindas da casa do senhorio e das brincadeiras das crianças na rua.
+</tw-passagedata><tw-passagedata pid="54" name="2.2.a" tags="" position="1800,400" size="100,100">- Já não basta vivermos neste cubículo e ainda temos de ouvir a barulheira dos outros. – disse Amanda a Pedro, quando por todo o prédio ecoava o burburinho de vozes exaltadas vindas da casa do senhorio e das brincadeiras das crianças na rua.
 Não era fácil viver naquelas condições e não eram raras as vezes que se ouviam as reclamações de Amanda Machado quanto ao buraco em que viviam. Mas o dinheiro que ela ganhava todos os meses era escasso e tornava-se difícil suportar sozinha o peso económico de um alojamento melhor. Por isso, a única solução que encontrou para lidar com a sua frustração foi falar mal da vida dos outros e contar as suas novas descobertas ao marido, que, por sua vez, passava os seus dias enfiado em casa, ou a aproveitar a cama vazia ou a refletir sobre o vazio da sua vida.
 Tentando ajoelhar-se num espaço vazio quase inexistente, Amanda encostou um copo de vidro ao chão e, com ele, tentou ouvir as conversas vindas do apartamento do senhorio. Algo havia acontecido. //pôr no presente
 
 [[=&gt; Continuar|2.2.d]]
 
-</tw-passagedata><tw-passagedata pid="56" name="2.2.b" tags="" position="1800,525" size="100,100">Com um olhar sonolento, ele vira-se para Amanda e diz:
+</tw-passagedata><tw-passagedata pid="55" name="2.2.b" tags="" position="1800,525" size="100,100">Com um olhar sonolento, ele vira-se para Amanda e diz:
 
 - Essa barulheira toda está a dar-me dores de cabeça.
 - Já não basta vivermos neste cubículo e ainda temos de ouvir a barulheira dos outros. – disse Amanda a Pedro, quando por todo o prédio ecoava o burburinho de vozes exaltadas vindas da casa do senhorio e das brincadeiras das crianças na rua.
@@ -796,7 +847,7 @@ Tentando ajoelhar-se num espaço vazio quase inexistente, Amanda encostou um cop
 
 [[=&gt; Decides voltar à porta pela qual entraste e explorar o restante do prédio.  |2.0]] 
 [[=&gt; Artur Azeredo, inclinado sobre a varanda, solta uma risada inesperada ao observar com interesse as brincadeiras das crianças na rua. |2.2.c]]
-</tw-passagedata><tw-passagedata pid="57" name="2.2.c" tags="letras" position="1800,675" size="100,100">- Arturzito, se continuas a rir-te das diabruras dessas crianças sem pai ficas preso na casa-de-banho durante uma semana. – disse Amanda, ao ver a reação do filho às brincadeiras inapropriadas dos seis filhos de D.ª Maria de Fátima, potenciais culpados da gritaria que se ouvia lá de baixo.
+</tw-passagedata><tw-passagedata pid="56" name="2.2.c" tags="letras" position="1800,675" size="100,100">- Arturzito, se continuas a rir-te das diabruras dessas crianças sem pai ficas preso na casa-de-banho durante uma semana. – disse Amanda, ao ver a reação do filho às brincadeiras inapropriadas dos seis filhos de D.ª Maria de Fátima, potenciais culpados da gritaria que se ouvia lá de baixo.
 
 Havia muita gente que não suportava aquelas infames criaturas, mas Amanda via nelas um verdadeiro perigo para o seu benquisto filho, que poderia vir a ser corrompido por aqueles diabretes e acabar por cair nas más-línguas.
 
@@ -818,7 +869,7 @@ Decides guardar essa letra na tua memória. Pode ser importante para o futuro. A
 =&gt; Decides acompanhar Amanda e investigar o paradeiro da velha Sebastiana. (Vai para E)
 
 
-</tw-passagedata><tw-passagedata pid="58" name="2.2.d" tags="" position="1950,425" size="100,100">- Olha-me para isto Pedro. Parece que a mercearia do Sr. Bernardo foi assaltada durante a noite por algum morador do prédio. Pois é muito bem feito para aquele velho avarento! Se eu… - Antes de prosseguir, Amanda Machado fez uma pausa e olhou de soslaio para o marido.
+</tw-passagedata><tw-passagedata pid="57" name="2.2.d" tags="" position="1950,425" size="100,100">- Olha-me para isto Pedro. Parece que a mercearia do Sr. Bernardo foi assaltada durante a noite por algum morador do prédio. Pois é muito bem feito para aquele velho avarento! Se eu… - Antes de prosseguir, Amanda Machado fez uma pausa e olhou de soslaio para o marido.
 - Quem terá sido? – perguntou ele molemente.
 - Eu é que não fui, de certeza. Tu viste que estive aqui a noite toda, não viste?
 - Alguém não esteve – respondeu Artur, o único filho do casal.
@@ -829,12 +880,12 @@ Decides guardar essa letra na tua memória. Pode ser importante para o futuro. A
 [[=&gt; Escolhes examinar a cama para ver se há pistas sobre quem saiu durante a noite.  |2.2.e]] 
 [[=&gt; Decides acompanhar Amanda e investigar o paradeiro da velha Sebastiana. |2.2.f]]
 
-</tw-passagedata><tw-passagedata pid="59" name="2.2.e" tags="letras" position="2075,300" size="100,100">Ao escolheres examinar a cama em busca de pistas, aproximas-te com cuidado e começas a vasculhar o espaço restrito em busca de qualquer indício. As cobertas estão amassadas e, devido ao reduzido espaço da habitação, alguns objetos pessoais estão espalhados pelo colchão. Enquanto investigas, encontras um pedaço de papel dobrado debaixo da almofada.
+</tw-passagedata><tw-passagedata pid="58" name="2.2.e" tags="letras" position="2075,300" size="100,100">Ao escolheres examinar a cama em busca de pistas, aproximas-te com cuidado e começas a vasculhar o espaço restrito em busca de qualquer indício. As cobertas estão amassadas e, devido ao reduzido espaço da habitação, alguns objetos pessoais estão espalhados pelo colchão. Enquanto investigas, encontras um pedaço de papel dobrado debaixo da almofada.
 Curioso para descobrir o seu conteúdo, desdobras cuidadosamente o papel e lês as palavras nele escritas. A caligrafia é um tanto trêmula, mas é possível discernir o seguinte: &quot;Apartamento número 3, 00h01. - O.&quot;.
 
 
 [[=&gt; Decides voltar à porta pela qual entraste e explorar o restante do prédio.  |2.0]] 
-[[=&gt; Com uma nova pista, tomas a decisão de explorar o apartamento número 3.   |2.3]] </tw-passagedata><tw-passagedata pid="60" name="2.2.f" tags="" position="2075,475" size="100,100">Amanda Machado tenta atravessar o quarto com dificuldade, passando por cima da cama sem evitar esbarrar no marido e no filho. Após fechar a porta, sacode a roupa com as mãos, como que para tirar um pó invisível, e respira fundo. Sebastiana não poderia estar longe. Mas onde procurar? Estaria na porta número 3? Mas essa porta estava fechada, não havia como a transpôr sem uma chave.
+[[=&gt; Com uma nova pista, tomas a decisão de explorar o apartamento número 3.   |2.3]] </tw-passagedata><tw-passagedata pid="59" name="2.2.f" tags="" position="2075,475" size="100,100">Amanda Machado tenta atravessar o quarto com dificuldade, passando por cima da cama sem evitar esbarrar no marido e no filho. Após fechar a porta, sacode a roupa com as mãos, como que para tirar um pó invisível, e respira fundo. Sebastiana não poderia estar longe. Mas onde procurar? Estaria na porta número 3? Mas essa porta estava fechada, não havia como a transpôr sem uma chave.
 
 Amanda Machado sente a frustração e a determinação crescerem dentro dela. Ela está determinada a encontrar Sebastiana, mesmo que isso signifique enfrentar desafios e obstáculos aparentemente intransponíveis. Com sua mente aguçada e um olhar determinado, ela sabe que precisa encontrar uma maneira de chegar à porta número 3, mesmo que esteja trancada.
 
@@ -844,6 +895,134 @@ Amanda chega à porta número 3 e, ao tentar girar a maçaneta, percebe que est�
 [[=&gt; Decides voltar à porta pela qual entraste e explorar o restante do prédio.  |2.0]] 
 [[=&gt; Tentas abrir a porta número 3 com a chave de Amanda. |2.3]] 
 
+</tw-passagedata><tw-passagedata pid="60" name="2.1.a" tags="" position="1375,300" size="100,100">Aproximas-te das crianças que conversam animadas entre risadas, explicando umas às outras as suas obras primas.
+
+-Quem é esta pessoa, Lucas, é a mãezinha?
+-Não digas isso, João, ela ainda aparece aí! E depois já sabes, temos de ouvir outra vez aquela conversa toda sobre a vizinha de cima…
+-Eu tenho pena do Artur. Não nos deixam falar com ele e ele está ali, sozinho com dois adultos aborrecidos.
+
+João parece entediado ao proferir estas palavras. O rapaz mais velho do grupo para de pintar as paredes e vira-se na sua direção, fazendo um esforço por permancer sério.
+
+-Não são dois, são três. Não te podes esquecer…
+-… da velha Sebastiana. Já não me assustas com essa, Mateus. Não acredito naquilo que não consigo ver.
+-Não vês tu, mas vejo eu. Às vezes está cá, às vezes não e quando aparece não diz uma palavra. Mas ela existe e…
+-… dizem que acordará depois de um grande desastre, levando consigo todos os pecadores que habitam o prédio. 
+
+Ao proferir estas palavras, João revira os olhos. O irmão mais velho parece ficar irritado com a ineficácia da sua história de terror e afasta-se do grupo, retomando a pintura da parede. 
+
+[[=&gt; Continuas a ouvir a conversa|2.1.d]] 
+[[=&gt; Abandonas a sala para explorar o resto do apartamento|2.1.c]]</tw-passagedata><tw-passagedata pid="61" name="2.1.b" tags="" position="1500,300" size="100,100">Vagueias pela sala espaçosa, passando os olhos pelas paredes completamente riscadas. Tentas perceber o que está desenhado, mas a maioria dos desenhos são impossíveis de interpretar, formando um colorida pintura abstrata. 
+
+&lt;&lt;if visited(&quot;2.1.a&quot;)&gt;&gt;
+[[=&gt; Voltas para a entrada e exploras uma nova porta|2.0]] 
+
+&lt;&lt;else if visited(&quot;2.1.c&quot;)&gt;&gt;
+[[=&gt; Voltas para a entrada e exploras uma nova porta|2.0]]
+
+&lt;&lt;else&gt;&gt;
+ [[=&gt; Continuar|2.1.j]] 
+&lt;&lt;endif&gt;&gt;
+</tw-passagedata><tw-passagedata pid="62" name="2.1.c" tags="" position="1650,300" size="100,100">Abandonas a divisão, atravessando um corredor amplo e escuro com várias portas que dão para os vários quartos da casa. Uma pequena cabeça espreita de um dos quartos, desaparecendo rapidamente logo de seguida. À medida que te aproximas da porta, começas a ouvir uma discussão sussurrada:
+
+-A costa ainda está livre, Adão, despacha-te. 
+-Já está quase, ajuda-me só a cortar este pedaço de fio.
+
+Aproximas-te o suficiente para o teu campo de visão te permitir ver o interior do quarto, onde duas crianças loiras muito parecidas estendem cautelosamente um fio invísivel entre as extremidades da porta. Depois de dar um nó na ponta do fio, Adão puxa-o com força para testar a sua resistência e, passando cautelosamente para o exterior do quarto, diz:
+
+-Está pronto, Eva! Daqui não se vê nem um bocadinho. De certeza que vai funcionar.
+-Aposto que o pai vai tropeçar primeiro.
+-Quem me dera… Mas vai ser a mãezinha, nem vai reparar no fio, de tanto que olha para o céu.
+
+As crianças riem-se em conjunto e sentam-se na parte exterior do quarto. 
+
+[[=&gt; Continuas onde estás|2.1.g]] 
+[[=&gt; Voltas para a sala e analisas os desenhos espalhados pelas paredes|2.1.b]]</tw-passagedata><tw-passagedata pid="63" name="2.1.d" tags="" position="1375,150" size="100,100">Lucas retoma a conversa com os irmãos, apontando um rabisco na parede:
+
+-Mas porque é que achaste que esta era a mãezinha?
+-Parece, anda com tantas cruzes atrás…
+-Atrás não, por cima. É aquele vizinho estranho que anda por aí…
+-O Magalhães?
+	
+É a criança mais pequena que responde, esfregando as mãos amarelas contra a parede perto de uma figura da mesma cor que se assemelha vagamente a uma galinha. Lucas responde sobressaltado.
+
+-Não digas o nome dele, dá-me arrepios. “Eu matei-o, eu matei-o”, não sabe dizer outra coisa. 
+-Se alguma vez algo de mau acontecer no prédio, pelo menos já sabemos quem foi que o fez.
+	
+O ambiente entre as crianças fica tenso por uns instantes, até que Mateus se junta novamente aos irmãos, dirigindo-se ao mais pequeno:
+
+-E tu, Marcos, o que estás a desenhar?
+-Aquela vez em que soltámos as galinhas...
+-Qual delas, ontem? - diz João, soltando uma gargalhada.
+
+As crianças riem-se da piada mas são interrompidas por um grito estridente da sua mãe, que se depara com a nova pintura da sala ao entrar em casa.
+
+[[=&gt; Continuar|2.1.i]] </tw-passagedata><tw-passagedata pid="64" name="2.1.i" tags="" position="1400,25" size="100,100">- João, Lucas, Marcos, Mateus! O que é que estão a fazer? Como se não bastasse terem libertado as galinhas… e o assalto… o vosso pai vai ficar furioso.
+- Assalto?
+É Eva que coloca a questão, ao entrar na sala de estar. //(se já tiver conhecido Adão e Eva mudamos isto??)//
+
+-A mercearia foi assaltada, levaram tudo o que estava nas prateleiras. Eva, Adão, por favor digam-me que não andaram a fazer nada de mal…
+
+Fátima abandona a casa em direção à mercearia, levando as 6 crianças consigo.
+
+&lt;&lt;if visited(&quot;2.1.b&quot;)&gt;&gt;
+[[=&gt; Voltas para a entrada e exploras uma nova porta|2.0]] 
+&lt;&lt;else&gt;&gt;
+[[=&gt; Analisas os desenhos espalhados pelas paredes da sala|2.1.b]] 
+[[=&gt; Voltas para a entrada e exploras uma nova porta|2.0]] 
+&lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="65" name="2.1.g" tags="" position="1650,25" size="100,100">Admiras a partida planeada pelos dois, certo de que alguém cairá na armadilha, colocando os irmãos em apuros. Eva volta a falar, substituindo a brincadeira por um tom esperançoso:
+
+- E se fosse o Sr. Carteiro a cair…
+- Porque é que o queres apanhar na nossa partida? É o único a quem não desejo esse mal. Bem, ele e tu.
+- Sim, mas talvez se isso acontecesse conseguíssemos falar com ele por mais de 2 minutos seguidos… Tenho saudades da altura em que os manos saiam com o pai aos sábados. No início ficava triste por não nos levarem com eles sabes? Se fosse hoje, não ficava, tenho a certeza que o Sr. Carteiro apareceria para deixar uma carta à mãezinha.
+- Eva, alguma vez ouviste falar de cartas a serem entregues à noite?
+- Não… porque dizes isso?
+- Ele esteve aqui ontem, sabes? Hoje de manhã também, vimo-lo no corredor, mas ontem também esteve. Acordei durante a noite e vi uma figura a escapulir-se pelos corredores, mas não o consegui apanhar. Ainda ouvi a porta de mercearia a ranger lá em baixo, mas quando passei pelo quarto da mãezinha, ela e o pai estavam a dormir.
+- Talvez não fosse ele, não se entregam cartas à noite. E ele não tem a chave da mercearia.
+	
+As crianças são interrompidas por um grito estridente da mãe, na divisão ao lado, dirigindo-se apressadamente na sua direção.  
+
+[[=&gt; Continuar|2.1.i]] </tw-passagedata><tw-passagedata pid="66" name="2.1.j" tags="" position="1525,150" size="100,100">No fundo da sala, as crianças riem-se de uma piada mas são interrompidas por um grito estridente da sua mãe, que se depara com a nova pintura da sala ao entrar em casa.
+
+[[=&gt; Continuar|2.1.i]] </tw-passagedata><tw-passagedata pid="67" name="8.a" tags="" position="1375,1925" size="100,100">Magalhães para de remexer nas folhas por um segundo e fala agitadamente:
+
+- Eles vão todos morrer, eu tentei avisá-los. Esta é a única hipótese que tenho de os salvar. Tens de te lembrar, tens de te lembrar…
+
+O velho continua a mexer freneticamente nas folhas até que parece que chega a uma decisão em relação à forma como as deve ordenar. Com a mão que tem livre retira do bolso o seu caderno, envelhecido pelo tempo. Percorre-o de uma ponta à outra, colocando as folhas soltas em lugares de onde parecem ter sido arrancadas páginas.
+
+[[=&gt; Aproxima-te para veres o caderno completo |8.c]]</tw-passagedata><tw-passagedata pid="68" name="8.b" tags="" position="1250,1925" size="100,100">Magalhães para de remexer nas folhas por um segundo e olha na tua direção com uma expressão confusa.
+
+- Eles vão todos morrer, eu tentei avisá-los. Mas ainda vou a tempo, não é impossível salvá-los. Mas está tudo dependente de ti… não pode ser…
+
+O velho continua a mexer freneticamente nas folhas até que parece que chega a uma decisão em relação à forma como as deve ordenar. Com a mão que tem livre retira do bolso o seu caderno, envelhecido pelo tempo. Percorre-o de uma ponta à outra, colocando as folhas soltas em lugares de onde parecem ter sido arrancadas páginas.
+
+[[=&gt; Aproxima-te para veres o caderno completo |8.c]]</tw-passagedata><tw-passagedata pid="69" name="8.c" tags="" position="1375,2050" size="100,100">Começas a ler as palavras escritas no velho caderno e depressa te apercebes que descrevem detalhadamente a vida dos moradores do prédio, desde momentos do quotidiano aos detalhes mais íntimos. 
+
+Um conjunto de memórias atinge-te repentinamente e recordas-te das longas horas passadas nesta sala, das palavras sem fim digitadas nas teclas gastas da máquina de escrever, a delinear a vida de cada um dos moradores do prédio, a escrutinar os seus pecados ao mais ínfimo detalhe. A figura de Magalhães, ao teu lado, olha-te contemplativamente e dirige-se a ti, oferecendo-te o caderno:
+
+- Só tu nos podes salvar. Aquela velha… Vai matá-los a todos. Mas eu sei a verdade, sei que tu vieste para nos salvar. O que ainda não está escrito ainda pode ser alterado.
+
+Aceitas o caderno e olhas para o velho louco à tua frente. No meio da sua loucura, conseguiu reunir as peças do puzzle mas tirou a conclusão errada e acaba de entregar a chave para a destruição àquele que está mais interessado em perpetuá-la, ao verdadeiro colecionador de pecados.
+
+Olhas para trás no tempo e recordas todos aqueles que vieram antes dos atuais habitantes do prédio. Todas as famílias que corrompeste e separaste, demasiado orgulhoso do poder que possuis para perceberes os perigos a ele associado. Recordas todos os destinos que passaram pelas tuas mãos e a expressão suplicante de Magalhães leva-te a escrutinar a tua memória na tentativa de encontrar alguém que tenhas ajudado, embora saibas de antemão que tal pessoa não existe. Por momentos imaginas o que aconteceria se te libertasses do teu próprio pecado. 
+
+Olhas uma vez mais para a folha e pensas novamente: o que vou fazer? Colocas o papel na máquina de escrever e digitas…
+
+[[=&gt; Assaltar a mercearia |8.d]]
+[[=&gt; Deixar os residentes em paz |8.e]]</tw-passagedata><tw-passagedata pid="70" name="8.d" tags="" position="1325,2200" size="100,100">Assim que a última letra acaba de ser marcada no papel, a sala passa de vazia a completamente cheia. Estás rodeado pelos produtos da loja do Sr. Bernardo e o tumulto nas restantes casas do prédio é evidente. Olhas em volta, mas o Magalhães já não está contigo. Sentes o ódio a crescer dentro de ti, pois sabes que Sebastiana interveio para salvar as crianças e o louco, impedindo-te de levares também os inocentes na tua viagem infernal. 
+Deixas o quarto para trás e atravessas o corredor do primeiro andar, onde os vizinhos discutem agressivamente sem qualquer sentido. Quando sais para a rua a tabuleta da entrada parece mais descaída, mais torta, prestes a colapsar. 
+
+Aprecias uma última vez a fachada do Prédio das Portas Vermelhas, de onde se soltam gritos de vozes angustiadas, tal e qual um transporte direto para o Inferno, a arder em pecados. O teu trabalho está feito. Em breve os sons morrerão e o prédio ficará vazio até um novo conjunto de pecadores o vir habitar e tu ditares o seu destino. 
+</tw-passagedata><tw-passagedata pid="71" name="8.e" tags="" position="1500,2175" size="100,100">Escreves as palavras apressadamente na máquina, decidido a mudar o desfecho habitual do jogo que tens vindo a conduzir nas últimas décadas. 
+
+Quando terminas de escrever, nada acontece. Não te consegues mexer e o silêncio que te rodeia é horrorizante. Esperas desesperado por um sinal que te indique que tudo mudou. A tensão que sentes é subitamente quebrada pelas palavras de Magalhães. 
+
+- Salvaste-nos? Salvaste-nos? Salvaste-nos? Onde é que eles estão?
+
+Sem esperar por uma resposta, Magalhães corre para o exterior do quarto. Depressa ouves os seus gritos de alegria, ao encontrar os restantes moradores. Sorris com a alegria do velho e lanças um último olhar à máquina de escrever, deixando para trás a divisão.
+
+[[=&gt; Avançar |8.f]]</tw-passagedata><tw-passagedata pid="72" name="8.f" tags="" position="1500,2300" size="100,100">Ao abandonares o quarto, notas que o nível de claridade no interior do prédio é maior do que te lembravas. À medida que passas pelos apartamentos, apanhas conversas indistintas, em vozes muito menos revoltosas que anteriormente, embora ainda agitadas. Sabes que, com o tempo, tudo irá ao sítio. Muito do mal que fizeste tem ainda de ser desfeito.
+
+Quando sais para a rua a tabuleta da entrada captura a tua atenção. Diriges-te a ela e puxas a ponta descaída para cima, na tentativa de a endireitar. Admiras uma última vez a fachada do Prédio das Portas Vermelhas, nostálgico, pois sabes que não voltarás a cruzar a sua entrada. A partir de agora, apenas irás ditar o teu próprio destino. 
 </tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
