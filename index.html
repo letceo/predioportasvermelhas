@@ -141,20 +141,10 @@ h1 {
   color:red;
 }
 #ui-bar {
-  background-image: url("data/images/building.png");
-  background-size: auto 45%;
-  background-repeat: no-repeat;
-  background-position: center top, center bottom;
   background-color: transparent;
   border: none;
   cursor: default;
 }
-
-
-#ui-bar.yellow {
-  background-image: url("data/images/building.png");
-}
-
 
 #ui-bar-body {
   position:absolute;
@@ -182,7 +172,10 @@ h1 {
 }
 
 #story-title {
-	display:none;
+  width:100%
+  text-align:center;
+  margin:0 auto;
+  	
 }
 
 #story-caption {
@@ -273,13 +266,11 @@ h1 {
 
 #esquerda{
   float:left;
-  width:35%;
-  background-color:green;
+  width:40%;
 }
 #direita{
   float:right;
-  width:65%;
-  background-color:purple;
+  width:60%;
 }
 
 .passage.portas {
@@ -444,7 +435,7 @@ Ao entrares numa casa, poderás interagir com pessoas e objetos que se encontram
 Aqui está um exemplo de uma escolha, basta clicares no rumo que queres seguir:
 
 &lt;&lt;link &quot;=&gt; Quero ouvir falar sobre os momentos narrativos antes de abrir o livro&quot; &quot;0.a&quot;&gt;&gt;&lt;&lt;set $chapter to &quot;Tutorial&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;link &quot;=&gt; Quero terminar o tutorial e abrir o livro&quot; &quot;0.b&quot;&gt;&gt;&lt;&lt;set $chapter to &quot;Tutorial&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="StoryDisplayTitle" tags="ui" position="300,100" size="100,100"></tw-passagedata><tw-passagedata pid="3" name="StoryAuthor" tags="ui" position="300,300" size="100,100"></tw-passagedata><tw-passagedata pid="4" name="StoryCaption" tags="ui data" position="300,200" size="100,100">Inventário: 
+&lt;&lt;link &quot;=&gt; Quero terminar o tutorial e abrir o livro&quot; &quot;0.b&quot;&gt;&gt;&lt;&lt;set $chapter to &quot;Tutorial&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="StoryDisplayTitle" tags="ui" position="300,100" size="100,100">&lt;&lt;if visited(&quot;0.i)&gt;&gt;&lt;img src=&quot;data/images/buildingoutside.png&quot;&gt;&lt;&lt;else&gt;&gt;&lt;img src=&quot;data/images/buildingoutside.png&quot;&gt;&lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="StoryAuthor" tags="ui" position="300,300" size="100,100"></tw-passagedata><tw-passagedata pid="4" name="StoryCaption" tags="ui data" position="300,200" size="100,100">Inventário: 
 &lt;div id=&quot;letrinhas&quot;&gt;&lt;&lt;if $hasLetterL is true&gt;&gt;L&lt;&lt;/if&gt;&gt;&lt;&lt;if $hasLetterO is true&gt;&gt;O&lt;&lt;/if&gt;&gt;&lt;&lt;if $hasLetterG is true&gt;&gt;G&lt;&lt;/if&gt;&gt;&lt;&lt;if $hasLetterR is true&gt;&gt;R&lt;&lt;/if&gt;&gt;&lt;&lt;if $hasLetterU is true&gt;&gt;U&lt;&lt;/if&gt;&gt;
 &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="5" name="Character" tags="character game-info no-return" position="400,200" size="100,100">character page</tw-passagedata><tw-passagedata pid="6" name="StoryMenu" tags="ui" position="200,200" size="100,100">&lt;&lt;link &quot;Collection&quot; &quot;Character&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
@@ -511,13 +502,13 @@ h1 {text-align:center;margin-top:25vh;}
 
 &lt;&lt;link &quot;=&gt; Vamos começar!&quot; &quot;0.c&quot;&gt;&gt;&lt;&lt;set $chapter to &quot;Introdução&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 </tw-passagedata><tw-passagedata pid="15" name="0.c" tags="exterior" position="500,675" size="100,100">&lt;&lt;audio &quot;introduction&quot; loop play&gt;&gt;\
-&lt;div id=&quot;esquerda&quot;&gt;&lt;img src=&quot;data/images/bifurcacao.png&quot; width=auto&gt;&lt;/div&gt;
+&lt;div id=&quot;esquerda&quot;&gt;&lt;img src=&quot;data/images/bifurcacao.png&quot;&gt;&lt;/div&gt;
 &lt;div id=&quot;direita&quot;&gt;Caminhas por uma rua abaixo, sem rumo, avançando lentamente por entre as casas e ouvindo as palavras trocadas pelos moradores. O porquê de estares aqui não importa, pois sabes que todos os caminhos irão dar, invariavelmente, ao mesmo destino. Como aconteceu de tantas outras vezes e continuará a acontecer no futuro. Não sabes qual é o teu destino nem o caminho que tens de percorrer para o atingires. Tens a certeza de uma coisa apenas: as tuas escolhas não o são realmente até lá chegares, pois todos os caminhos vão dar ao mesmo lugar. Depois… é uma incógnita.
 
 Chegas ao fim da rua e encontras uma bifurcação:
 [[=&gt; Viras à esquerda para uma ruela decadente|0.d]]
 [[=&gt; Viras à direita para uma rua semelhante àquela em que te encontras|0.e]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="16" name="0.d" tags="exterior" position="650,600" size="100,100">&lt;div id=&quot;esquerda&quot;&gt;&lt;img src=&quot;data/images/vista_ao_longe.png&quot; width=auto&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="16" name="0.d" tags="exterior" position="650,600" size="100,100">&lt;div id=&quot;esquerda&quot;&gt;&lt;img src=&quot;data/images/vista_ao_longe.png&quot;&gt;&lt;/div&gt;
 &lt;div id=&quot;direita&quot;&gt;A descida à tua frente é abrupta e tens de andar cautelosamente para garantir que não cais nos paralelos desnivelados da calçada. À medida que avanças, a redução de luminosidade é notória. As casas que te rodeiam estão cada vez mais degradadas e ouvem-se bocados de conversas trocadas aos berros de uma janela para outra, ao longo de toda a largura da rua. Ao virar uma esquina avistas ao fundo um edifício velho que te chama à atenção. 
 [[=&gt; Admirar o prédio|0.g]]
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="17" name="0.e" tags="exterior" position="650,725" size="100,100">Viras à direita e entras numa rua ampla e luminosa. Algumas pessoas bem vestidas andam apressadamente, cumprimentando-se umas às outras de forma educada. Continuas a andar em frente e as palavras trocadas por um casal jovem que sai de um prédio chegam-te aos ouvidos por entre os ruídos da rua. 
@@ -693,7 +684,7 @@ G- GULA
 ORGULHO 
 
 [[=&gt; teste fim; |3.0/mercearia]] 
-</tw-passagedata><tw-passagedata pid="32" name="2.4" tags="" position="1625,775" size="100,100">&lt;&lt;audio &quot;door4&quot; loop play&gt;&gt;\
+</tw-passagedata><tw-passagedata pid="32" name="2.4" tags="" position="1625,775" size="100,100">&lt;&lt;audio &quot;door4&quot; loop play&gt;&gt;
 Decides subir ao último piso e entrar na &quot;Porta Número 4&#39;&#39;. Enquanto sobes as escadas, não consegues deixar de reparar no que parecem ser berros vindos do andar de cima. 
 Ora a voz de uma mulher, um som estridente e de tom agressivo, ora a voz de um homem de sotaque carregado, voz profunda, mas que deixa transparecer uma raiva que não és capaz de ignorar.
 
@@ -719,78 +710,64 @@ Preferes:
 [[=&gt; Juntar-te ao festim dos 3 homens no sofá; |2.4.c]] 
 [[=&gt; Ajudar o homem perdido; |2.4.d]]</tw-passagedata><tw-passagedata pid="33" name="2.4.a" tags="" position="1425,950" size="100,100">Decides aproximar-te da mulher de pele morena e cabelo liso, que grita na junção entre a sala de estar e a cozinha, reclamando de toda a desorganização e restos de lixo espalhados pelo chão do apartamento.
 
--Mas o que é que aquela tola pensa que está a fazer ali aos berros, desde a mercearia até aqui conseguimos ouvir a histérica. Ivan, tu que não fazes nada, vai ser um bom marido e desaparece-me da frente para ver o que se passa, vai!
+- Mas o que é que aquela tola pensa que está a fazer ali aos berros, desde a mercearia até aqui conseguimos ouvir a histérica. Ivan, tu que não fazes nada, vai ser um bom marido e desaparece-me da frente para ver o que se passa, vai!
 - Ai que eu agora não faço nada! Ao menos não ando por aqui a partir coisas. A tua sorte é que ao menos lá em baixo não te ouço a reclamar, então bem vou com toda a vontade. Eu juro, antes de nos casarmos e mudarmos para esta maldita casa não eras tão resmungona, a tua raiva está cada vez pior //ye-bat//!
-- Olha quem fala! Ao menos ainda tenho juízo, já tu que estás constantemente aos berros com o pobre do Magalhães, como se o pobre louco tivesse culpa da sua demência! Olha para ele ali, num canto a tremer, cheio de medo de ti.
-- Melhor berrar do que andar a partir tudo a torto e a direito! Coisas custam dinheiro //lyubimaya//, e a fotografia que partiste à bocado bem podia ter valor.
+- Olha quem fala, Grozny! Ao menos ainda tenho juízo, já tu que estás constantemente aos berros com o Magalhães, como se o pobre louco tivesse culpa da sua demência! Olha para ele ali, num canto a tremer, cheio de medo de ti.
+- Melhor berrar do que andar a partir tudo a torto e a direito, Gloriana! Coisas custam dinheiro //lyubimaya//, e a fotografia que partiste à bocado bem podia ter valor.
 
-Desviando a sua atenção da fotografia partida no chão, respondeu Ivan Grozny que, furioso, finalmente decide abandonar a divisão, fechando a porta atrás de si com um estrondo. Com uns passos pesados, ouvimos o homem praguejar com um sotaque russo carregado enquanto descia as escadas de madeira apressado, até que, degrau a degrau, o som começa a dissipar-se e a voz de mulher volta a ficar em foco. 
+Desviando a sua atenção da fotografia partida no chão, Ivan Grozny abandona finalmente a divisão, furioso, fechando a porta atrás de si com um estrondo. Com passos pesados, ouves o homem praguejar com um sotaque russo carregado enquanto desce as escadas de madeira apressadamente, até que, degrau a degrau, o som começa a dissipar-se e a voz de mulher volta a ficar em foco, dirigindo-se irritadamente aos três homens de aspeto visualmente semelhante se empanturram de comida no centro da sala:
 
-Agora de olhar virado para o centro da sala, onde três homens de aspeto visualmente semelhante se empanturram de comida, a mulher exprime a sua raiva:
+- Vocês nunca param de comer? Porque é que eu vivo num prédio de maluquinhos, já não me bastava ali o louco com as manias da conspiração, a histérica lá de baixo, e dos vizinhos do apartamento 2 nem se fala... se pudesse fazê-los desaparecer a todos bem que o faria…  Também não vos posso julgar muito, que mãe é que dá o nome Carlos a três irmãos? Bem que vocês tinham de sair com algum problema...
 
--Vocês nunca param de comer, também? Porque é que eu vivo num prédio de maluquinhos, já não me bastava ali o louco com as manias da conspiração, a histérica lá de baixo, e dos vizinhos do apartamento 2 nem se fala... se pudesse fazê-los desaparecer a todos bem que o faria…  
--Também nem posso julgar muito, quer dizer, que mãe é que dá o nome Carlos a três irmãos? Bem que vocês tinham de sair com algum problema. - continua a mulher a murmurar para si.
+Enquanto dá voz aos desabafos, Gloriana arrasta com força uma vassoura pelo chão para aliviar a fúria, como se o ato de limpar o lixo espalhado pelo chão ajudasse a esvaziar os pensamentos maus e angustiantes que apertam o seu coração. Sem dar por isso, a força que aperta o cabo da vassoura, acaba por parti-la. Com mais uma coisa a ser partida na casa, o mais sarcástico dos irmãos não consegue manter a boca fechada na sua tentativa nada sorrateira de ir buscar mais umas sandes de presunto para o piquenique dos três no sofá em frente à televisão:
 
-Enquanto dava voz aos desabafos, continua a arrastar com força a vassoura pelo chão para aliviar a fúria, como se o ato de limpar o lixo espalhado pelo chão ajudasse também a esvaziar os pensamentos maus e angustiantes que apertavam o seu coração. Mas sem dar por isso, a raiva era tanta que com a força que apertava o cabo da vassoura, acabou por parti-la.
- 
-Com mais uma coisa a ser partida naquela casa, o mais sarcástico dos irmãos não conseguiu manter a boca fechada na sua tentativa nada sorrateira de ir buscar mais umas sandes de presuntos para o piquenique dos três no sofá em frente à televisão:
+- Depois claro que nunca temos dinheiro para um frigorífico maior com a quantidade de coisas que partes, Gloriana!
 
--Depois claro que nunca temos dinheiro para um frigorífico maior com a quantidade de coisas que partes Gloriana!
+Gloriana suspira fundo antes de atirar o que resta da vassoura ao chão e soltar um grito agressivo e ameaçador...:
 
-Gloriana suspirou só fundo, antes de soltar um grito estridente e atirar o que restava da vassoura ao chão.
+- Está mas é caladinho Carlos António e paga a renda, ou vais ver se a próxima comida que roubares não te cai mal. 
 
-- Está mas é caladinho Carlos António e paga a renda, ou vais ver se a próxima comida que roubares não te cai mal. - respondeu Gloriana num tom agressivo, até quase.... ameaçador...
+Depois da explosão e agora sem vassoura, a mulher olha para os seus 4 colegas de casa, contemplando-os de forma derrotada.
 
-[[=&gt; Continuar a investigar a Porta 4 |2.4.f]]</tw-passagedata><tw-passagedata pid="34" name="2.4.b" tags="" position="1550,950" size="100,100">Decides tentar aproximar-te do curioso homem de forte sotaque russo. Pálido de aparência e feições fortes, cabelo curto, quase rapado a pente 2, e uma aparência forte, retângular e com uma cicatriz na cara. 
+- Eu não consigo lidar mais com vocês. Tentem só não fazer MAIS lixo POR FAVOR.
 
-Só a primeira impressão passava a imagem de um homem misterioso e forte, mas quando a voz profunda e arranhada do homem se tornou mais alta, a sensação de perigo também parecia ter crescido. Falava num português correto e bem estruturado, mas a pronúncia mais arrastada denunciava a sua origem eslava.
+Furiosa, Gloriana abandona a sala, decidindo juntar-se ao marido na tarefa de descobrir o que se passa na mercearia e batendo a porta vermelha com tal força que o mundo parece abanar.
 
-- //Zólattse// mayó, vai ver o que é a gritaria que eu não aguento mais 
-- Também nunca és capaz de fazer nada Ivan, custava-te assim tanto ser umm bom marido e mexer um bocado?
+[[=&gt; Continuar a investigar a Porta 4 |2.4.f]]</tw-passagedata><tw-passagedata pid="34" name="2.4.b" tags="" position="1550,950" size="100,100">Decides aproximar-te do curioso homem de forte sotaque russo. Pálido de aparência e feições fortes, cabelo curto, quase rapado a pente 2, a sua aparência forte, retângular passa a imagem de um homem misterioso, destacada ainda mais pela grande cicatriz que tem na cara. Quando a voz profunda e arranhada do homem se torna mais alta, não consegues evitar que uma sensação de perigo atravesse o teu corpo. O homem fala num português correto e bem estruturado, mas a pronúncia mais arrastada denuncia a sua origem eslava.
 
-A mulher suspirou só fundo, antes de soltar um grito estridente e atirar a vassoura ao chão, partindo o  cabo ao meio e angariando olhares de julgamento por parte dos restantes moradores que ocupavam o apartamento e gritar:
+- //Zólattse// mayó, vai ver o que é a gritaria que eu não aguento mais. 
+- Também nunca és capaz de fazer nada Ivan. Custava-te assim tanto ser umm bom marido e mexer um bocado?
+
+A mulher suspira fundo, antes de soltar um grito estridente e atirar ao chão a vassoura com que anteriormente limpava a casa, partindo o  cabo ao meio e angariando olhares de julgamento por parte dos restantes moradores que ocupavam o apartamente. Frustrada, a mulher solta mais um grito antes de abandonar a casa:
 
 - Não aguento estar mais aqui. Vou lá ver que milagre é que a Maria de Fátima fez desta vez para estar ali aos gritos… será que conseguiu outro filho totalmente diferente do pai?
 
 - E vocês aí estão sentadinhos no sofá porquê? Não vêm as vossas porcarias no chão? Para além de mal conseguirem pagar renda e roubarem a comida toda, ainda ficam aí especados seus //svo-lach//? Levantem-se antes que eu vá aí. Ainda são piores que o mandrião do Azeredo ou a invejosa da Amanda, juro… 
 
-As palavras agressivas saíram da boca do homem que agora sabias chamar-se Ivan, irritado com a passividade dos 3 irmãos que ocupavam o sofá a devorar sandes de presunto e a deixar lixo, restos de comida e embalagens por toda a parte
+Estas palavras agressivas saiem da boca do homem que agora sabes chamar-se Ivan, irritado com a passividade dos 3 irmãos que ocupam o sofá a devorar sandes de presunto, deixando lixo, restos de comida e embalagens por toda a parte.
 
-- Calma aí, nós também pagamos renda! Temos os mesmos direitos que vocês. Ao menos não andamos a atirar tudo ao chão e a partir coisas! Não é por nada que vos chamam Ivan o Terrivel e Gloriana, a raínha Maldosa!  
+- Calma aí, nós também pagamos renda! Temos os mesmos direitos que vocês. Ao menos não andamos a atirar tudo ao chão e a partir coisas! Não é por nada que vos chamam Ivan o terrível e Gloriana, a rainha maldosa!  
 - O que é que tu disseste //mudak//? Queres mesmo começar com isso agora? Ao menos eu e a Glorinha pagamos as coisas a tempo seus... E tu aí, ò Magahães, para de parecer um perdido aí às voltinhas que já me estás a irritar!
 
-E após uma respiração a fundo, para controlar a raiva que teimava em dominá-lo, lança agora um olhar agressivo e murmura em jeito sério:
+Após uma respiração a fundo para controlar a raiva que teimava em dominá-lo, Ivan lança um olhar agressivo e murmura em jeito sério:
 
-- Maldito o dia em que decidimos encontrar pessoas para partilhar a casa. Já não bastava ali o louco ali falar sozinho a chamar-se de assassino, e ainda vos tenho de aturar a vocês…eu juro. Tenham cuidadinho que eu arranjo forma de vos pôr lá para fora. Aliás, até já faltou menos. 
+- Maldito o dia em que decidimos encontrar pessoas para partilhar a casa. Já não bastava ali o louco a falar sozinho e a chamar-se a si mesmo de assassino, e ainda vos tenho de aturar a vocês… eu juro. Tenham cuidadinho que eu arranjo forma de vos pôr daqui para fora. Aliás, até já faltou menos... 
+
+Após a explosão de raiva, Ivan olha para os seus 4 colegas de casa, contemplando-os de forma derrotada. &quot;//Idi na khuy//&quot;, murmura em russo, abandonando a casa para se juntar a Gloriana na tarefa de descobrir o que se passa na mercearia e batendo a porta vermelha com tal força que o mundo parece abanar. 
 
 [[=&gt; Continuar a investigar a Porta 4 |2.4.f]]</tw-passagedata><tw-passagedata pid="35" name="2.4.c" tags="" position="1675,950" size="100,100">[[=&gt; Continuar a investigar a Porta 4 |2.4.f]]</tw-passagedata><tw-passagedata pid="36" name="2.4.d" tags="" position="1800,950" size="100,100">[[=&gt; Continuar a investigar a Porta 4 |2.4.f]]
 
-</tw-passagedata><tw-passagedata pid="37" name="2.4.f" tags="" position="1625,1100" size="100,100">&lt;&lt;if visited(&quot;2.4.a&quot;)&gt;&gt;
-Depois da explosão e agora sem vassoura, Gloriana olhou só para os seus 4 colegas de casa, contemplando-os de forma derrotada.
-
-- Eu não consigo lidar mais com vocês. Tentem só não fazer MAIS lixo POR FAVOR.
-
-E abandonou,  decidindo juntar-se ao marido na tarefa de descobrir o que se passava na mercearia e batendo a porta vermelha com tal força que o mundo pareceu abanar. &lt;&lt;endif&gt;&gt;
-&lt;&lt;if visited(&quot;2.4.b&quot;)&gt;&gt;Após a explosão de raiva, Ivan olhou só para os seus 4 colegas de casa, contemplando-os de forma derrotada.
-
-- //Idi na khuy//, murmurou em russo, e abandonou,  decidindo juntar-se a Gloriana na tarefa de descobrir o que se passava na mercearia e batendo a porta vermelha com tal força que o mundo pareceu abanar. 
-&lt;&lt;endif&gt;&gt;
-Pelo ruído exterior que se ouvia na Porta Número 4, mais pessoas se tinham juntando à discussão, e já não era só a D.ª Maria de Fátima a gritar, mas uma mixórdia de vozes, tanto masculinas como femininas, que expandiram a confusão.
-
-A intriga só aumentava, mas nem por isso o grupo de irmãos se mexeu, continuando todos no sofá a empanturrarem-se de sandes de presunto e cerveja, completamente alheios ao que se passava no exterior.
+</tw-passagedata><tw-passagedata pid="37" name="2.4.f" tags="" position="1625,1100" size="100,100">Pelo ruído audível através da porta, mais pessoas se tinham juntando à discussão na mercearia e já não era só a D.ª Maria de Fátima a gritar, mas uma mixórdia de vozes, tanto masculinas como femininas, que expandiam a confusão. A intriga aumentava, mas nem por isso o grupo de irmãos se mexeu: continuavam todos no sofá a empanturrarem-se de sandes de presunto e cerveja, completamente alheios ao que se passava no exterior.
 
 - Se calhar era melhor não aparecer nenhum dos três lá em baixo... o que acham?
 
-Já Magalhães, escondido no corredor com um caderno na mão, apontava só para a desordem junto à mesinha da sala, onde espreitava uma moldura de madeira antiga rodeada por estilhaços.
+Magalhães, escondido no corredor com um caderno na mão, aponta só para a desordem junto à mesinha da sala, perto de uma moldura de madeira antiga rodeada por estilhaços.
 
-- Devias ver a fotografia, ouvi dizer que Reina a Raiva nela, ouvi eu dizer - murmurava sozinho, o louco.
+- Devias ver a fotografia, ouvi dizer que reina a raiva nela... - murmurava sozinho, o louco.
 
-[[=&gt; Perceber a relutância dos 3 irmãos |2.4.g]] 
-[[=&gt; Questionar Magalhães |2.4.h]]
-[[=&gt; Pegar na Moldura |2.4.i]]
-
-
-//ver a formatação</tw-passagedata><tw-passagedata pid="38" name="2.4.g" tags="em-falta" position="1425,1250" size="100,100">[[=&gt; Pegar na Moldura |2.4.i]]</tw-passagedata><tw-passagedata pid="39" name="2.4.i" tags="letras" position="1550,1250" size="100,100">Sem saber exatamente a quem Magalhães se dirigia, esperas um pouco para ver se algo acontecia, mas toda a gente na sala ignorou as suas palavras misteriosas e o homem decidiu abandonar o apartamento e continuar a sua intriga.
+[[=&gt; Tentas perceber a relutância dos 3 irmãos |2.4.g]] 
+[[=&gt; Aproximas-te de Magalhães |2.4.h]]
+[[=&gt; Pegas na moldura |2.4.i]]</tw-passagedata><tw-passagedata pid="38" name="2.4.g" tags="em-falta" position="1425,1250" size="100,100">[[=&gt; Pegar na Moldura |2.4.i]]</tw-passagedata><tw-passagedata pid="39" name="2.4.i" tags="letras" position="1550,1250" size="100,100">Sem saber exatamente a quem Magalhães se dirigia, esperas um pouco para ver se algo acontecia, mas toda a gente na sala ignorou as suas palavras misteriosas e o homem decidiu abandonar o apartamento e continuar a sua intriga.
 
 Decides seguir na mesma as suas instruções, afastando os estilhaços e pegando na Moldura e na fotografia que se esconde debaixo dela.
 
@@ -917,7 +894,8 @@ Nesse momento, as cortinas começam a mover-se, apesar das portadas da varanda e
 - O que é isso aí no chão? – pergunta Amanda com curiosidade, apontando para um objeto abandonado perto das portadas da varanda.
 - Deve ser o chapéu da prima Sebastiana.
 - Se é dela, qual a razão de ter um “G” estampado na aba. Deve ser de alguém com essa inicial no nome.
-&lt;img src=&quot;data/images/chapeu.png&quot; style=&quot;width=auto; text-align:center;background-color:green;&quot;&gt;
+
+&lt;img src=&quot;data/images/chapeu.png&quot; style=&quot;width=auto; text-align:center;margin:auto,0;&quot;&gt;
 Decides guardar essa letra na tua memória. Pode ser importante para o futuro. Afinal de contas, nada acontece por acaso. 
 
 - Ah, onde raio anda essa mulher? – continua Amanda.
