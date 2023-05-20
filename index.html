@@ -98,7 +98,7 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="Prédio das Portas Vermelhas" startnode="13" creator="Twine" creator-version="2.6.2" format="SugarCube" format-version="2.36.1" ifid="50052D13-ABF9-464E-8B3E-631E645DCA0D" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+	<tw-storydata name="Prédio das Portas Vermelhas" startnode="32" creator="Twine" creator-version="2.6.2" format="SugarCube" format-version="2.36.1" ifid="50052D13-ABF9-464E-8B3E-631E645DCA0D" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&display=swap');
 
@@ -637,8 +637,6 @@ Os miúdos continuam a conversa que o homem tenta despachar. Ouves um estridente
 &lt;&lt;audio &quot;door4&quot; stop&gt;&gt;\
 
 &lt;&lt;if visited(&quot;2.1&quot;) &amp;&amp; visited(&quot;2.2&quot;) &amp;&amp; visited(&quot;2.4&quot;) &amp;&amp; visited(&quot;3.0&quot;)==0&gt;&gt;
-&lt;&lt;if visited(&quot;2.1&quot;)&gt;&gt;&lt;a data-passage=&quot;2.1&quot;&gt;&lt;img src=&quot;data/images/door1open.png&quot; style=&quot;margin-right:2%&quot;&gt;&lt;/a&gt;&lt;&lt;else&gt;&gt;&lt;a data-passage=&quot;2.1&quot;&gt;&lt;img src=&quot;data/images/door1closed.png&quot; style=&quot;margin-left:2%&quot;&gt;&lt;/a&gt;&lt;&lt;endif&gt;&gt;&lt;&lt;if visited(&quot;2.2&quot;)&gt;&gt;&lt;a data-passage=&quot;2.2&quot;&gt;&lt;img src=&quot;data/images/door2open.png&quot;&gt;&lt;/a&gt;&lt;&lt;else&gt;&gt;&lt;a data-passage=&quot;2.2&quot;&gt;&lt;img src=&quot;data/images/door2closed.png&quot;&gt;&lt;/a&gt;&lt;&lt;endif&gt;&gt; &lt;a data-passage=&quot;2.3&quot;&gt;&lt;img src=&quot;data/images/door3closed.png&quot;&gt;&lt;/a&gt;&lt;&lt;if visited(&quot;2.4&quot;)&gt;&gt;&lt;a data-passage=&quot;2.4&quot;&gt;&lt;img src=&quot;data/images/door4open.png&quot; style=&quot;margin-right:2%&quot;&gt;&lt;/a&gt;&lt;&lt;else&gt;&gt;&lt;a data-passage=&quot;2.4&quot;&gt;&lt;img src=&quot;data/images/door4closed.png&quot; style=&quot;margin-right:2%&quot;&gt;&lt;/a&gt;&lt;&lt;endif&gt;&gt;
-&lt;&lt;else&gt;&gt;
 Ao saíres do último apartamento que consegues investigar és imediatamente confrontado com uma barulheira descomunal, proveniente do rés do chão da casa. À medida que desces as escadas para te dirigires à mercearia, o ruído torna-se cada vez mais ensurdecedor e consegues apanhar pequenos fragmentos da discussão acalorada entre os moradores do prédio:
 
 - … porque ambos sabem muito bem que assalto é aquilo que nos fazem com as rendas e não este roubo de meia dúzia de produtos estragados. Para além disso, quem me diz que isto não é encenado? Tenho a certeza que algum seguro há-de cobrir estes danos muito acima do seu valor real!
@@ -651,6 +649,8 @@ Uma voz com um sotaque russo carregado faz-se ouvir no meio da discussão, calan
 - Não devo nada àqueles 3 e muito me devem eles a mim, não nada a esconderm só estou a constatar uma realidade. De ti não se pode dizer o mesmo… segredos não te faltam.
 
 [[=&gt; Entras na mercearia|3.0]]
+&lt;&lt;else&gt;&gt;
+&lt;&lt;if visited(&quot;2.1&quot;)&gt;&gt;&lt;a data-passage=&quot;2.1&quot;&gt;&lt;img src=&quot;data/images/door1open.png&quot; style=&quot;margin-right:2%&quot;&gt;&lt;/a&gt;&lt;&lt;else&gt;&gt;&lt;a data-passage=&quot;2.1&quot;&gt;&lt;img src=&quot;data/images/door1closed.png&quot; style=&quot;margin-left:2%&quot;&gt;&lt;/a&gt;&lt;&lt;endif&gt;&gt;&lt;&lt;if visited(&quot;2.2&quot;)&gt;&gt;&lt;a data-passage=&quot;2.2&quot;&gt;&lt;img src=&quot;data/images/door2open.png&quot;&gt;&lt;/a&gt;&lt;&lt;else&gt;&gt;&lt;a data-passage=&quot;2.2&quot;&gt;&lt;img src=&quot;data/images/door2closed.png&quot;&gt;&lt;/a&gt;&lt;&lt;endif&gt;&gt; &lt;a data-passage=&quot;2.3&quot;&gt;&lt;img src=&quot;data/images/door3closed.png&quot;&gt;&lt;/a&gt;&lt;&lt;if visited(&quot;2.4&quot;)&gt;&gt;&lt;a data-passage=&quot;2.4&quot;&gt;&lt;img src=&quot;data/images/door4open.png&quot; style=&quot;margin-right:2%&quot;&gt;&lt;/a&gt;&lt;&lt;else&gt;&gt;&lt;a data-passage=&quot;2.4&quot;&gt;&lt;img src=&quot;data/images/door4closed.png&quot; style=&quot;margin-right:2%&quot;&gt;&lt;/a&gt;&lt;&lt;endif&gt;&gt;
 &lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="2.1" tags="" position="1575,400" size="100,100">&lt;&lt;audio &quot;door1&quot; loop play&gt;&gt;\
 &lt;&lt;if visited(&quot;2.1.f&quot;)&gt;&gt;Voltas a entrar no apartamento espaçoso onde habita a família de Bernardo e Fátima. A sala de estar está completamente vazia e não se ouve qualquer som, criando um ambiente pesado que contrasta com os rabiscos coloridos nas paredes.
 
@@ -773,7 +773,39 @@ Após uma respiração a fundo para controlar a raiva que teimava em dominá-lo,
 
 Após a explosão de raiva, Ivan olha para os seus 4 colegas de casa, contemplando-os de forma derrotada. &quot;//Idi na khuy//&quot;, murmura em russo, abandonando a casa para se juntar a Gloriana na tarefa de descobrir o que se passa na mercearia e batendo a porta vermelha com tal força que o mundo parece abanar. 
 
-[[=&gt; Continuar a investigar a Porta 4 |2.4.f]]</tw-passagedata><tw-passagedata pid="35" name="2.4.c" tags="" position="1675,950" size="100,100">[[=&gt; Continuar a investigar a Porta 4 |2.4.f]]</tw-passagedata><tw-passagedata pid="36" name="2.4.d" tags="" position="1800,950" size="100,100">Aproximas-te do homem que anda em círculos pela sala, tentando discernir os seus murmúrios repetitivos.
+[[=&gt; Continuar a investigar a Porta 4 |2.4.f]]</tw-passagedata><tw-passagedata pid="35" name="2.4.c" tags="" position="1675,950" size="100,100">Com toda a agitação no pequeno apartamento, decides focar a atenção no local mais sossegado, onde os três homens continuam a empanturrar-se para preencher o buraco negro que parecia ser os seus estômagos.
+
+Agora observando-os com mais atenção, reparavas que a quantidade de comida que o trio consumia era bem maior do que aquela que te tinhas apercebido inicialmente. Já não era só as pernas de presunto a captar a tua atenção, mas um autêntico piquenique em frente à televisão, composto por sandes de toda a variedade, batatas fritas, cervejas... um verdadeiro manjar. O ritmo com que tudo era devorado, quase acompanha o som da discussão que ecoava entre as quatro paredes: 
+
+- Olha quem fala, Ivan! Ao menos ainda tenho juízo, já tu que estás constantemente aos berros com o Magalhães, como se o pobre louco tivesse culpa da sua demência! Olha para ele ali, num canto a tremer, cheio de medo de ti.
+- Melhor berrar do que andar a partir tudo a torto e a direito, Gloriana! Coisas custam dinheiro lyubimaya, e a fotografia que partiste à bocado bem podia ter valor.
+
+Desviando a sua atenção da fotografia partida no chão, Ivan abandona a divisão, furioso, fechando a porta atrás de si com um estrondo. A mulher volta a gritar num tom estridente, dirigindo-se desta vez aos três homens sentados no sofá:
+
+- Vocês nunca param de comer? Porque é que eu vivo num prédio de maluquinhos, já não me bastava ali o louco com as manias da conspiração, a histérica lá de baixo, e dos vizinhos do apartamento 2 nem se fala... se pudesse fazê-los desaparecer a todos bem que o faria… Também não vos posso julgar muito, que mãe é que dá o nome Carlos a três irmãos? Bem que vocês tinham de sair com algum problema...
+
+A mulher gesticula furiosamente e abandona a divisão atrás do marido, batendo com a porta ao sair do apartamento. Agora totalmente sozinhos, com exceção de um louco que andava aos círculos pelo apartamento em murmúros repetitivos, o grupo dos Três Carlos decide aproveitar o momento de privacidade para uma conversa entre irmãos a acompanhar pitéu:
+
+- Não sei qual é o problema daquele casal, tanto discutem, tanto discutem, partem tudo e dão-se mal com toda a gente, mas somos sempre nós, aqui caladinhos na nossa, que somos o problema? Passa-me aí o queijo, Carlos António, com a gritaria toda até sinto a minha tensão arterial a descer...
+- Toma, aqui tens, mas também quero um pedaço! Mas tens toda a razão, bem que o título de Ivan o terrível e Gloriana a rainha maldosa lhes fica bem... A Amanda até pode ter muitos defeitos e ser uma invejosa de primeira, mas as alcunhas que ela dá assentam que nem um mimo.... Espera aí José Carlos, lembras-te daquele fabuloso nome que deu à mulher do Carneiro?
+- Ui, vou-me lá lembrar agora, achas mesmo? Mas talvez uma jola me refresque as ideias, vá lá Carlitos Duarte, chega aí que eu não tenho todo o dia! 
+
+Depois de beber a cerveja toda num gole, uma expressão de sucesso aparece na cara que agora sabes pertencer a José Carlos:
+
+- Espera aí, era o nome daquela mulher que teve o caso com Jesusnão era?, Maria... Maria qualquer coisa.
+- Madalena! - disseram os outros dois Carlos em uníssono e entre gargalhadas. 
+- Isso mesmo!. E com a quantidade de cartas que ela recebe, não surpreendia ninguém...
+
+A conversa é interrompida momentâneamente quando o homem, agora às voltas no corredor, diz agora mais alto: &quot;Eu matei-o! Eu matei-o&quot;. Mas quando volta a sossegar novamente, Carlos Duarte retoma o diálogo:
+
+- Eu juro, nunca hei-de perceber o tolo do Magalhães, pessoa mais suspeita não há!
+- Porque é que tinhas de me relembrar irmãozito, vamos só voltar a ignorá-lo que aquela figura não dá para compreender... Mas esperem aí, o que acham que aconteceu lá em baixo com tantos gritos?
+- Eu não sei mas...
+
+Distrais-te da conversa para olhar em volta, tentando perceber o ruído exterior...
+
+[[=&gt; Continuar a investigar a Porta 4 |2.4.f]]
+</tw-passagedata><tw-passagedata pid="36" name="2.4.d" tags="" position="1800,950" size="100,100">Aproximas-te do homem que anda em círculos pela sala, tentando discernir os seus murmúrios repetitivos.
 
 - Eu matei-o, eu matei-o, eu matei-o, e ela vai matar-nos a todos... É uma desgraça... Eu matei-o, eu matei-o, a culpa é dela... É uma desgraça. Eu matei-o...
 
@@ -808,17 +840,24 @@ Magalhães, escondido no corredor com um caderno na mão, aponta só para a deso
 
 [[=&gt; Tentas perceber a relutância dos 3 irmãos |2.4.g]] 
 [[=&gt; Aproximas-te de Magalhães |2.4.h]]
-[[=&gt; Pegas na moldura |2.4.i]]</tw-passagedata><tw-passagedata pid="38" name="2.4.g" tags="em-falta" position="1675,1450" size="100,100">- Devias ver a fotografia, ouvi dizer que reina a raiva nela...
+[[=&gt; Pegas na moldura |2.4.i]]</tw-passagedata><tw-passagedata pid="38" name="2.4.g" tags="em-falta" position="1625,1400" size="100,100">Optaste por ignorar as palavras de Magalhães que eventualmente saiu da sala a correr, para te focares na conversa dos três irmãos que debatiam o tema da tua investigação. 
 
-Sem saber exatamente a quem Magalhães se dirige, esperas um pouco para ver se algo acontece, mas toda os 3 irmãos ignoram as suas palavras misteriosas e o homem decide abandonar o apartamento e continuar a sua intriga.
+- Olha, tiraste-me mesmo as palavras da boca! Deve estar uma confusão e não me apetece nada ter que voltar para a gritaria. E pelos gritos olha que deve ser grave, a Maria de Fátima bem que parece estar muito agitada... Quase tanto como se tivesse visto o diabo! - diz um dos Carlos entre gargalhadas.
+- Pois, mas vamos ter que ir lá abaixo de qualquer uma das formas... acho que a cerveja acabou.
+- Tinha que ser, acho que não temos outro remédio.
 
-[[=&gt; Pegas na Moldura |2.4.i]]</tw-passagedata><tw-passagedata pid="39" name="2.4.i" tags="letras" position="1800,1450" size="100,100">Decides seguir as instruções de Magalhães, afastando os estilhaços e pegando na moldura antiga e na fotografia que se esconde debaixo dela. A moldura é de uma madeira acastanhada e de aparência rústica, contrastanfo com o resto da mobilia do apartamento, bastante mais banalizada, barata e comercial. Aproxima-la de ti para poderes analisar a fotografia com maior detalhe. 
+E por entre suspiros, levantando-se com dificuldade enquanto arrastavam as migalhas e todos os pacotes para o chão, os três irmãos decidem abandonar o apartamento Número 4.
+
+Preparas-te para fazer o mesmo, mas antes de te retirares, lembras-te das palavras de Magalhães... a fotografia! 
+
+[[=&gt; Pegas na moldura |2.4.i]]
+</tw-passagedata><tw-passagedata pid="39" name="2.4.i" tags="letras" position="1750,1400" size="100,100">Decides seguir as instruções de Magalhães, afastando os estilhaços e pegando na moldura antiga e na fotografia que se esconde debaixo dela. A moldura é de uma madeira acastanhada e de aparência rústica, contrastanfo com o resto da mobilia do apartamento, bastante mais banalizada, barata e comercial. Aproxima-la de ti para poderes analisar a fotografia com maior detalhe. 
 
 A fotograifia analógica encontra-se marcada pelo tempo e pelo grão típico da impressão dos anos 80.  Apesar da cor esbatida, tudo se distingue com clareza, com exceção da lateral esquerda onde um pedaço tinha sido rasgado. Na imagem, é visível um conjunto de pessoas com caras ligeiramemente familiares, posicionadas em pé, em frente a um prédio com um charme único e inconfundível, com uma fachada renovada e de portas tão vermelhas que parecem acabadinhas de pintar. O grupo é formado por várias pessoas nos seus 20/30 anos e o braço de um indíviduo impossível identificar graças ao rasgão da fotografia. Analisando com mais atenção, é fácil distinguir as feições de várias das pessoas que conheceste hoje, apesar de bem mais novas e de olhar bem mais inocente. 
 
 Aproveitas para virar a imagem, em busca de mais informações sobre os moradores no prédio. No verso é visível um carimbo vermelho e consegues ler &quot;Dia da Grande Mudança - M.&quot;.
 
-[[=&gt; Investigar o resto do prédio |2.0]]</tw-passagedata><tw-passagedata pid="40" name="2.4.h" tags="em-falta" position="1925,1450" size="100,100">Aproximas-te do homem que anda em círculos pela sala, tentando discernir os seus murmúrios repetitivos.
+[[=&gt; Investigar o resto do prédio |2.0]]</tw-passagedata><tw-passagedata pid="40" name="2.4.h" tags="em-falta" position="1875,1400" size="100,100">Aproximas-te do homem que anda em círculos pela sala, tentando discernir os seus murmúrios repetitivos.
 
 - Eu matei-o, eu matei-o, eu matei-o, e ela vai matar-nos a todos... É uma desgraça... Eu matei-o, eu matei-o, a culpa é dela... É uma desgraça. Eu matei-o...
 
@@ -835,42 +874,38 @@ Surpreendido com a abordagem direta do homem, olhas em redor, verificando que ma
 
 O homem aponta para uma moldura de madeira antiga rodeada por estilhaços e, sem qualquer aviso prévio, desata a correr, abandonando a sala.
 
-[[=&gt; Pegas na moldura |2.4.i]]</tw-passagedata><tw-passagedata pid="41" name="4.3magalhaes" tags="final" position="2300,750" size="100,100">Olhas sobre o ombro esquerdo e acenas na direção do louco, que recebe o teu sinal com visível entusiasmo. Magalhães abre a porta e atravessa a entrada, dirigindo-se ao fundo da sala, sem esperar que o sigas.
+[[=&gt; Pegas na moldura |2.4.i]]</tw-passagedata><tw-passagedata pid="41" name="4.3magalhaes" tags="final" position="2175,850" size="100,100">Olhas sobre o ombro esquerdo e acenas na direção do louco, que recebe o teu sinal com visível entusiasmo. Magalhães abre a porta e atravessa a entrada, dirigindo-se ao fundo da sala, sem esperar que o sigas.
 
 Entras cautelosamente na divisão estranhamente espaçosa. Depressa te apercebes que a sensação de espaço é uma mera ilusão resultante do facto de a única mobília presente ser a secretária sobre a qual Magalhães se debruça e a respetiva cadeira, encostadas na parede mais afastada. O ambiente é sombrio e o chão está coberto de pó, como se não fosse pisado há décadas.
 
 Atravessas a divisão na direção da secretária, perto da qual o velho louco remexe freneticamente num conjunto de papéis soltos. A primeira coisa que te chama à atenção é a claridade que circunda uma velha máquina de escrever, um círculo áureo sem origem aparente, uma vez que a divisão não tem qualquer janela. Quando os teus olhos se habituam à luz, reparas numa folha velha encravada na máquina. Pegas nela e lês em voz alta as palavras que tem escrita:
 
-Mais uma década, mais uma versão deste prédio, mais um fim, igual a todos os outros. As chances de redenção acabaram e os moradores estão, como sempre, à beira do colapso. Qualquer pequeno distúrbio irá levantar intrigas, gerar o caos, acabar com tudo. Só há uma questão: o que vou fazer? 
+Mais uma versão deste prédio, mais um fim, igual a todos os outros. As chances de redenção acabaram e os moradores estão, como sempre, à beira do colapso. Qualquer pequeno distúrbio irá levantar intrigas, gerar o caos, acabar com tudo. Só há uma questão: o que vou fazer? 
 M.
 
 Quando acabas de ler a mensagem do antigo dono do prédio, voltas a tua atenção para Magalhães, que ainda está focado no pequeno conjunto de folhas soltas que encontrou na secretária. Com a folha que arrancaste ainda na mão, diriges-te a Magalhães:
 
 [[=&gt; Porque estás tão interessado nessas folhas? |4.3.a]]
-[[=&gt; Foste tu que escreveste isto?  |4.3.b]]</tw-passagedata><tw-passagedata pid="42" name="4.2default" tags="final" position="2300,625" size="100,100">Olhas uma última vez à tua volta e tentas absorver todas as sensações que te rodeiam, tentando memorizar, uma vez mais, todo o ambiente que estiveste a investigar nas últimas horas.
+[[=&gt; Foste tu que escreveste isto?  |4.3.b]]</tw-passagedata><tw-passagedata pid="42" name="4.2default" tags="final" position="2175,725" size="100,100">Olhas uma última vez à tua volta e tentas absorver todas as sensações que te rodeiam, tentando memorizar, uma vez mais, todo o ambiente que estiveste a investigar nas últimas horas.
 
-Não sabias exatamente porquê, mas desde o momento em que abriste a porta, um peso tinha-se formado sobre o teu coração, talvez um agouro do que pudesse vir depois? Olhas em volta em jeito de captar todos os últimos pormenores, a tinta acizentada da parede decrépita, que denunciava mais anos e ciclos do que podias contar, o tom vibrante das portas vermelhas, e a palavra ORGULHO bem vísivel no topo da porta, os sons das crianças que no andar de baixo soltavam gritos animados enquanto corriam atrás das galinhas, os murmúrios, grunhos e discussões que conseguias ouvir por todo o prédio. Todo um conjunto de vidas e memórias que algo dentro de ti dizia para contemplares, quase como um sussurro de uma idosa a espreitar que te murmurava “Outro ciclo prestes a fechar...”
+Não sabes exatamente porquê, mas desde o momento em que abriste a porta, um peso formou-se sobre o teu coração, talvez um agouro do que pudesse vir depois. Olhas em volta em jeito de captar todos os últimos pormenores, a tinta acizentada da parede decrépita, que denuncia mais anos e ciclos do que podias contar, o tom vibrante das portas vermelhas, e a palavra ORGULHO bem vísivel no topo da porta, os sons das crianças que no andar de baixo soltam gritos animados enquanto correm atrás das galinhas, os murmúrios, grunhos e discussões que consegues ouvir por todo o prédio. Todo um conjunto de vidas e memórias que algo dentro de ti te diz para contemplares, quase como um sussurro de uma idosa a espreitar, murmurando “Outro ciclo prestes a fechar...”
 
-Com uma última respiração profunda, decides finalmente abrir a porta, totalmente alheio ao que te esperaria do outro lado. Mas assim que os teus olhos assentaram sobre o interior das quatro paredes do apartamento da Porta Número 3, uma divisão estranhamente espaçosa, unicamente preenchida por uma secretária com uma máquina de escrever e a respetiva cadeira é tudo o que vês. O ambiente é sombrio e o chão está coberto de pó, como se não fosse pisado há décadas.
-
-Atravessas cautelosamente a divisão na direção da secretária e aproximas-te da mobília desgastada.  
+Com uma última respiração profunda, decides finalmente abrir a porta, totalmente alheio ao que te espera do outro lado. Assim que os teus olhos assentam sobre o interior das quatro paredes do apartamento da Porta Número 3, vês uma divisão estranhamente espaçosa, unicamente preenchida por uma secretária com uma máquina de escrever e a respetiva cadeira. O ambiente é sombrio e o chão está coberto de pó, como se não fosse pisado há décadas. Atravessas cautelosamente a divisão na direção da secretária e aproximas-te da mobília desgastada.  
 
 A primeira coisa que te chama à atenção é a claridade que circunda a máquina de escrever, um círculo áureo sem origem aparente, uma vez que a divisão não tem qualquer janela. Quando os teus olhos se habituam à luz, reparas numa folha velha encravada na máquina. Pegas nela e lês em voz alta as palavras que tem escrita:
 
-Mais uma década, mais uma versão deste prédio, mais um fim, igual a todos os outros. As chances de redenção acabaram e os moradores estão, como sempre, à beira do colapso. Qualquer pequeno distúrbio irá levantar intrigas, gerar o caos, acabar com tudo. Só há uma questão: o que vou fazer? 
-M.
+\\Mais uma década, mais uma versão deste prédio, mais um fim, igual a todos os outros. As chances de redenção acabaram e os moradores estão, como sempre, à beira do colapso. Qualquer pequeno distúrbio irá levantar intrigas, gerar o caos, acabar com tudo. Só há uma questão: o que vou fazer? 
+M.\\
 
-Quando acabas de ler a mensagem de quem agora sabes ser o antigo dono do prédio, recordas-te das longas horas passadas nesta sala, das palavras sem fim digitadas nas teclas gastas da máquina de escrever, a delinear a vida de cada um dos moradores do prédio, a escrutinar os seus pecados ao mais ínfimo detalhe.
+Quando acabas de ler a mensagem recordas-te das longas horas passadas nesta sala, das palavras sem fim digitadas nas teclas gastas da máquina de escrever, a delinear a vida de cada um dos moradores do prédio, a escrutinar os seus pecados ao mais ínfimo detalhe.
 
-Olhas para trás no tempo e recordas todos aqueles que vieram antes dos atuais habitantes do prédio. Todas as famílias que corrompeste e separaste, demasiado orgulhoso do poder que possuis para perceberes os perigos a ele associado. Recordas todos os destinos que passaram pelas tuas mãos e a expressão suplicante de Magalhães leva-te a escrutinar a tua memória na tentativa de encontrar alguém que tenhas ajudado, embora saibas de antemão que tal pessoa não existe. 
+Olhas para trás no tempo e recordas todos aqueles que vieram antes dos atuais habitantes. Todas as famílias que corrompeste e separaste, demasiado orgulhoso do poder que possuis para perceberes os perigos a ele associado. 
 
-Uma vez mais, os teus dedos vagueiam sobre o teclado da antiga máquina de escrever, instintivamente sabendo que palavras se seguiriam. Talvez se tivesses investigado mais, falado com alguém que te apelasse à consciência, o resultado fosse diferente, talvez este não tivesse de ser o fim de mais uma geração de pecadores. As crianças, a idosa de figura angelical e o louco estariam a salvo, claramente, porque aquele que tenta salvar ou não sabe o que faz, está longe do caminho do pecado. Mas os detentores dos 7 Sacrilégios - a Raiva, a Gula, o Orgulho, a Avareza, a Luxúria, a Inveja e a Preguiça, não têm salvação do destino infernal e tortuoso que os aguarda.
+Uma vez mais, os teus dedos vagueiam sobre o teclado da antiga máquina de escrever, instintivamente sabendo que palavras se seguem. Talvez se tivesses investigado mais, falado com alguém que te apelasse à consciência, o resultado fosse diferente, talvez este não tivesse de ser o fim de mais uma geração de pecadores. As crianças, a idosa de figura angelical e o louco estarão a salvo, por serem demasiado inocentes para conhecerem o caminho do pecado. Mas os detentores dos 7 Sacrilégios - a Raiva, a Gula, o Orgulho, a Avareza, a Luxúria, a Inveja e a Preguiça - não têm salvação do destino infernal e tortuoso que os aguarda.
 
-Mas sem alguém a levantar-te a esperança e a questionar a moralidade das tuas ações, as palavras que escreveste pareciam-te as as mais adequadas para mais um fim da história dos moradores do Prédio das Portas Vermelhas.  
+As palavras que escreves começam a ganhar forma no papel que conta toda a história das vidas, relações, memórias e detalhes dos habitantes do prédio:
 
-As palavras que acabaste de escrever ganham forma no papel que contava toda a história, das vidas, relações, memórias e detalhes dos habitantes do prédio.
-
-‘[[=&gt; Assaltar a mercearia |5.1mau]]’</tw-passagedata><tw-passagedata pid="43" name="4.1sebastiana" tags="final" position="2300,500" size="100,100">Olhas sobre o ombro direito para confirmares que a Sebastiana ainda se encontra atrás de ti e verificas que esta não se moveu um milímetro. A sua expressão misteriosa transforma-se pela primeira vez num sorriso bondoso e a mulher incita-te a entrar na habitação, indicando a porta vermelha com a mão.
+[[=&gt; Assaltar a mercearia|5.1mau]]</tw-passagedata><tw-passagedata pid="43" name="4.1sebastiana" tags="final" position="2175,600" size="100,100">Olhas sobre o ombro direito para confirmares que a Sebastiana ainda se encontra atrás de ti e verificas que esta não se moveu um milímetro. A sua expressão misteriosa transforma-se pela primeira vez num sorriso bondoso e a mulher incita-te a entrar na habitação, indicando a porta vermelha com a mão.
 
 Abres a porta e entras cautelosamente numa divisão estranhamente espaçosa. Depressa te apercebes que a sensação de espaço é uma mera ilusão resultante do facto de a única mobília presente ser uma secretária com uma máquina de escrever e a respetiva cadeira, encostadas na parede mais afastada. O ambiente é sombrio e o chão está coberto de pó, como se não fosse pisado há décadas.
 
@@ -878,33 +913,32 @@ Atravessas cautelosamente a divisão na direção da secretária, olhando period
 
 A primeira coisa que te chama à atenção é a claridade que circunda a máquina de escrever, um círculo áureo sem origem aparente, uma vez que a divisão não tem qualquer janela. Quando os teus olhos se habituam à luz, reparas numa folha velha encravada na máquina. Pegas nela e lês em voz alta as palavras que tem escrita:
 
-Mais uma década, mais uma versão deste prédio, mais um fim, igual a todos os outros. As chances de redenção acabaram e os moradores estão, como sempre, à beira do colapso. Qualquer pequeno distúrbio irá levantar intrigas, gerar o caos, acabar com tudo. Só há uma questão: o que vou fazer? 
+Mais uma versão deste prédio, mais um fim, igual a todos os outros. As chances de redenção acabaram e os moradores estão, como sempre, à beira do colapso. Qualquer pequeno distúrbio irá levantar intrigas, gerar o caos, acabar com tudo. Só há uma questão: o que vou fazer? 
 M.
+
 Quando acabas de ler a mensagem do antigo dono do prédio, Sebastiana fala pela primeira vez desde que entraram na sala.
 
-A vida é feita de escolhas. Todos os dias, desde que acordamos até irmos dormir somos confrontados com escolhas e temos de decidir o que fazer. Pode parecer irrelevante, mas cada passo que dás, cada escolha que fazes, influencia a pessoa que és. Por isso, repito a pergunta que fizeste a ti mesmo: o que vais fazer, M.?
+- A vida é feita de escolhas. Todos os dias, desde que acordamos até irmos dormir somos confrontados com escolhas e temos de decidir o que fazer. Pode parecer irrelevante, mas cada passo que dás, cada escolha que fazes, influencia a pessoa que és. Por isso, repito a pergunta que fizeste a ti mesmo: o que vais fazer, M.?
 
 Quando Sebastiana se dirije a ti pelo teu nome pela primeira vez, todas as tuas memórias regressam em catadupa. Recordas-te das longas horas passadas nesta sala, das palavras sem fim digitadas nas teclas gastas da máquina de escrever, a delinear a vida de cada um dos moradores do prédio, a escrutinar os seus pecados ao mais ínfimo detalhe. A figura de Sebastiana, ao teu lado, parece de súbito mais imponente. O foco de claridade da sala abandonou a máquina e concentra-se agora nela.
 
-Não é tarde demais, M., as regras são simples: o que não está escrito ainda pode ser alterado. Sabes que não te posso deixar levar todos eles, seria injusto. O louco e as crianças virão comigo. Os restantes são teus, se assim os quiseres. A decisão é tua.
+- Não é tarde demais, M., as regras são simples: o que não está escrito ainda pode ser alterado. Sabes que não te posso deixar levar todos eles, seria injusto. O louco e as crianças virão comigo. Os restantes são teus, se assim os quiseres. A decisão é tua.
 
 Olhas uma vez mais para a folha e pensas novamente: o que vou fazer? Colocas o papel na máquina de escrever e digitas…
 
 [[=&gt; Assaltar a mercearia |5.1mau]]
-[[=&gt; Deixar os residentes em paz |4.1.a]]</tw-passagedata><tw-passagedata pid="44" name="4.1.a" tags="" position="2625,550" size="100,100">Escreves as palavras apressadamente na máquina, decidido a mudar o desfecho habitual do jogo que tens vindo a conduzir nas últimas décadas. 
+[[=&gt; Deixar os residentes em paz |4.1.a]]</tw-passagedata><tw-passagedata pid="44" name="4.1.a" tags="" position="2500,650" size="100,100">Escreves as palavras apressadamente na máquina, decidido a mudar o desfecho habitual do jogo que tens vindo a conduzir nas últimas décadas. Quando terminas de escrever, nada acontece. Não te consegues mexer e o silêncio que te rodeia é horrorizante. Esperas desesperado por um sinal que te indique que tudo mudou. Quando sentes a mão da Sebastiana pousar no teu ombro, toda a tensão desaparece e uma sensação desconhecida percorre o teu corpo.
 
-Quando terminas de escrever, nada acontece. Não te consegues mexer e o silêncio que te rodeia é horrorizante. Esperas desesperado por um sinal que te indique que tudo mudou. Quando sentes a mão da Sebastiana pousar no teu ombro, toda a tensão desaparece e uma sensação desconhecida percorre o teu corpo.
-
-Estás livre, M., tu e todos eles. Fizeste a escolha certa.
+- Estás livre, M., tu e todos eles. Fizeste a escolha certa.
 
 [[=&gt; Como sabias que o que ia fazer? |4.1.b]]
 [[=&gt; Porque está tudo em silêncio, onde está toda a gente? |4.1.c]]
 
-</tw-passagedata><tw-passagedata pid="45" name="4.1.b" tags="" position="2800,500" size="100,100">Não sabia. Como te disse, a decisão era unicamente tua. Deixa a máquina, agora que os libertaste eu tomarei conta do resto. Sabes que estão em boas mãos.
+</tw-passagedata><tw-passagedata pid="45" name="4.1.b" tags="" position="2675,600" size="100,100">- Não sabia. Como te disse, a decisão era unicamente tua. Deixa a máquina, agora que os libertaste eu tomarei conta do resto. Sabes que estão em boas mãos.
 
 [[=&gt; Avançar |6.1bom]]
 
-</tw-passagedata><tw-passagedata pid="46" name="4.1.c" tags="" position="2800,625" size="100,100">Não te preocupes com o silêncio, os moradores estão bem e com o tempo expiarão os seus pecados. Deixa a máquina, agora que os libertaste eu tomarei conta do resto. Sabes que estão em boas mãos.
+</tw-passagedata><tw-passagedata pid="46" name="4.1.c" tags="" position="2675,725" size="100,100">- Não te preocupes com o silêncio, os moradores estão bem e com o tempo expiarão os seus pecados. Deixa a máquina, agora que os libertaste eu tomarei conta do resto. Sabes que estão em boas mãos.
 
 [[=&gt; Avançar |6.1bom]]</tw-passagedata><tw-passagedata pid="47" name="2.2.a" tags="" position="1850,250" size="100,100">- Já não basta vivermos neste cubículo e ainda temos de ouvir a barulheira dos outros. – diz Amanda a Pedro, quando por todo o prédio ecoa o burburinho de vozes exaltadas vindas da casa do senhorio e das brincadeiras das crianças na rua.
 Tentando ajoelhar-se num espaço vazio quase inexistente, Amanda encosta um copo de vidro ao chão e, com ele, tenta ouvir as conversas vindas do apartamento do senhorio. Algo havia acontecido.
@@ -1058,19 +1092,19 @@ Fátima abandona a casa em direção à mercearia, levando as 6 crianças consig
 	
 As crianças são interrompidas por um grito estridente da mãe, na divisão ao lado, dirigindo-se apressadamente na sua direção.  
 
-[[=&gt; Continuar|2.1.f]] </tw-passagedata><tw-passagedata pid="58" name="4.3.a" tags="" position="2500,800" size="100,100">Magalhães para de remexer nas folhas por um segundo e fala agitadamente:
+[[=&gt; Continuar|2.1.f]] </tw-passagedata><tw-passagedata pid="58" name="4.3.a" tags="" position="2375,900" size="100,100">Magalhães para de remexer nas folhas por um segundo e fala agitadamente:
 
 - Eles vão todos morrer, eu tentei avisá-los. Esta é a única hipótese que tenho de os salvar. Tens de te lembrar, tens de te lembrar…
 
 O velho continua a mexer freneticamente nas folhas até que chega a uma decisão em relação à forma como as deve ordenar. Com a mão que tem livre retira do bolso o seu caderno, envelhecido pelo tempo. Percorre-o de uma ponta à outra, colocando as folhas soltas em lugares de onde parecem ter sido arrancadas páginas.
 
-[[=&gt; Aproxima-te para veres o caderno completo |4.3.c]]</tw-passagedata><tw-passagedata pid="59" name="4.3.b" tags="" position="2500,925" size="100,100">Magalhães para de remexer nas folhas por um segundo e olha na tua direção com uma expressão confusa.
+[[=&gt; Aproxima-te para veres o caderno completo |4.3.c]]</tw-passagedata><tw-passagedata pid="59" name="4.3.b" tags="" position="2375,1025" size="100,100">Magalhães para de remexer nas folhas por um segundo e olha na tua direção com uma expressão confusa.
 
 - Eles vão todos morrer, eu tentei avisá-los. Mas ainda vou a tempo, não é impossível salvá-los. Mas está tudo dependente de ti… não pode ser…
 
 O velho continua a mexer freneticamente nas folhas até  que chega a uma decisão em relação à forma como as deve ordenar. Com a mão que tem livre retira do bolso o seu caderno, envelhecido pelo tempo. Percorre-o de uma ponta à outra, colocando as folhas soltas em lugares de onde parecem ter sido arrancadas páginas.
 
-[[=&gt; Aproxima-te para veres o caderno completo |4.3.c]]</tw-passagedata><tw-passagedata pid="60" name="4.3.c" tags="" position="2650,875" size="100,100">Começas a ler as palavras escritas no velho caderno e depressa te apercebes que descrevem detalhadamente a vida dos moradores do prédio, desde momentos do quotidiano aos detalhes mais íntimos. 
+[[=&gt; Aproxima-te para veres o caderno completo |4.3.c]]</tw-passagedata><tw-passagedata pid="60" name="4.3.c" tags="" position="2525,975" size="100,100">Começas a ler as palavras escritas no velho caderno e depressa te apercebes que descrevem detalhadamente a vida dos moradores do prédio, desde momentos do quotidiano aos detalhes mais íntimos. 
 
 Um conjunto de memórias atinge-te repentinamente e recordas-te das longas horas passadas nesta sala, das palavras sem fim digitadas nas teclas gastas da máquina de escrever, a delinear a vida de cada um dos moradores do prédio, a escrutinar os seus pecados ao mais ínfimo detalhe. A figura de Magalhães, ao teu lado, olha-te contemplativamente e dirige-se a ti, oferecendo-te o caderno:
 
@@ -1083,11 +1117,12 @@ Olhas para trás no tempo e recordas todos aqueles que vieram antes dos atuais h
 Olhas uma vez mais para a folha e pensas novamente: o que vou fazer? Colocas o papel na máquina de escrever e digitas…
 
 [[=&gt; Assaltar a mercearia |5.1mau]]
-[[=&gt; Deixar os residentes em paz |8.e]]</tw-passagedata><tw-passagedata pid="61" name="5.1mau" tags="" position="2625,675" size="100,100">Assim que a última letra acaba de ser marcada no papel, a sala passa de vazia a completamente cheia. Estás rodeado pelos produtos da loja do Sr. Bernardo e o tumulto nas restantes casas do prédio é evidente. Olhas em volta, mas mais ninguém está contigo. Sentes o ódio a crescer dentro de ti, pois sabes que Sebastiana interveio para salvar as crianças e o louco, impedindo-te de levares também os inocentes na tua viagem infernal. 
+[[=&gt; Deixar os residentes em paz |8.e]]</tw-passagedata><tw-passagedata pid="61" name="5.1mau" tags="" position="2500,775" size="100,100">Assim que a última letra acaba de ser marcada no papel, a sala passa de vazia a completamente cheia. Estás rodeado pelos produtos da loja do Sr. Bernardo e o tumulto nas restantes casas do prédio é evidente. Olhas em volta, mas mais ninguém está contigo. Sentes o ódio a crescer dentro de ti, pois sabes que Sebastiana interveio para salvar as crianças e o louco, impedindo-te de levares também os inocentes na tua viagem infernal. 
+
 Deixas o quarto para trás e atravessas o corredor do primeiro andar, onde os vizinhos discutem agressivamente sem qualquer sentido. Quando sais para a rua a tabuleta da entrada parece mais descaída, mais torta, prestes a colapsar. 
 
 Aprecias uma última vez a fachada do Prédio das Portas Vermelhas, de onde se soltam gritos de vozes angustiadas, tal e qual um transporte direto para o Inferno, a arder em pecados. O teu trabalho está feito. Em breve os sons morrerão e o prédio ficará vazio até um novo conjunto de pecadores o vir habitar e tu ditares o seu destino. 
-</tw-passagedata><tw-passagedata pid="62" name="8.e" tags="" position="2800,825" size="100,100">Escreves as palavras apressadamente na máquina, decidido a mudar o desfecho habitual do jogo que tens vindo a conduzir nas últimas décadas. 
+</tw-passagedata><tw-passagedata pid="62" name="8.e" tags="" position="2675,925" size="100,100">Escreves as palavras apressadamente na máquina, decidido a mudar o desfecho habitual do jogo que tens vindo a conduzir nas últimas décadas. 
 
 Quando terminas de escrever, nada acontece. Não te consegues mexer e o silêncio que te rodeia é horrorizante. Esperas desesperado por um sinal que te indique que tudo mudou. A tensão que sentes é subitamente quebrada pelas palavras de Magalhães. 
 
@@ -1095,10 +1130,10 @@ Quando terminas de escrever, nada acontece. Não te consegues mexer e o silênci
 
 Sem esperar por uma resposta, Magalhães corre para o exterior do quarto. Depressa ouves os seus gritos de alegria, ao encontrar os restantes moradores. Sorris com a alegria do velho e lanças um último olhar à máquina de escrever, deixando para trás a divisão.
 
-[[=&gt; Avançar |6.1bom]]</tw-passagedata><tw-passagedata pid="63" name="6.1bom" tags="" position="2975,600" size="100,100">Ao abandonares o quarto, notas que o nível de claridade no interior do prédio é maior do que te lembravas. À medida que passas pelos apartamentos, apanhas conversas indistintas, em vozes muito menos revoltosas que anteriormente, embora ainda agitadas. Sabes que, com o tempo, tudo irá ao sítio. Muito do mal que fizeste tem ainda de ser desfeito.
+[[=&gt; Avançar |6.1bom]]</tw-passagedata><tw-passagedata pid="63" name="6.1bom" tags="" position="2850,700" size="100,100">Ao abandonares o quarto, notas que o nível de claridade no interior do prédio é maior do que te lembravas. À medida que passas pelos apartamentos, apanhas conversas indistintas, em vozes muito menos revoltosas que anteriormente, embora ainda agitadas. Sabes que, com o tempo, tudo irá ao sítio. Muito do mal que fizeste tem ainda de ser desfeito.
 
 Quando sais para a rua a tabuleta da entrada captura a tua atenção. Diriges-te a ela e puxas a ponta descaída para cima, na tentativa de a endireitar. Admiras uma última vez a fachada do Prédio das Portas Vermelhas, nostálgico, pois sabes que não voltarás a cruzar a sua entrada. A partir de agora, apenas irás ditar o teu próprio destino. 
-</tw-passagedata><tw-passagedata pid="64" name="4.0" tags="" position="2025,750" size="100,100">&lt;&lt;audio &quot;door3&quot; loop play&gt;&gt;\
+</tw-passagedata><tw-passagedata pid="64" name="4.0" tags="" position="1925,700" size="100,100">&lt;&lt;audio &quot;door3&quot; loop play&gt;&gt;\
 &lt;&lt;if $hasLetterO &amp;&amp; $hasLetterR &amp;&amp; $hasLetterG &amp;&amp; $hasLetterU &amp;&amp; $hasLetterL&gt;&gt;
 Aproximas-te da porta número 3, constantando que já colecionaste letras suficientes para preencher o enigmático quadro que se encontra à tua frente. 
 
@@ -1140,16 +1175,16 @@ No meio dos rabiscos, és capaz de discernir claramente a letra L, pintada a cor
 [[=&gt; Voltas para a entrada e exploras uma nova porta|2.0]] 
 &lt;&lt;else&gt;&gt;
  [[=&gt; Continuar|2.1.f]] 
-&lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="68" name="5" tags="" position="1050,1175" size="100,100">Abandonas a mercearia e sobes as escadas, entrando na casa número 1 e atravessando até ao quarto onde Adão e Eva colocaram a armadilha do fio. Ainda no chão, Magalhães faz um esforço por se erguer, agarrando-se à ombreira da porta.
+&lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="68" name="5" tags="" position="1000,1025" size="100,100">Abandonas a mercearia e sobes as escadas, entrando na casa número 1 e atravessando até ao quarto onde Adão e Eva colocaram a armadilha do fio. Ainda no chão, Magalhães faz um esforço por se erguer, agarrando-se à ombreira da porta.
 
 [[=&gt; Ofereces-lhe ajuda|5.a]]
-[[=&gt; Esperas que ele repare na tua presença|5.b]]</tw-passagedata><tw-passagedata pid="69" name="5.b" tags="" position="1175,1300" size="100,100">Após um minuto de desespero, Magalhães consegue equilibrar-se e olha em seu redor, reparando na tua presença. Dirige-se a ti num tom desconfiado:
+[[=&gt; Esperas que ele repare na tua presença|5.b]]</tw-passagedata><tw-passagedata pid="69" name="5.b" tags="" position="1125,1150" size="100,100">Após um minuto de desespero, Magalhães consegue equilibrar-se e olha em seu redor, reparando na tua presença. Dirige-se a ti num tom desconfiado:
 
 - O que estás a fazer aqui, esta casa não te pertence?
 - E tu, o que estás a fazer aqui? Que eu saiba, esta casa também não te pertence.
 
 [[=&gt; Continuar|5.d]]
-</tw-passagedata><tw-passagedata pid="70" name="5.a" tags="" position="1050,1300" size="100,100">Aproximas-te do homem caído no chão e estendes-lhe a mão, dizendo:
+</tw-passagedata><tw-passagedata pid="70" name="5.a" tags="" position="1000,1150" size="100,100">Aproximas-te do homem caído no chão e estendes-lhe a mão, dizendo:
 
 - Precisas de ajuda?
 
@@ -1159,7 +1194,7 @@ Magalhães olha para ti com uma expressão aliviada, sorrindo ao agarrar a mão 
 
 [[=&gt; Explicas que foi uma partida das crianças|5.c]]
 [[=&gt; Perguntas a Magalhães o que está a fazer naquele apartamento|5.d]]
-</tw-passagedata><tw-passagedata pid="71" name="5.d" tags="" position="1175,1425" size="100,100">Magalhães olha em volta com cautela, na tentativa de verificar se se encontram sozinhos antes de continuar a falar:
+</tw-passagedata><tw-passagedata pid="71" name="5.d" tags="" position="1125,1275" size="100,100">Magalhães olha em volta com cautela, na tentativa de verificar se se encontram sozinhos antes de continuar a falar:
 
 - Vim à procura de pistas… Têm de estar por aqui, aquela mulher é a culpada de tudo isto… Só me faltam algumas páginas, para perceber o que vai acontecer a seguir… O meu caderno!!!
 
@@ -1167,13 +1202,13 @@ Magalhães percorre todos os bolsos do seu casaco pesado, à procura de um objet
 
 [[=&gt; Apanhas o caderno e entrega-lo a Magalhães|5.e]]
 [[=&gt; Apanhas o caderno e começas a folheá-lo|5.f]]
-</tw-passagedata><tw-passagedata pid="72" name="5.c" tags="" position="1050,1425" size="100,100">Apontas para o fio que se encontra esticado entre as duas extremidades da porta e dizes:
+</tw-passagedata><tw-passagedata pid="72" name="5.c" tags="" position="1000,1275" size="100,100">Apontas para o fio que se encontra esticado entre as duas extremidades da porta e dizes:
 
 - Tropeçaste, sim. Os filhos mais novos da Sr. Carneiro apanharam-te na sua partida. 
 - Aqueles diabretes…
 - Se te servir de algum conforto, o objetivo deles era apanhar o pai.
 
-[[=&gt; Continuar|5.d]]</tw-passagedata><tw-passagedata pid="73" name="5.e" tags="" position="1300,1300" size="100,100">Apanhas o caderno e estende-lo na direção de Magalhães:
+[[=&gt; Continuar|5.d]]</tw-passagedata><tw-passagedata pid="73" name="5.e" tags="" position="1250,1150" size="100,100">Apanhas o caderno e estende-lo na direção de Magalhães:
 
 - É isto que procuras?
 
@@ -1185,7 +1220,7 @@ Magalhães afasta-se rapidamente na direção da saída da casa número 1. Antes
 
 - Obrigado pela ajuda!
 
-[[=&gt; Voltas para a entrada e exploras uma nova porta|2.0]] </tw-passagedata><tw-passagedata pid="74" name="5.f" tags="" position="1350,1425" size="100,100">Apanhas o caderno e começas a folheá-lo, reparando que contém várias páginas soltas no seu interior, todas escritas à máquina. Antes de conseguires ler alguma coisa, contudo, Magalhães retira-te o caderno das mãos e começa a falar sozinho.
+[[=&gt; Voltas para a entrada e exploras uma nova porta|2.0]] </tw-passagedata><tw-passagedata pid="74" name="5.f" tags="" position="1325,1275" size="100,100">Apanhas o caderno e começas a folheá-lo, reparando que contém várias páginas soltas no seu interior, todas escritas à máquina. Antes de conseguires ler alguma coisa, contudo, Magalhães retira-te o caderno das mãos e começa a falar sozinho.
 
 - Ainda bem que não o perdi, meses de pesquisa… horas sem dormir… tenho de sair daqui… 
 
@@ -1198,7 +1233,7 @@ Magalhães olha para ti com desconfiança uma última vez e afasta-se rapidament
 
 Aquela mulher… E agora este… Estamos condenados!
 &lt;&lt;end if&gt;&gt;
-[[=&gt; Voltas para a entrada e exploras uma nova porta|2.0]] </tw-passagedata><tw-passagedata pid="75" name="4.0.1" tags="" position="2050,950" size="100,100">&lt;&lt;if $codeWord==&quot;ORGULHO&quot;&gt;&gt;
+[[=&gt; Voltas para a entrada e exploras uma nova porta|2.0]] </tw-passagedata><tw-passagedata pid="75" name="4.0.1" tags="" position="1925,850" size="100,100">&lt;&lt;if $codeWord==&quot;ORGULHO&quot;&gt;&gt;
 Ao proferires a palavra &#39;&#39;ORGULHO&#39;&#39; em voz alta, ouves um “click” e reparas que o cadeado está aberto, permitindo-te entrar. Apesar de teres finalmente conseguido o que ansiavas há tanto tempo, sentes algo estranho no interior do teu corpo que te faz repensar se queres entrar no quarto sozinho.
 
 &lt;&lt;if visited(&quot;5.a&quot;) || visited(&quot;5.e&quot;) || visited(&quot;2.2.h&quot;)&gt;&gt;
@@ -1262,7 +1297,7 @@ Pelo ruído audível através da porta agora entreaberta, mais pessoas se juntar
 - Se calhar era melhor não aparecer nenhum dos três lá em baixo... o que acham?
 
 [[=&gt; Tentas perceber a relutância dos 3 irmãos |2.4.g]] 
-[[=&gt; Pegas na moldura |2.4.i]]</tw-passagedata><tw-passagedata pid="79" name="3.1" tags="" position="900,1150" size="100,100">O teu pensamento é interrompido por um grito exaltado do Sr. Carneiro:
+[[=&gt; Pegas na moldura |2.4.i]]</tw-passagedata><tw-passagedata pid="79" name="3.1" tags="" position="850,1000" size="100,100">O teu pensamento é interrompido por um grito exaltado do Sr. Carneiro:
 
 - Se eu descubro quem fez isto, ponho-vos fora desta casa ainda hoje!
 
@@ -1287,7 +1322,7 @@ Recordas-te da montagem da armadilha em que Magalhães caiu e afastas-te das cri
 Infelizmente, não sabes onde as crianças montaram a armadilha e, por isso, não consegues procurar Magalhães.
 
 [[=&gt; Voltas para a entrada e exploras uma nova porta|2.0]] 
-&lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="80" name="3.0" tags="" position="750,1150" size="100,100">Entras na mercearia a tempo de ver Ivan apontar indiscretamente na direção de Adão e Eva que estão nesse momento a abandonar a divisão a correr, sem repararem na insinuação do eslavo. Fátima solta um conjunto de insultos na direção do casal de estrangeiros, reacendendo a discussão. 
+&lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="80" name="3.0" tags="" position="700,1000" size="100,100">Entras na mercearia a tempo de ver Ivan apontar indiscretamente na direção de Adão e Eva que estão nesse momento a abandonar a divisão a correr, sem repararem na insinuação do eslavo. Fátima solta um conjunto de insultos na direção do casal de estrangeiros, reacendendo a discussão. 
 
 Contemplas o espaço que te rodeia e só consegues pensar numa palavra: caos. As caixas seladas que não tinham sido roubadas estão espalhadas pela mercearia, e algumas encontram-se caídas no chão, provavelmente devido a algum acesso de raiva dos moradores do prédio. Os casais das casas 1, 2 e 4 discutem agressivamente, libertando insultos gratuitos e acusando-se mutuamente de terem perpetuado o assalto. A discussão escala perigosamente e as acusações viram-se também para os moradores que não estão presentes: parece que toda a gente tem um motivo para ter cometido o crime. Abstrais-te das vozes que te rodeiam e tentas formular a tua própria opinião.
 
