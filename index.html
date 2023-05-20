@@ -253,10 +253,12 @@ h1 {
 #passages a:before {
   content: "";
 }
+
 .passage {
   line-height: 2;
   height: 87vh;
 }
+
 #menu-core li:first-child, #menu-core li:not(:first-child), #menu li:not(:first-child) {
   border-top: 1px solid white;
 }
@@ -266,10 +268,19 @@ h1 {
   margin-bottom: 5px;
   height: calc(100vh - 12px);
   font-size:1.5em;
-  margin-bottom:20%
-  
+  margin-bottom:20%  
 }
 
+#esquerda{
+  float:left;
+  width:35%;
+  background-color:green;
+}
+#direita{
+  float:right;
+  width:65%;
+  background-color:purple;
+}
 
 .passage.portas {
   background-image: url("https://cdn.discordapp.com/attachments/954851768657928242/1105588921875845220/bgbuilding.png");
@@ -294,7 +305,6 @@ h1 {
   top:0%;
   margin-top:9%;
   right:0%;
-  padding-right:10%;
   margin-right:7%
 }
 
@@ -501,18 +511,16 @@ h1 {text-align:center;margin-top:25vh;}
 
 &lt;&lt;link &quot;=&gt; Vamos começar!&quot; &quot;0.c&quot;&gt;&gt;&lt;&lt;set $chapter to &quot;Introdução&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 </tw-passagedata><tw-passagedata pid="15" name="0.c" tags="exterior" position="500,675" size="100,100">&lt;&lt;audio &quot;introduction&quot; loop play&gt;&gt;\
-Caminhas por uma rua abaixo, sem rumo, avançando lentamente por entre as casas e ouvindo as palavras trocadas pelos moradores. O porquê de estares aqui não importa, pois sabes que todos os caminhos irão dar, invariavelmente, ao mesmo destino. Como aconteceu de tantas outras vezes e continuará a acontecer no futuro. Não sabes qual é o teu destino nem o caminho que tens de percorrer para o atingires. Tens a certeza de uma coisa apenas: as tuas escolhas não o são realmente até lá chegares, pois todos os caminhos vão dar ao mesmo lugar. Depois… é uma incógnita.
+&lt;div id=&quot;esquerda&quot;&gt;&lt;img src=&quot;data/images/bifurcacao.png&quot; width=auto&gt;&lt;/div&gt;
+&lt;div id=&quot;direita&quot;&gt;Caminhas por uma rua abaixo, sem rumo, avançando lentamente por entre as casas e ouvindo as palavras trocadas pelos moradores. O porquê de estares aqui não importa, pois sabes que todos os caminhos irão dar, invariavelmente, ao mesmo destino. Como aconteceu de tantas outras vezes e continuará a acontecer no futuro. Não sabes qual é o teu destino nem o caminho que tens de percorrer para o atingires. Tens a certeza de uma coisa apenas: as tuas escolhas não o são realmente até lá chegares, pois todos os caminhos vão dar ao mesmo lugar. Depois… é uma incógnita.
 
-Chegas ao fim da rua e encontras uma bifurcação.
-&lt;img src=&quot;data/images/bifurcacao.png&quot; width=500&gt;
-
+Chegas ao fim da rua e encontras uma bifurcação:
 [[=&gt; Viras à esquerda para uma ruela decadente|0.d]]
-[[=&gt; Viras à direita para uma rua semelhante àquela em que te encontras|0.e]]</tw-passagedata><tw-passagedata pid="16" name="0.d" tags="exterior" position="650,600" size="100,100">A descida à tua frente é abrupta e tens de andar cautelosamente para garantir que não cais nos paralelos desnivelados da calçada. À medida que avanças, a redução de luminosidade é notória. As casas que te rodeiam estão cada vez mais degradadas e ouvem-se bocados de conversas trocadas aos berros de uma janela para outra, ao longo de toda a largura da rua. Ao virar uma esquina avistas ao fundo um edifício velho que te chama à atenção. 
-
-&lt;img src=&quot;data/images/vista_ao_longe.png&quot; width=500&gt;
-
+[[=&gt; Viras à direita para uma rua semelhante àquela em que te encontras|0.e]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="16" name="0.d" tags="exterior" position="650,600" size="100,100">&lt;div id=&quot;esquerda&quot;&gt;&lt;img src=&quot;data/images/vista_ao_longe.png&quot; width=auto&gt;&lt;/div&gt;
+&lt;div id=&quot;direita&quot;&gt;A descida à tua frente é abrupta e tens de andar cautelosamente para garantir que não cais nos paralelos desnivelados da calçada. À medida que avanças, a redução de luminosidade é notória. As casas que te rodeiam estão cada vez mais degradadas e ouvem-se bocados de conversas trocadas aos berros de uma janela para outra, ao longo de toda a largura da rua. Ao virar uma esquina avistas ao fundo um edifício velho que te chama à atenção. 
 [[=&gt; Admirar o prédio|0.g]]
-</tw-passagedata><tw-passagedata pid="17" name="0.e" tags="exterior" position="650,725" size="100,100">Viras à direita e entras numa rua ampla e luminosa. Algumas pessoas bem vestidas andam apressadamente, cumprimentando-se umas às outras de forma educada. Continuas a andar em frente e as palavras trocadas por um casal jovem que sai de um prédio chegam-te aos ouvidos por entre os ruídos da rua. 
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="17" name="0.e" tags="exterior" position="650,725" size="100,100">Viras à direita e entras numa rua ampla e luminosa. Algumas pessoas bem vestidas andam apressadamente, cumprimentando-se umas às outras de forma educada. Continuas a andar em frente e as palavras trocadas por um casal jovem que sai de um prédio chegam-te aos ouvidos por entre os ruídos da rua. 
 
 -Não dá jeito nenhum que estejam a fazer obras no fim da rua, temos de fazer um desvio enorme para chegar às caves.
 -Porque não vamos pela rua de baixo e damos a volta às obras, em vez de voltarmos todo o caminho para trás?
@@ -634,7 +642,7 @@ Os miúdos continuam a conversa que o homem tenta despachar. Ouves um estridente
 &lt;&lt;audio &quot;door3&quot; stop&gt;&gt;\
 &lt;&lt;audio &quot;door4&quot; stop&gt;&gt;\
 
-&lt;&lt;if visited(&quot;2.1&quot;)&gt;&gt;&lt;a data-passage=&quot;2.1&quot;&gt;&lt;img src=&quot;data/images/door1open.png&quot; style=&quot;margin-right:2%&quot;&gt;&lt;/a&gt;&lt;&lt;else&gt;&gt;&lt;a data-passage=&quot;2.1&quot;&gt;&lt;img src=&quot;data/images/door1closed.png&quot; style=&quot;margin-left:2%&quot;&gt;&lt;/a&gt;&lt;&lt;endif&gt;&gt;&lt;&lt;if visited(&quot;2.2&quot;)&gt;&gt;&lt;a data-passage=&quot;2.2&quot;&gt;&lt;img src=&quot;data/images/door2open.png&quot;&gt;&lt;/a&gt;&lt;&lt;else&gt;&gt;&lt;a data-passage=&quot;2.2&quot;&gt;&lt;img src=&quot;data/images/door2closed.png&quot;&gt;&lt;/a&gt;&lt;&lt;endif&gt;&gt; &lt;a data-passage=&quot;2.3&quot;&gt;&lt;&quot;data/images/door3closed.png&quot;&gt;&lt;/a&gt;&lt;&lt;if visited(&quot;2.4&quot;)&gt;&gt;&lt;a data-passage=&quot;2.4&quot;&gt;&lt;img src=&quot;data/images/door4open.png&quot; style=&quot;margin-right:2%&quot;&gt;&lt;/a&gt;&lt;&lt;else&gt;&gt;&lt;a data-passage=&quot;2.4&quot;&gt;&lt;img src=&quot;data/images/door4closed.png&quot; style=&quot;margin-right:2%&quot;&gt;&lt;/a&gt;&lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="2.1" tags="" position="1575,400" size="100,100">&lt;&lt;audio &quot;door1&quot; loop play&gt;&gt;\
+&lt;&lt;if visited(&quot;2.1&quot;)&gt;&gt;&lt;a data-passage=&quot;2.1&quot;&gt;&lt;img src=&quot;data/images/door1open.png&quot; style=&quot;margin-right:2%&quot;&gt;&lt;/a&gt;&lt;&lt;else&gt;&gt;&lt;a data-passage=&quot;2.1&quot;&gt;&lt;img src=&quot;data/images/door1closed.png&quot; style=&quot;margin-left:2%&quot;&gt;&lt;/a&gt;&lt;&lt;endif&gt;&gt;&lt;&lt;if visited(&quot;2.2&quot;)&gt;&gt;&lt;a data-passage=&quot;2.2&quot;&gt;&lt;img src=&quot;data/images/door2open.png&quot;&gt;&lt;/a&gt;&lt;&lt;else&gt;&gt;&lt;a data-passage=&quot;2.2&quot;&gt;&lt;img src=&quot;data/images/door2closed.png&quot;&gt;&lt;/a&gt;&lt;&lt;endif&gt;&gt; &lt;a data-passage=&quot;2.3&quot;&gt;&lt;img src=&quot;data/images/door3closed.png&quot;&gt;&lt;/a&gt;&lt;&lt;if visited(&quot;2.4&quot;)&gt;&gt;&lt;a data-passage=&quot;2.4&quot;&gt;&lt;img src=&quot;data/images/door4open.png&quot; style=&quot;margin-right:2%&quot;&gt;&lt;/a&gt;&lt;&lt;else&gt;&gt;&lt;a data-passage=&quot;2.4&quot;&gt;&lt;img src=&quot;data/images/door4closed.png&quot; style=&quot;margin-right:2%&quot;&gt;&lt;/a&gt;&lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="2.1" tags="" position="1575,400" size="100,100">&lt;&lt;audio &quot;door1&quot; loop play&gt;&gt;\
 &lt;&lt;if visited(&quot;2.1.f&quot;)&gt;&gt;Voltas a entrar no apartamento espaçoso onde habita a família de Bernardo e Fátima. A sala de estar está completamente vazia e não se ouve qualquer som, criando um ambiente pesado que contrasta com os rabiscos coloridos nas paredes.
 
 [[=&gt; Analisas os desenhos espalhados pelas paredes da sala|2.1.b]]
@@ -686,31 +694,29 @@ ORGULHO
 
 [[=&gt; teste fim; |3.0/mercearia]] 
 </tw-passagedata><tw-passagedata pid="32" name="2.4" tags="" position="1625,775" size="100,100">&lt;&lt;audio &quot;door4&quot; loop play&gt;&gt;\
-Decides subir ao último piso e entrar na &quot;Porta 4&quot;. Enquanto sobes as escadas, não consegues deixar de reparar no que parecem ser berros vindos do andar de cima. 
+Decides subir ao último piso e entrar na &quot;Porta Número 4&#39;&#39;. Enquanto sobes as escadas, não consegues deixar de reparar no que parecem ser berros vindos do andar de cima. 
 Ora a voz de uma mulher, um som estridente e de tom agressivo, ora a voz de um homem de sotaque carregado, voz profunda, mas que deixa transparecer uma raiva que não és capaz de ignorar.
 
-Bem tentas compreender do que se trata a conversa, mas a mistura de sotaques, ora brasileiro, ora russo, torna difícil a compreensão. À medida que os degraus vão diminuindo, o número de vozes vai aumentando, criando uma total cacofonia de sons. Somados aos sons da discussão distinguem-se uns murmúrios de vozes masculinas, enfim. Pessoas no Apartamento número 4 não parecem faltar!
+Bem tentas compreender do que se trata a conversa, mas a mistura de sotaques, ora brasileiro, ora russo, torna difícil a compreensão. À medida que os degraus vão diminuindo, o número de vozes vai aumentando, criando uma total cacofonia de sons. Somados aos sons da discussão distinguem-se uns murmúrios de vozes masculinas. Pessoas no Apartamento número 4 não parecem faltar!
 
-No entanto, no meio da confusão ainda consegues distinguir uma ou outra frase proferidas por uma voz feminina:.
+No meio da confusão consegues distinguir uma ou outra frase proferidas por uma voz feminina:.
 
-- Mas que gritaria é esta do andar de baixo? Será que o sovina finalmente percebeu que não é o pai das crianças? Ai, que gritaria, a sério, com esta barulheira toda é bom que o velho tenha finalmente batido a bota.
+- Mas que gritaria é esta no andar de baixo? Será que o sovina finalmente percebeu que não é o pai das crianças? Ai, que gritaria, a sério, com esta barulheira toda é bom que o velho tenha finalmente batido a bota.
 
-Agora com o senso de curiosidade de mais aguçado, finalmente decides entrar pela porta. Mas nada te podia preparar para o ambiente que acabas de encontrar.
-Do outro lado, a visão de uma sala de estar pequena, suja e tão pobre em mobília, surge através dos umbrais da porta.
+Agora com a curiosidade mais aguçada, decides entrar pela porta. A visão de uma sala de estar pequena, suja e tão pobre em mobília, surge através dos umbrais da porta. Nada te podia preparar para o ambiente que acabas de encontrar: o que falta em estilo e gosto, compensa na quantidade de restos de comida espalhados por todos os cantos, sacos de batatas fritas, bolachas, caixas de pizza, copos descartáveis de bebidas pegajosas que mancham o chão. Esta confusão só pode ser obra dos três homens de aparência voluptuosa sentados no sofá a devorar uma perna de presunto cada um.
 
-O que falta em estilo e gosto, compensa na quantidade de restos de comida espalhados por todos os cantos, sacos de batatas fritas, bolachas, caixas de pizza, copos descartáveis de bebidas pegajosas que mancham o chão. Esta confusão só podia ser, claramente obra dos três homens de aparência voluptuosa, sentados no sofá a devorar uma perna de presunto cada um.
+Se não fossem os restos de comida a criar mau ambiente, seriam os vários pedaços de decoração partida espalhados pela sala. Estilhaços de jarras e de loiça e uma moldura partida de onde espreita uma fotografia. Pela raiva com que as duas figuras de sotaque forte gritam uma com a outra, até é de admirar o vidro das janelas ainda estar intacto...
 
-Se não fossem os restos de comida a criar mau ambiente, seriam os vários pedaços de decoração partida espalhados pela sala. Estilhaços de jarras e de loiça, e uma moldura partida de onde espreitava uma fotografia. Pela forma como as duas figuras de sotaque forte gritam uma com a outra, até é de admirar o vidro das janelas estar intacto perante tais vozes raivosas e estridentes.
+No canto da sala, um homem anda em círculos, de expressão nervosa e mãos trémulas, segurarando um caderno castanho e desgastado enquanto da sua boca saiem frases repetitivas e incompreensíveis.
 
-No canto da sala, um homem anda em círculos, de expressão nervosa e mãos trémulas, a segurar um caderno castanho e desgastado enquanto da sua boca saíam frases repetitivas e incompreensíveis.
+Uma coisa é certa: com tantos corpos vadiando pelo apartamento pequeno e estreito, faz confusão saber que a casa abaixo está totalmente vazia e inabitada, aparentemente livre da maldade e pecados que parecem assombrar os residentes do prédio.
 
-Uma coisa era certa, com tantos corpos vadiando pelo apartamento pequeno e estreito, até faz confusão ver a porta abaixo totalmente vazia e inabitada, sem resquícios da maldade e pecados que parecem assombrar os residentes do prédio.
-Agora com uma visão ampla do caráter que assola a Porta Número 4, dos seus habitantes e comportamentos, não consegues evitar investigar mais um pouco os mistérios do apartamento barulhento, mas a quantidade de opções por onde explorar enche-te de dúvidas.
+Não consegues evitar investigar mais um pouco os mistérios do apartamento barulhento, mas a quantidade de opções por onde explorar enche-te de dúvidas.
 
 Preferes:
 [[=&gt; Aproximar-te da mulher de aparência exótica e tentar perceber o motivo da sua gritaria; |2.4.a]] 
 [[=&gt; Tentar a sorte junto do homem de sotaque forte e incompreensível e decifrar as suas palavras misteriosas; |2.4.b]]
-[[=&gt; Juntar-te ao festim dos 3 homens; |2.4.c]] 
+[[=&gt; Juntar-te ao festim dos 3 homens no sofá; |2.4.c]] 
 [[=&gt; Ajudar o homem perdido; |2.4.d]]</tw-passagedata><tw-passagedata pid="33" name="2.4.a" tags="" position="1425,950" size="100,100">Decides aproximar-te da mulher de pele morena e cabelo liso, que grita na junção entre a sala de estar e a cozinha, reclamando de toda a desorganização e restos de lixo espalhados pelo chão do apartamento.
 
 -Mas o que é que aquela tola pensa que está a fazer ali aos berros, desde a mercearia até aqui conseguimos ouvir a histérica. Ivan, tu que não fazes nada, vai ser um bom marido e desaparece-me da frente para ver o que se passa, vai!
@@ -911,7 +917,7 @@ Nesse momento, as cortinas começam a mover-se, apesar das portadas da varanda e
 - O que é isso aí no chão? – pergunta Amanda com curiosidade, apontando para um objeto abandonado perto das portadas da varanda.
 - Deve ser o chapéu da prima Sebastiana.
 - Se é dela, qual a razão de ter um “G” estampado na aba. Deve ser de alguém com essa inicial no nome.
-
+&lt;img src=&quot;data/images/chapeu.png&quot; style=&quot;width=auto; text-align:center;background-color:green;&quot;&gt;
 Decides guardar essa letra na tua memória. Pode ser importante para o futuro. Afinal de contas, nada acontece por acaso. 
 
 - Ah, onde raio anda essa mulher? – continua Amanda.
