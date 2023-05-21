@@ -305,6 +305,21 @@ align-items:center;}
   height:100%;
 }
 
+#portas2{
+  top:0;
+  margin:auto;
+  text-align:center;
+}
+
+.passage.portas2 img{
+  width:100%;
+  float:left;
+  top:0%;
+  right:0%;
+  text-align:center;
+  margin:auto;
+}
+
 #textoporta{
 text-align:center;
 font-size:1.5em;}
@@ -766,9 +781,7 @@ No canto da sala, 4 crianças brincam com um conjunto de lápis de cera, rindo-s
 
 [[=&gt; Voltas para a entrada e exploras outra porta|2]] 
 &lt;&lt;else&gt;&gt;
-Ao abrires a &#39;&#39;Porta Número 2&#39;&#39;, deparas-te com um espaço tão pequeno que te vês incapaz de transpor a porta cor de sangue, prenúncio de mau agoiro. No interior do apartamento, uma mulher, um homem e uma criança mantêm-se imóveis, com o olhar vago e inexpressivo, como se habitassem uma pintura sem movimento. Sentados numa cama que ocupa todo o espaço interior disponível, frio e claustrofóbico, o único sinal de vida percetível é o discreto piscar de olhos e os silenciosos suspiros de três pessoas imersas nos seus próprios pensamentos.
-
-A primeira a pronunciar-se é a mulher, sentada num canto da cama com uma postura ereta, pernas juntas e as mãos pousadas sobre o colo.
+&lt;div id=&quot;pares&quot;&gt;&lt;div id=&quot;esquerda&quot;&gt;&lt;img src=&quot;data/images/apartamento2.png&quot; style=&quot;width:100%;&quot;&gt;&lt;/div&gt;&lt;div id=&quot;direita&quot;&gt;Ao abrires a &#39;&#39;Porta Número 2&#39;&#39;, deparas-te com um espaço tão pequeno que te vês incapaz de transpor a porta cor de sangue, prenúncio de mau agoiro. No interior do apartamento, uma mulher, um homem e uma criança mantêm-se imóveis, com o olhar vago e inexpressivo, como se habitassem uma pintura sem movimento. Sentados numa cama que ocupa todo o espaço interior disponível, frio e claustrofóbico, o único sinal de vida percetível é o discreto piscar de olhos e os silenciosos suspiros de três pessoas imersas nos seus próprios pensamentos.&lt;/div&gt;&lt;/div&gt;A primeira a pronunciar-se é a mulher, sentada num canto da cama com uma postura ereta, pernas juntas e as mãos pousadas sobre o colo.
 
 - Não é fácil viver nestas condições... Mas como vou eu suportar sozinha o peso económico de um alojamento melhor quando o dinheiro que ganho é escasso e tu passas os teus dias enfiado em casa a aproveitar a cama vazia a refletir sobre o vazio da tua vida, Pedro?
 - Não sejas injusta, Amanda! Eu bem mereço um momento de folga quando sou obrigado a ouvir as tuas reclamações constantes e fofoquices sobre a vida dos outros.
@@ -792,10 +805,9 @@ Tentas decidir para onde te dirigir de seguida quando um pequeno papel caído pe
 
 Curioso para descobrir o seu conteúdo, desdobras cuidadosamente o papel e lês as palavras nele escritas. A caligrafia é um tanto trémula, mas é possível discernir o seguinte: &quot;Apartamento número 3, 00h01. - G.&quot;. A letra vermelha chama-te à atenção e rasgas o pedaço de papel à sua volta, certo de ter encontrado uma nova pista.
 &lt;&lt;endif&gt;&gt;[[=&gt; Voltas para a entrada e exploras outra porta|2]]</tw-passagedata><tw-passagedata pid="32" name="2.4" tags="" position="1150,1200" size="100,100">&lt;&lt;audio &quot;door4&quot; loop play&gt;&gt;\
-&lt;&lt;if visited(&quot;2.2.i&quot;)&gt;&gt;Voltas a entrar na casa do quarto andar cujos únicos habitantes são neste momento os Três Carlos, sentados no sofá a devorar o seu manjar enquanto vêm televisão. 
+&lt;&lt;if visited(&quot;2.4.i&quot;)&gt;&gt;Voltas a entrar na casa do quarto andar cujos únicos habitantes são neste momento os Três Carlos, sentados no sofá a devorar o seu manjar enquanto vêm televisão. 
 
-&lt;&lt;if $hasLetterR&gt;&gt;
-Nada de interessante parece acontecer e, por isso, decides regressar à entrada e prosseguir as tuas investigações.
+&lt;&lt;if $hasLetterR&gt;&gt;Nada de interessante parece acontecer e, por isso, decides regressar à entrada e prosseguir as tuas investigações.
 
 [[=&gt; Voltas para a entrada e exploras outra porta|2]] 
 &lt;&lt;else&gt;&gt; [[=&gt; Pegas na moldura |2.4.n]] &lt;&lt;endif&gt;&gt;
@@ -1104,9 +1116,7 @@ Ao proferir estas palavras, João revira os olhos. O irmão mais velho parece fi
 
 [[=&gt; Continuas a ouvir a conversa|2.1.d]] 
 [[=&gt; Abandonas a sala para explorar o resto do apartamento|2.1.b]]</tw-passagedata><tw-passagedata pid="53" name="2.1.c" tags="letras" position="1950,500" size="100,100">Vagueias pela sala espaçosa, passando os olhos pelas paredes completamente riscadas. Tentas perceber o que está desenhado, mas a maioria dos desenhos são impossíveis de interpretar, formando um colorida pintura abstrata. 
-
-&lt;&lt;if $hasLetterL&gt;&gt;
-&lt;img src=&quot;data/images/parede.png&quot; style=&quot;margin-left:2%;&quot;&gt;
+&lt;&lt;if $hasLetterL&gt;&gt;&lt;img src=&quot;data/images/parede.png&quot; style=&quot;margin-left:2%;&quot;&gt;
 &lt;&lt;else&gt;&gt;
 &lt;a data-passage=&quot;2.1.e&quot;&gt;&lt;div id=&quot;pistas&quot;&gt;&lt;img src=&quot;data/images/parede.png&quot;&gt;&lt;/div&gt;&lt;/a&gt;
 &lt;&lt;endif&gt;&gt;
@@ -1209,7 +1219,8 @@ Assim que a última letra acaba de ser marcada no papel, a sala passa de vazia a
 Deixas o quarto para trás e atravessas o corredor do primeiro andar, onde os vizinhos discutem agressivamente sem qualquer sentido. Quando sais para a rua a tabuleta da entrada parece mais descaída, mais torta, prestes a colapsar. 
 
 Aprecias uma última vez a fachada do Prédio das Portas Vermelhas, de onde se soltam gritos de vozes angustiadas, tal e qual um transporte direto para o Inferno, a arder em pecados. O teu trabalho está feito. Em breve os sons morrerão e o prédio ficará vazio até um novo conjunto de pecadores o vir habitar e tu ditares o seu destino. 
-</tw-passagedata><tw-passagedata pid="62" name="3.3.d" tags="" position="2925,1350" size="100,100">&lt;&lt;audio &quot;door3&quot; stop&gt;&gt;\
+
+&lt;div id=&quot;textoporta&quot; style=&quot;color:red;&quot;&gt;&#39;&#39;Fim&#39;&#39;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="62" name="3.3.d" tags="" position="2925,1350" size="100,100">&lt;&lt;audio &quot;door3&quot; stop&gt;&gt;\
 &lt;&lt;audio &quot;final_good&quot; loop play&gt;&gt;\
 Escreves as palavras apressadamente na máquina, decidido a mudar o desfecho habitual do jogo que tens vindo a conduzir nas últimas décadas. 
 
@@ -1222,7 +1233,8 @@ Sem esperar por uma resposta, Magalhães corre para o exterior do quarto. Depres
 [[=&gt; Avançar |3.b]]</tw-passagedata><tw-passagedata pid="63" name="3.b" tags="" position="3100,1100" size="100,100">Ao abandonares o quarto, notas que o nível de claridade no interior do prédio é maior do que te lembravas. À medida que passas pelos apartamentos, apanhas conversas indistintas, em vozes muito menos revoltosas que anteriormente, embora ainda agitadas. Sabes que, com o tempo, tudo irá ao sítio. Muito do mal que fizeste tem ainda de ser desfeito.
 
 Quando sais para a rua a tabuleta da entrada captura a tua atenção. Diriges-te a ela e puxas a ponta descaída para cima, na tentativa de a endireitar. Admiras uma última vez a fachada do Prédio das Portas Vermelhas, nostálgico, pois sabes que não voltarás a cruzar a sua entrada. A partir de agora, apenas irás ditar o teu próprio destino. 
-</tw-passagedata><tw-passagedata pid="64" name="2.3" tags="" position="2175,1100" size="100,100">&lt;&lt;audio &quot;door3&quot; loop play&gt;&gt;\
+
+&lt;div id=&quot;textoporta&quot; style=&quot;color:red;&quot;&gt;&#39;&#39;Fim&#39;&#39;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="64" name="2.3" tags="" position="2175,1100" size="100,100">&lt;&lt;audio &quot;door3&quot; loop play&gt;&gt;\
 &lt;&lt;if $hasLetterO &amp;&amp; $hasLetterR &amp;&amp; $hasLetterG &amp;&amp; $hasLetterL&gt;&gt;
 Aproximas-te da porta número 3, constantando que já colecionaste letras suficientes para preencher o enigmático quadro que se encontra à tua frente. 
 
@@ -1404,9 +1416,16 @@ As crianças desatam a rir com a imitação nada realista de Magalhães que Adã
 
 Contemplas o espaço que te rodeia e só consegues pensar numa palavra: caos. As caixas seladas que não tinham sido roubadas estão espalhadas pela mercearia, e algumas encontram-se caídas no chão, provavelmente devido a algum acesso de raiva dos moradores do prédio. Os casais das casas 1, 2 e 4 discutem agressivamente, libertando insultos gratuitos e acusando-se mutuamente de terem perpetrado o assalto. A discussão escala perigosamente e as acusações viram-se também para os moradores que não estão presentes: parece que toda a gente tem um motivo para ter cometido o crime. Abstrais-te das vozes que te rodeiam e tentas formular a tua própria opinião.
 
-user dá opinião, independentemente salta para 3.1
+&lt;div id=&quot;textoporta&quot;&gt;&#39;&#39;Quem será o responsável pelo assalto?&#39;&#39;&lt;/div&gt;
+&lt;div id=&quot;portas2&quot;&gt;&lt;a data-passage=&quot;2.0.a&quot;&gt;&lt;img src=&quot;data/images/fatima.png&quot; style=&quot;width:20%; margin-right:2%&quot;&gt;&lt;/a&gt;&lt;a data-passage=&quot;2.0.a&quot;&gt;&lt;img src=&quot;data/images/bernardo.png&quot; style=&quot;width:20%; margin-right:2%&quot;&gt;&lt;/a&gt;&lt;a data-passage=&quot;2.0.a&quot;&gt;&lt;img src=&quot;data/images/adaoeva.png&quot; style=&quot;width:20%; margin-right:2%&quot;&gt;&lt;/a&gt;&lt;a data-passage=&quot;2.0.a&quot;&gt;&lt;img src=&quot;data/images/criancas.png&quot; style=&quot;width:20%; margin-right:2%&quot;&gt;&lt;/a&gt;
+&lt;/div&gt;&lt;div id=&quot;portas2&quot;&gt;&lt;a data-passage=&quot;2.0.a&quot;&gt;&lt;img src=&quot;data/images/amanda.png&quot; style=&quot;width:20%; margin-right:2%&quot;&gt;&lt;/a&gt;&lt;a data-passage=&quot;2.0.a&quot;&gt;&lt;img src=&quot;data/images/pedro.png&quot; style=&quot;width:20%; margin-right:2%&quot;&gt;&lt;/a&gt;&lt;a data-passage=&quot;2.0.a&quot;&gt;&lt;img src=&quot;data/images/artur.png&quot; style=&quot;width:20%; margin-right:2%&quot;&gt;&lt;/a&gt;&lt;a data-passage=&quot;2.0.a&quot;&gt;&lt;img src=&quot;data/images/sebastiana.png&quot; style=&quot;width:20%; margin-right:2%&quot;&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;div id=&quot;portas2&quot;&gt;&lt;a data-passage=&quot;2.0.a&quot;&gt;&lt;img src=&quot;data/images/ivanglor.png&quot; style=&quot;width:20%; margin-right:2%&quot;&gt;&lt;/a&gt;&lt;a data-passage=&quot;2.0.a&quot;&gt;&lt;img src=&quot;data/images/trescarlos.png&quot; style=&quot;width:20%; margin-right:2%&quot;&gt;&lt;/a&gt;&lt;a data-passage=&quot;2.0.a&quot;&gt;&lt;img src=&quot;data/images/magalhaes.png&quot; style=&quot;width:20%; margin-right:2%&quot;&gt;&lt;/a&gt;&lt;a data-passage=&quot;2.0.a&quot;&gt;&lt;img src=&quot;data/images/sr_m.png&quot; style=&quot;width:20%; margin-right:2%&quot;&gt;&lt;/a&gt;
+&lt;/div&gt;
 
-[[algo|2.0.a]]</tw-passagedata><tw-passagedata pid="81" name="2.4.e" tags="" position="1075,1550" size="100,100">Agora totalmente sozinhos, com exceção do louco que anda aos círculos em murmúros repetitivos, o grupo dos Três Carlos decide aproveitar o momento de privacidade para uma conversa entre irmãos a acompanhar pitéu:
+
+
+</tw-passagedata><tw-passagedata pid="81" name="2.4.e" tags="" position="1075,1550" size="100,100">Agora totalmente sozinhos, com exceção do louco que anda aos círculos em murmúros repetitivos, o grupo dos Três Carlos decide aproveitar o momento de privacidade para uma conversa entre irmãos a acompanhar pitéu:
 
 - Não sei qual é o problema daquele casal, tanto discutem, tanto discutem, partem tudo e dão-se mal com toda a gente, mas somos sempre nós, aqui caladinhos na nossa, que somos o problema? Passa-me aí o queijo, Carlos António, com a gritaria toda até sinto a minha tensão arterial a descer...
 - Toma, aqui tens, mas também quero um pedaço! Mas tens toda a razão, bem que o título de Ivan o terrível e Gloriana a rainha maldosa lhes fica bem... A Amanda até pode ter muitos defeitos e ser uma invejosa de primeira, mas as alcunhas que ela dá assentam que nem um mimo.... Espera aí José Carlos, lembras-te daquele fabuloso nome que deu à mulher do Carneiro?
@@ -1434,7 +1453,6 @@ A expressão de Artur mostra algum desapontamento ao constatar que ninguém se e
 - Se é dela, qual a razão de ter um &#39;&#39;G&#39;&#39; estampado na aba. Deve ser de alguém com essa inicial no nome.
 
 &lt;div id=&quot;pistas&quot;&gt;&lt;img src=&quot;data/images/chapeu.png&quot;&gt;&lt;/div&gt;
-
 Decides guardar esta letra na tua memória, pois pode ser importante para o futuro. Afinal de contas, nada acontece por acaso...
 
 Amanda pronuncia-se novamente, pousando o chapéu em cima da cama:
