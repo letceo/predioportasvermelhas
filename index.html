@@ -272,18 +272,25 @@ h1 {
   margin-bottom:20%  
 }
 
+#pares{
+width:100%;
+display:flex;
+align-items:center;}
+
 #esquerda{
   float:left;
-  width:40%;
+  width:35%;
+  margin-left:2%;
 }
 
 #esquerda img{
-  width:auto;
+  width:100%;
 }
 
 #direita{
   float:right;
   width:60%;
+  margin:auto;
 }
 
 .passage.portas {
@@ -436,7 +443,37 @@ display: block;
     height:auto;
     width:60%;
 }
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript">//long return
+  #esquerda{
+  float:none;}
+  
+  #direita{
+  float:none;}
+}
+
+@media screen and (max-width: 800px) {
+  .passage #direita{
+  line-height:1.5;}
+  
+  #pares{
+    margin-top:2%;
+}
+
+@media screen and (max-width: 662px) {
+  #pares{
+    height:auto;
+    position:relative;
+    display:block;
+}
+  
+  #esquerda{
+  float:none;
+  width:100%;}
+  
+  #direita{
+  float:none;
+  width:100%;}
+}
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">//long return
 $(document).on(':passagestart', function (ev) {
     if (!ev.passage.tags.includes('no-return')) {
         State.variables.return = ev.passage.title;
@@ -552,14 +589,12 @@ h1 {text-align:center;margin-top:25vh;}
 Caminhas por uma rua abaixo, sem rumo, avançando lentamente por entre as casas e ouvindo as palavras trocadas pelos moradores. O porquê de estares aqui é-te desconhecido, mas sabes que todos os caminhos irão dar, invariavelmente, ao mesmo destino. 
 
 Não sabes que destino é esse nem o caminho que tens de percorrer para o atingires, mas tens a certeza de uma coisa: as tuas escolhas não o são realmente até lá chegares, pois todos os caminhos vão dar ao mesmo lugar. Depois… é uma incógnita.
-&lt;div id=&quot;esquerda&quot;&gt;&lt;img src=&quot;data/images/bifurcacao.png&quot; style=&quot;width:100%;&quot;&gt;&lt;/div&gt;
-
-&lt;div id=&quot;direita&quot;&gt;Chegas ao fim da rua e encontras uma bifurcação:
+&lt;div id=&quot;pares&quot;&gt;&lt;div id=&quot;esquerda&quot;&gt;&lt;img src=&quot;https://cdn.discordapp.com/attachments/954851768657928242/1109765673908969492/bifurcacao.png&quot;&gt;&lt;/div&gt;&lt;div id=&quot;direita&quot;&gt;Chegas ao fim da rua e encontras uma bifurcação:
 
 [[=&gt; Viras à esquerda para uma ruela decadente|0.d]]
 [[=&gt; Viras à direita para uma rua semelhante àquela em que te encontras|0.e]]
 &lt;/div&gt;
-
+&lt;/div&gt;
 
 </tw-passagedata><tw-passagedata pid="16" name="0.d" tags="exterior" position="700,1025" size="100,100">&lt;div id=&quot;esquerda&quot;&gt;&lt;img src=&quot;https://cdn.discordapp.com/attachments/954851768657928242/1109765256198226011/vista_ao_longe.png&quot;&gt;&lt;/div&gt;
 &lt;div id=&quot;direita&quot;&gt;A descida à tua frente é abrupta e tens de andar cautelosamente para garantir que não cais nos paralelos desnivelados da calçada. À medida que avanças, a redução de luminosidade é notória. As casas que te rodeiam estão cada vez mais degradadas e ouvem-se bocados de conversas trocadas aos berros de uma janela para outra, ao longo de toda a largura da rua. Ao virar uma esquina avistas ao fundo um edifício velho que te chama à atenção. 
