@@ -569,7 +569,7 @@ passages.scrollTop = 0;
 		&lt;h1&gt;Inventário&lt;/h1&gt;
 	&lt;&lt;else&gt;&gt;&lt;h1&gt;$chapter&lt;/h1&gt;
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="8" name="StoryInit" tags="ui" position="300,500" size="100,100">&lt;&lt;set $chapter to &quot;Tutorial&quot;&gt;&gt;
+</tw-passagedata><tw-passagedata pid="8" name="StoryInit" tags="ui" position="300,500" size="100,100">&lt;&lt;set $chapter to &quot;O Prédio das Portas Vermelhas&quot;&gt;&gt;
 &lt;&lt;set $hasLetterO to false&gt;&gt;
 &lt;&lt;set $hasLetterR to false&gt;&gt;
 &lt;&lt;set $hasLetterG to false&gt;&gt;
@@ -581,6 +581,7 @@ passages.scrollTop = 0;
 &lt;&lt;cacheaudio &quot;door2&quot; &quot;data/audio/door2.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;door3&quot; &quot;data/audio/door3.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;door4&quot; &quot;data/audio/door4.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;mercearia&quot; &quot;data/audio/mercearia.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;final_good&quot; &quot;data/audio/final_good.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;final_bad&quot; &quot;data/audio/final_bad.mp3&quot;&gt;&gt;
 
@@ -748,11 +749,13 @@ Os miúdos continuam a conversa que o homem tenta despachar. Ouves um estridente
 [[=&gt; Continuar|1.e]]
 </tw-passagedata><tw-passagedata pid="27" name="1.e" tags="" position="1350,800" size="100,100">Atravessas a casa e a porta que dá para a mercearia, entrando num espaço decadente com algumas pilhas de mercadoria cobertas de pó e um pequeno galinheiro com cerca de uma dezena de galinhas misantropas. No chão, perto da porta que dá para a caixa registadora, encontra-se estendido um homem sobre o qual Fátima se debruça, batendo-lhe levemente na cara na tentativa de o acordar.
 
-[[=&gt; Continuar|1.f]]</tw-passagedata><tw-passagedata pid="28" name="2" tags="portas" position="1475,975" size="100,100">&lt;&lt;audio &quot;door1&quot; stop&gt;&gt;\
+[[=&gt; Continuar|1.f]]</tw-passagedata><tw-passagedata pid="28" name="2" tags="portas" position="1475,975" size="100,100">&lt;&lt;audio &quot;introduction&quot; stop&gt;&gt;\
+&lt;&lt;audio &quot;door1&quot; stop&gt;&gt;\
 &lt;&lt;audio &quot;door2&quot; stop&gt;&gt;\
 &lt;&lt;audio &quot;door3&quot; stop&gt;&gt;\
 &lt;&lt;audio &quot;door4&quot; stop&gt;&gt;\
-&lt;&lt;if visited(&quot;2.1&quot;) &amp;&amp; visited(&quot;2.2&quot;) &amp;&amp; visited(&quot;2.4&quot;) &amp;&amp; visited(&quot;2.0&quot;)==0&gt;&gt;
+&lt;&lt;audio &quot;mercearia&quot; stop&gt;&gt;\
+&lt;&lt;if visited(&quot;2.1&quot;) &amp;&amp; visited(&quot;2.2&quot;) &amp;&amp; visited(&quot;2.4&quot;) &amp;&amp; visited(&quot;2.0&quot;)==0&gt;&gt;&lt;&lt;audio &quot;mercearia&quot; loop play&gt;&gt;\
 Ao saíres do último apartamento que consegues investigar és imediatamente confrontado com uma barulheira descomunal, proveniente do rés do chão da casa. À medida que desces as escadas para te dirigires à mercearia, o ruído torna-se cada vez mais ensurdecedor e consegues apanhar pequenos fragmentos da discussão acalorada entre os moradores do prédio:
 
 - … porque ambos sabem muito bem que assalto é aquilo que nos fazem com as rendas e não este roubo de meia dúzia de produtos estragados. Para além disso, quem me diz que isto não é encenado? Tenho a certeza que algum seguro há-de cobrir estes danos muito acima do seu valor real!
@@ -809,7 +812,8 @@ Tentas decidir para onde te dirigir de seguida quando um pequeno papel caído pe
 &lt;div id=&quot;pistas&quot;&gt;&lt;img src=&quot;data/images/papel.png&quot;&gt;&lt;/div&gt;
 
 Curioso para descobrir o seu conteúdo, desdobras cuidadosamente o papel e lês as palavras nele escritas. A caligrafia é um tanto trémula, mas é possível discernir o seguinte: &quot;Apartamento número 3, 00h01. - G.&quot;. A letra vermelha chama-te à atenção e rasgas o pedaço de papel à sua volta, certo de ter encontrado uma nova pista.
-&lt;&lt;endif&gt;&gt;[[=&gt; Voltas para a entrada e exploras outra porta|2]]</tw-passagedata><tw-passagedata pid="32" name="2.4" tags="" position="1150,1200" size="100,100">&lt;&lt;audio &quot;door4&quot; loop play&gt;&gt;\
+&lt;&lt;endif&gt;&gt;
+[[=&gt; Voltas para a entrada e exploras outra porta|2]]</tw-passagedata><tw-passagedata pid="32" name="2.4" tags="" position="1150,1200" size="100,100">&lt;&lt;audio &quot;door4&quot; loop play&gt;&gt;\
 &lt;&lt;if visited(&quot;2.4.i&quot;)&gt;&gt;Voltas a entrar na casa do quarto andar cujos únicos habitantes são neste momento os Três Carlos, sentados no sofá a devorar o seu manjar enquanto vêm televisão. 
 
 &lt;&lt;if $hasLetterR&gt;&gt;Nada de interessante parece acontecer e, por isso, decides regressar à entrada e prosseguir as tuas investigações.
@@ -948,7 +952,7 @@ A fotografia analógica encontra-se marcada pelo tempo e pelo grão típico da i
 
 Aproveitas para virar a imagem, em busca de mais informações sobre os moradores no prédio. No verso é visível um carimbo vermelho e consegues ler &quot;Dia da Grande Mudança - M.&quot;.
 
-&lt;a data-passage=&quot;2.4.m&quot;&gt;&lt;div id=&quot;pistas&quot;&gt;&lt;img src=&quot;data/images/foto.png&quot;&gt;&lt;/div&gt;&lt;/a&gt;
+&lt;div id=&quot;pistas&quot;&gt;&lt;img src=&quot;data/images/foto.png&quot; usemap=&quot;#myMap&quot;&gt;&lt;map name=&quot;myMap&quot;&gt;&lt;area shape=&quot;rect&quot; coords=&quot;10,80,100,180&quot; data-passage= &quot;2.4.m&quot; /&gt;&lt;/map&gt;&lt;/div&gt;
 
 [[=&gt; Investigar o resto do prédio |2]]</tw-passagedata><tw-passagedata pid="40" name="2.4.h" tags="em-falta" position="1125,1875" size="100,100">Aproximas-te do homem que anda em círculos pela sala, tentando discernir os seus murmúrios repetitivos.
 
@@ -1123,12 +1127,8 @@ Ao proferir estas palavras, João revira os olhos. O irmão mais velho parece fi
 [[=&gt; Abandonas a sala para explorar o resto do apartamento|2.1.b]]</tw-passagedata><tw-passagedata pid="53" name="2.1.c" tags="letras" position="1950,500" size="100,100">Vagueias pela sala espaçosa, passando os olhos pelas paredes completamente riscadas. Tentas perceber o que está desenhado, mas a maioria dos desenhos são impossíveis de interpretar, formando um colorida pintura abstrata. 
 &lt;&lt;if $hasLetterL&gt;&gt;&lt;img src=&quot;data/images/parede.png&quot; style=&quot;margin-left:2%;&quot;&gt;
 &lt;&lt;else&gt;&gt;
-&lt;a data-passage=&quot;2.1.e&quot;&gt;&lt;div id=&quot;pistas&quot;&gt;&lt;img src=&quot;data/images/parede.png&quot;&gt;&lt;/div&gt;&lt;/a&gt;
-&lt;&lt;endif&gt;&gt;
-&lt;&lt;if visited(&quot;2.1.f&quot;)&gt;&gt;
-[[=&gt; Voltas para a entrada e exploras outra porta|2]] 
-&lt;&lt;else&gt;&gt;
-[[=&gt; Continuar|2.1.f]] 
+&lt;div id=&quot;pistas&quot;&gt;&lt;img src=&quot;data/images/parede.png&quot; usemap=&quot;#myMapTwo&quot;&gt;&lt;map name=&quot;myMapTwo&quot;&gt;&lt;area shape=&quot;rect&quot; coords=&quot;340,260,400,340&quot; data-passage= &quot;2.1.e&quot; /&gt;&lt;/map&gt;&lt;/div&gt;
+&lt;&lt;endif&gt;&gt;&lt;&lt;if visited(&quot;2.1.f&quot;)&gt;&gt;[[=&gt; Voltas para a entrada e exploras outra porta|2]] &lt;&lt;else&gt;&gt;[[=&gt; Continuar|2.1.f]] 
 &lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="54" name="2.1.b" tags="" position="1700,500" size="100,100">Abandonas a divisão, atravessando um corredor amplo e escuro com várias portas que dão para os vários quartos da casa. Uma pequena cabeça espreita de um dos quartos, desaparecendo rapidamente logo de seguida. À medida que te aproximas da porta, começas a ouvir uma discussão sussurrada:
 
 - A costa ainda está livre, Adão, despacha-te. 
@@ -1291,7 +1291,9 @@ No meio dos desenhos das crianças, és capaz de discernir claramente a letra L.
 [[=&gt; Voltas para a entrada e exploras outra porta|2]] 
 &lt;&lt;else&gt;&gt;
  [[=&gt; Continuar|2.1.f]] 
-&lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="68" name="2.1.h" tags="" position="2025,1475" size="100,100">Abandonas a mercearia e sobes as escadas, entrando na casa número 1 e atravessando até ao quarto onde Adão e Eva colocaram a armadilha do fio. Ainda no chão, Magalhães faz um esforço por se erguer, agarrando-se à ombreira da porta.
+&lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="68" name="2.1.h" tags="" position="2025,1475" size="100,100">&lt;&lt;audio &quot;mercearia&quot; stop&gt;&gt;\
+&lt;&lt;audio &quot;door1&quot; loop play&gt;&gt;\
+Abandonas a mercearia e sobes as escadas, entrando na casa número 1 e atravessando até ao quarto onde Adão e Eva colocaram a armadilha do fio. Ainda no chão, Magalhães faz um esforço por se erguer, agarrando-se à ombreira da porta.
 
 [[=&gt; Ofereces-lhe ajuda|2.1.i]]
 [[=&gt; Esperas que ele repare na tua presença|2.1.j]]</tw-passagedata><tw-passagedata pid="69" name="2.1.j" tags="" position="2150,1600" size="100,100">Após um minuto de desespero, Magalhães consegue equilibrar-se e olha em seu redor, reparando na tua presença. Dirige-se a ti num tom desconfiado:
@@ -1426,9 +1428,6 @@ Contemplas o espaço que te rodeia e só consegues pensar numa palavra: caos. As
 &lt;/div&gt;&lt;div id=&quot;portas2&quot;&gt;&lt;a data-passage=&quot;2.0.a&quot;&gt;&lt;img src=&quot;data/images/amanda.png&quot; style=&quot;width:20%; margin-right:2%&quot;&gt;&lt;/a&gt;&lt;a data-passage=&quot;2.0.a&quot;&gt;&lt;img src=&quot;data/images/pedro.png&quot; style=&quot;width:20%; margin-right:2%&quot;&gt;&lt;/a&gt;&lt;a data-passage=&quot;2.0.a&quot;&gt;&lt;img src=&quot;data/images/artur.png&quot; style=&quot;width:20%; margin-right:2%&quot;&gt;&lt;/a&gt;&lt;a data-passage=&quot;2.0.a&quot;&gt;&lt;img src=&quot;data/images/sebastiana.png&quot; style=&quot;width:20%; margin-right:2%&quot;&gt;&lt;/a&gt;
 &lt;/div&gt;&lt;div id=&quot;portas2&quot;&gt;&lt;a data-passage=&quot;2.0.a&quot;&gt;&lt;img src=&quot;data/images/ivanglor.png&quot; style=&quot;width:20%; margin-right:2%&quot;&gt;&lt;/a&gt;&lt;a data-passage=&quot;2.0.a&quot;&gt;&lt;img src=&quot;data/images/trescarlos.png&quot; style=&quot;width:20%; margin-right:2%&quot;&gt;&lt;/a&gt;&lt;a data-passage=&quot;2.0.a&quot;&gt;&lt;img src=&quot;data/images/magalhaes.png&quot; style=&quot;width:20%; margin-right:2%&quot;&gt;&lt;/a&gt;&lt;a data-passage=&quot;2.0.a&quot;&gt;&lt;img src=&quot;data/images/sr_m.png&quot; style=&quot;width:20%; margin-right:2%&quot;&gt;&lt;/a&gt;
 &lt;/div&gt;
-
-
-
 </tw-passagedata><tw-passagedata pid="81" name="2.4.e" tags="" position="1075,1550" size="100,100">Agora totalmente sozinhos, com exceção do louco que anda aos círculos em murmúros repetitivos, o grupo dos Três Carlos decide aproveitar o momento de privacidade para uma conversa entre irmãos a acompanhar pitéu:
 
 - Não sei qual é o problema daquele casal, tanto discutem, tanto discutem, partem tudo e dão-se mal com toda a gente, mas somos sempre nós, aqui caladinhos na nossa, que somos o problema? Passa-me aí o queijo, Carlos António, com a gritaria toda até sinto a minha tensão arterial a descer...
