@@ -277,6 +277,13 @@ width:100%;
 display:flex;
 align-items:center;}
 
+#pistas{
+width:90%;
+align-items:center;}
+
+#pistas img{
+  width:100%;}
+
 #esquerda{
   float:left;
   width:35%;
@@ -613,7 +620,7 @@ As palavras do casal perdem-se por entre o som das buzinas de dois carros que qu
 [[=&gt; Segues o desvio e desces a ruela decadente|0.f]]
 [[=&gt; Voltas para trás e segues o casal|0.h]]
 </tw-passagedata><tw-passagedata pid="18" name="0.g" tags="exterior" position="925,1025" size="100,100">À medida que desces a rua na sua direção os prédios que te rodeiam cobrem cada vez mais a luz do sol e o ambiente torna-se estranhamente abafado. 
-&lt;div id=&quot;pares&quot;&gt;&lt;div id=&quot;esquerda&quot;&gt;&lt;img src=&quot;data/images/bifurcacao.png&quot;&gt;&lt;/div&gt;&lt;div id=&quot;direita&quot;&gt;Quando dás conta estás imediatamente em frente a uma tabuleta onde um conjunto de letras tortas mostra a designação do edifício: &#39;&#39;Prédio das Portas Vermelhas&#39;&#39;. 
+&lt;div id=&quot;pares&quot;&gt;&lt;div id=&quot;esquerda&quot;&gt;&lt;img src=&quot;data/images/prediorua.png&quot;&gt;&lt;/div&gt;&lt;div id=&quot;direita&quot;&gt;Quando dás conta estás imediatamente em frente a uma tabuleta onde um conjunto de letras tortas mostra a designação do edifício: &#39;&#39;Prédio das Portas Vermelhas&#39;&#39;. 
 &lt;/div&gt;
 &lt;/div&gt;Não é a primeira vez que ouves este nome, pois são vários os rumores que circulam pela cidade sobre a história deste prédio e dos moradores que habitam por detrás das suas portas vermelhas. Ninguém sabe ao certo há quantos séculos foi construído, mas é do conhecimento geral que em tempos passados não era tão decadente como atualmente e que nem sempre albergou gente de tão baixa estirpe. 
 
@@ -781,7 +788,7 @@ Pedro espreguiça-se e espalha o seu corpo preguiçosamente pela cama ao mesmo t
 &lt;&lt;set $hasLetterG to true&gt;&gt;
 Tentas decidir para onde te dirigir de seguida quando um pequeno papel caído perto da porta misteoriosa chama a tua atenção. 
 
-&lt;img src=&quot;data/images/parede.png&quot; style=&quot;width=auto; text-align:center;margin:auto,0;&quot;&gt;
+&lt;div id=&quot;pistas&quot;&gt;&lt;img src=&quot;data/images/papel.png&quot;&gt;&lt;/div&gt;
 
 Curioso para descobrir o seu conteúdo, desdobras cuidadosamente o papel e lês as palavras nele escritas. A caligrafia é um tanto trémula, mas é possível discernir o seguinte: &quot;Apartamento número 3, 00h01. - G.&quot;. A letra vermelha chama-te à atenção e rasgas o pedaço de papel à sua volta, certo de ter encontrado uma nova pista.
 &lt;&lt;endif&gt;&gt;[[=&gt; Voltas para a entrada e exploras outra porta|2]]</tw-passagedata><tw-passagedata pid="32" name="2.4" tags="" position="1150,1200" size="100,100">&lt;&lt;audio &quot;door4&quot; loop play&gt;&gt;\
@@ -924,7 +931,7 @@ A fotografia analógica encontra-se marcada pelo tempo e pelo grão típico da i
 
 Aproveitas para virar a imagem, em busca de mais informações sobre os moradores no prédio. No verso é visível um carimbo vermelho e consegues ler &quot;Dia da Grande Mudança - M.&quot;.
 
-&lt;a data-passage=&quot;2.4.m&quot;&gt;&lt;div id=&quot;pares&quot;&gt;&lt;img src=&quot;https://cdn.discordapp.com/attachments/954851768657928242/1109845339592216626/foto.png&quot; style=&quot;width=auto; text-align:center;margin:auto,0;&quot;&gt;&lt;/div&gt;&lt;/a&gt;
+&lt;a data-passage=&quot;2.4.m&quot;&gt;&lt;div id=&quot;pistas&quot;&gt;&lt;img src=&quot;data/images/foto.png&quot;&gt;&lt;/div&gt;&lt;/a&gt;
 
 [[=&gt; Investigar o resto do prédio |2]]</tw-passagedata><tw-passagedata pid="40" name="2.4.h" tags="em-falta" position="1125,1875" size="100,100">Aproximas-te do homem que anda em círculos pela sala, tentando discernir os seus murmúrios repetitivos.
 
@@ -1076,7 +1083,7 @@ A mulher cala-se quando encontra o que procurava nos bolsos, segurando uma peque
 [[=&gt; Esperas enquanto Amanda tenta abrir a porta misteriosa|2.2.j]]</tw-passagedata><tw-passagedata pid="51" name="2.2.e" tags="letras" position="2650,625" size="100,100">&lt;&lt;set $hasLetterG to true&gt;&gt;
 Amanda abandona o quarto a custo, esgueirando-se pela porta entreaberta. Aproximas-te da cama em busca de pistas e começas a vasculhar o espaço que não se encontra ocupado por Pedro, que dorme profundamente. As cobertas estão amassadas e, devido ao reduzido espaço da habitação, alguns objetos pessoais estão espalhados pelo colchão. Enquanto investigas, encontras um pedaço de papel dobrado debaixo da almofada.
 
-&lt;img src=&quot;data/images/parede.png&quot; style=&quot;width=auto; text-align:center;margin:auto,0;&quot;&gt;
+&lt;div id=&quot;pistas&quot;&gt;&lt;img src=&quot;data/images/papel.png&quot;&gt;&lt;/div&gt;
 
 Curioso para descobrir o seu conteúdo, desdobras cuidadosamente o papel e lês as palavras nele escritas. A caligrafia é um tanto trémula, mas é possível discernir o seguinte: &quot;Apartamento número 3, 00h01. - G.&quot;. A letra vermelha chama-te à atenção e rasgas o pedaço de papel à sua volta, certo de ter encontrado uma nova pista.
 
@@ -1101,7 +1108,7 @@ Ao proferir estas palavras, João revira os olhos. O irmão mais velho parece fi
 &lt;&lt;if $hasLetterL&gt;&gt;
 &lt;img src=&quot;data/images/parede.png&quot; style=&quot;margin-left:2%;&quot;&gt;
 &lt;&lt;else&gt;&gt;
-&lt;a data-passage=&quot;2.1.e&quot;&gt;&lt;img src=&quot;data/images/parede.png&quot; style=&quot;width=auto; text-align:center;margin:auto,0;&quot;&gt;&lt;/a&gt;
+&lt;a data-passage=&quot;2.1.e&quot;&gt;&lt;div id=&quot;pistas&quot;&gt;&lt;img src=&quot;data/images/parede.png&quot;&gt;&lt;/div&gt;&lt;/a&gt;
 &lt;&lt;endif&gt;&gt;
 &lt;&lt;if visited(&quot;2.1.f&quot;)&gt;&gt;
 [[=&gt; Voltas para a entrada e exploras outra porta|2]] 
@@ -1426,7 +1433,8 @@ A expressão de Artur mostra algum desapontamento ao constatar que ninguém se e
 - Deve ser o chapéu da prima Sebastiana.
 - Se é dela, qual a razão de ter um &#39;&#39;G&#39;&#39; estampado na aba. Deve ser de alguém com essa inicial no nome.
 
-&lt;img src=&quot;data/images/chapeu.png&quot; style=&quot;width=auto; text-align:center;margin:auto,0;&quot;&gt;
+&lt;div id=&quot;pistas&quot;&gt;&lt;img src=&quot;data/images/chapeu.png&quot;&gt;&lt;/div&gt;
+
 Decides guardar esta letra na tua memória, pois pode ser importante para o futuro. Afinal de contas, nada acontece por acaso...
 
 Amanda pronuncia-se novamente, pousando o chapéu em cima da cama:
@@ -1447,6 +1455,8 @@ Aproximas-te de Adão e Eva, ouvindo as palavras que a menina dirige ao irmão:
 
 - E deixou cair isto. Quem é que quer um bocado de madeira vermelha em forma de O?
 - Ele é maluco, deixa lá isso. Provavelmente arracou um bocado da porta de casa para fazer essa bela escultura.
+
+&lt;div id=&quot;pistas&quot;&gt;&lt;img src=&quot;data/images/madeira.png&quot;&gt;&lt;/div&gt;
 
 Reparas no pedaço de madeira que a menina segura na mão e decides guardar a letra na tua memória, convicto de que a existência do objeto vermelho não deriva apenas dos ataques de insanidade de Magalhães.
 
