@@ -529,10 +529,7 @@ Aqui está um exemplo de uma escolha, basta clicares no rumo que queres seguir:
 </tw-passagedata><tw-passagedata pid="3" name="StoryAuthor" tags="ui" position="400,500" size="100,100"></tw-passagedata><tw-passagedata pid="4" name="StoryCaption" tags="ui data" position="400,400" size="100,100">Inventário: 
 &lt;div id=&quot;letrinhas&quot;&gt;&lt;&lt;if $hasLetterL is true&gt;&gt;L&lt;&lt;/if&gt;&gt;&lt;&lt;if $hasLetterO is true&gt;&gt;O&lt;&lt;/if&gt;&gt;&lt;&lt;if $hasLetterG is true&gt;&gt;G&lt;&lt;/if&gt;&gt;&lt;&lt;if $hasLetterR is true&gt;&gt;R&lt;&lt;/if&gt;&gt;
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="5" name="Character" tags="character game-info no-return" position="500,400" size="100,100">character page</tw-passagedata><tw-passagedata pid="6" name="StoryMenu" tags="ui" position="300,400" size="100,100">&lt;&lt;link &quot;Collection&quot; &quot;Character&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;link &quot;Inventário&quot; &quot;Codex&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;link &quot;Créditos&quot; &quot;Credits&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;link &quot;Voltar atrás&quot;&gt;&gt;&lt;&lt;if tags().includes(&quot;game-info&quot;)&gt;&gt;&lt;&lt;goto $return&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;run Engine.backward()&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="PassageHeader" tags="nobr code" position="600,300" size="100,100">	&lt;!-- since the scrollbar is built into the passages container, this code resets it to the top each time a new passage is loaded --&gt;
+</tw-passagedata><tw-passagedata pid="5" name="Character" tags="character game-info no-return" position="500,400" size="100,100">character page</tw-passagedata><tw-passagedata pid="6" name="StoryMenu" tags="ui" position="300,400" size="100,100">&lt;&lt;link &quot;Voltar atrás&quot;&gt;&gt;&lt;&lt;if tags().includes(&quot;game-info&quot;)&gt;&gt;&lt;&lt;goto $return&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;run Engine.backward()&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="PassageHeader" tags="nobr code" position="600,300" size="100,100">	&lt;!-- since the scrollbar is built into the passages container, this code resets it to the top each time a new passage is loaded --&gt;
 &lt;&lt;script&gt;&gt;
 var passages = document.getElementById(&quot;passages&quot;);
 passages.scrollTop = 0;
@@ -659,8 +656,8 @@ Quando finalmente repara no corpo estendido no chão, a mulher solta um estriden
 
 [[=&gt; Continuar|1.f]]</tw-passagedata><tw-passagedata pid="23" name="1.b" tags="" position="1100,800" size="100,100">&lt;&lt;audio &quot;introduction&quot; fadeout&gt;&gt;\
 &lt;&lt;audio &quot;door1&quot; loop fadein&gt;&gt;\
-Sobes a escadaria e chegas ao primeiro piso, onde encontras a Porta Número 1. Abres a porta, entrando num apartamento espaçoso mas completamente degradado. A redução da quantidade de mobília ao mínimo indispensável e a ausência de decoração faz o espaço parecer ainda mais amplo, dando destaque à camada de sujidade acumulada em todas as superfícies. 
-
+Sobes a escadaria e chegas ao primeiro piso, onde encontras a Porta Número 1. 
+&lt;div id=&quot;pares&quot;&gt;&lt;div id=&quot;esquerda&quot;&gt;&lt;img src=&quot;data/images/apartamento4.png&quot; style=&quot;width:100%;&quot;&gt;&lt;/div&gt;&lt;div id=&quot;direita&quot;&gt;Abres a porta, entrando num apartamento espaçoso mas completamente degradado. A redução da quantidade de mobília ao mínimo indispensável e a ausência de decoração faz o espaço parecer ainda mais amplo, dando destaque à camada de sujidade acumulada em todas as superfícies. &lt;/div&gt;&lt;/div&gt;
 A conversa abafada que ouviste anteriormente continua atrás de uma porta que abres, revelando duas pessoas que discutem.
 
 - Despacha-te, não ouviste este estrondo? Não tarda está aí o Bernardo a ver o que se passa!
@@ -755,7 +752,8 @@ Uma voz com um sotaque russo carregado faz-se ouvir no meio da discussão, calan
 [[=&gt; Voltas para a entrada e exploras outra porta|2]] 
 &lt;&lt;else&gt;&gt;
 &lt;&lt;if visited(&quot;1.b&quot;)&gt;&gt;Entras no apartamento espaçoso que anteriormente te conduziu ao caloroso debate entre Fátima e o seu acompanhante. No canto da sala, 4 crianças de cabelo muito escuro brincam com um conjunto de lápis de cera, rindo-se dos rabiscos coloridos que fazem nas paredes da divisão.
-&lt;&lt;else&gt;&gt;Abres a porta com o número 1, entrando num apartamento espaçoso mas completamente degradado. A redução da quantidade de mobília ao mínimo indispensável e a ausência de decoração faz o espaço parecer ainda mais amplo, dando destaque à camada de sujidade acumulada em todas as superfícies. No canto da sala, 4 crianças brincam com um conjunto de lápis de cera, rindo-se dos rabiscos coloridos que fazem nas paredes da divisão.
+&lt;&lt;else&gt;&gt;&lt;div id=&quot;pares&quot;&gt;&lt;div id=&quot;esquerda&quot;&gt;&lt;img src=&quot;data/images/apartamento4.png&quot; style=&quot;width:100%;&quot;&gt;&lt;/div&gt;&lt;div id=&quot;direita&quot;&gt;Abres a porta com o número 1, entrando num apartamento espaçoso mas completamente degradado. A redução da quantidade de mobília ao mínimo indispensável e a ausência de decoração faz o espaço parecer ainda mais amplo, dando destaque à camada de sujidade acumulada em todas as superfícies.&lt;/div&gt;&lt;/div&gt;
+No canto da sala, 4 crianças brincam com um conjunto de lápis de cera, rindo-se dos rabiscos coloridos que fazem nas paredes da divisão.
 &lt;&lt;endif&gt;&gt;
 [[=&gt; Aproximas-te das crianças, que começaram a conversar alegremente|2.1.a]] 
 [[=&gt; Analisas os desenhos espalhados pelas paredes da sala|2.1.c]]
@@ -814,7 +812,6 @@ No meio da confusão consegues distinguir uma ou outra frase proferida por uma v
 Agora com a curiosidade mais aguçada, decides entrar pela porta. 
 &lt;div id=&quot;pares&quot;&gt;&lt;div id=&quot;esquerda&quot;&gt;&lt;img src=&quot;data/images/apartamento4.png&quot; style=&quot;width:100%;&quot;&gt;&lt;/div&gt;&lt;div id=&quot;direita&quot;&gt;
 A visão de uma sala de estar pequena, suja e pobre em mobília, surge através dos umbrais da porta. Nada te podia preparar para o ambiente que acabas de encontrar: o que falta em estilo e gosto, compensa na quantidade de restos de comida espalhados por todos os cantos, sacos de batatas fritas, bolachas, caixas de pizza, copos descartáveis de bebidas pegajosas que mancham o chão. Esta confusão só pode ser obra dos três homens de aparência voluptuosa sentados no sofá a devorar uma perna de presunto cada um.&lt;/div&gt;&lt;/div&gt;
-
 Se não fossem os restos de comida a criar mau ambiente, seriam os vários pedaços de decoração partida espalhados pela sala. Estilhaços de jarras e de loiça e uma moldura partida de onde espreita uma fotografia. Pela raiva com que as duas figuras de sotaque forte gritam uma com a outra, até é de admirar o vidro das janelas ainda estar intacto...
 
 No canto da sala, um homem anda em círculos, de expressão nervosa e mãos trémulas, segurarando um caderno castanho e desgastado enquanto da sua boca saiem frases repetitivas e incompreensíveis.
@@ -1108,9 +1105,9 @@ Ao proferir estas palavras, João revira os olhos. O irmão mais velho parece fi
 [[=&gt; Abandonas a sala para explorar o resto do apartamento|2.1.b]]</tw-passagedata><tw-passagedata pid="53" name="2.1.c" tags="letras" position="1950,500" size="100,100">Vagueias pela sala espaçosa, passando os olhos pelas paredes completamente riscadas. Tentas perceber o que está desenhado, mas a maioria dos desenhos são impossíveis de interpretar, formando um colorida pintura abstrata. 
 
 &lt;&lt;if $hasLetterL&gt;&gt;
-&lt;img src=https://cdn.discordapp.com/attachments/954851768657928242/1105560629412102154/door1.png style=&quot;margin-left:2%&quot;&gt;
+&lt;img src=data/images/parede.png style=&quot;margin-left:2%&quot;&gt;
 &lt;&lt;else&gt;&gt;
-&lt;a data-passage=&quot;2.1.e&quot;&gt;&lt;img src=https://cdn.discordapp.com/attachments/954851768657928242/1105560629412102154/door1.png style=&quot;margin-left:2%&quot;&gt;&lt;/a&gt;
+&lt;a data-passage=&quot;2.1.e&quot;&gt;&lt;img src= style=&quot;margin-left:2%&quot;&gt;&lt;/a&gt;
 &lt;&lt;endif&gt;&gt;
 &lt;&lt;if visited(&quot;2.1.f&quot;)&gt;&gt;
 [[=&gt; Voltas para a entrada e exploras outra porta|2]] 
