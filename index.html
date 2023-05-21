@@ -293,6 +293,15 @@ align-items:center;}
   margin:auto;
 }
 
+#portas{
+  top:0;
+  height:100%;
+}
+
+#textoporta{
+text-align:center;
+font-size:1.5em;}
+
 .passage.portas {
   background-image: url("https://cdn.discordapp.com/attachments/954851768657928242/1105588921875845220/bgbuilding.png");
   background-position:center;
@@ -314,7 +323,6 @@ align-items:center;}
   width:18%;
   float:left;
   top:0%;
-  margin-top:9%;
   right:0%;
   margin-right:7%
 }
@@ -517,7 +525,7 @@ Ao entrares numa casa, poderás interagir com pessoas e objetos que se encontram
 Aqui está um exemplo de uma escolha, basta clicares no rumo que queres seguir:
 
 &lt;&lt;link &quot;=&gt; Quero ouvir falar sobre os momentos narrativos antes de abrir o livro&quot; &quot;0.a&quot;&gt;&gt;&lt;&lt;set $chapter to &quot;Tutorial&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;link &quot;=&gt; Quero terminar o tutorial e abrir o livro&quot; &quot;0.b&quot;&gt;&gt;&lt;&lt;set $chapter to &quot;Tutorial&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="StoryDisplayTitle" tags="ui" position="400,300" size="100,100">&lt;&lt;if visited(&quot;1.a&quot;) || visited(&quot;1.b&quot;)&gt;&gt;&lt;img src=&quot;data/images/building.png&quot; style=&quot;max-width:100%&quot;&gt;&lt;&lt;else&gt;&gt;&lt;img src=&quot;https://cdn.discordapp.com/attachments/954851768657928242/1109540851283144776/buildingoutside.png&quot; style=&quot;max-width:100%&quot;&gt;&lt;&lt;endif&gt;&gt;
+&lt;&lt;link &quot;=&gt; Quero terminar o tutorial e abrir o livro&quot; &quot;0.b&quot;&gt;&gt;&lt;&lt;set $chapter to &quot;Tutorial&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="StoryDisplayTitle" tags="ui" position="400,300" size="100,100">&lt;&lt;if visited(&quot;1.a&quot;) || visited(&quot;1.b&quot;)&gt;&gt;&lt;img src=&quot;data/images/building.png&quot; style=&quot;max-width:100%&quot;&gt;&lt;&lt;else&gt;&gt;&lt;img src=&quot;data/images/buildingoutside.png&quot; style=&quot;max-width:100%&quot;&gt;&lt;&lt;endif&gt;&gt;
 </tw-passagedata><tw-passagedata pid="3" name="StoryAuthor" tags="ui" position="400,500" size="100,100"></tw-passagedata><tw-passagedata pid="4" name="StoryCaption" tags="ui data" position="400,400" size="100,100">Inventário: 
 &lt;div id=&quot;letrinhas&quot;&gt;&lt;&lt;if $hasLetterL is true&gt;&gt;L&lt;&lt;/if&gt;&gt;&lt;&lt;if $hasLetterO is true&gt;&gt;O&lt;&lt;/if&gt;&gt;&lt;&lt;if $hasLetterG is true&gt;&gt;G&lt;&lt;/if&gt;&gt;&lt;&lt;if $hasLetterR is true&gt;&gt;R&lt;&lt;/if&gt;&gt;
 &lt;/div&gt;
@@ -589,17 +597,17 @@ h1 {text-align:center;margin-top:25vh;}
 Caminhas por uma rua abaixo, sem rumo, avançando lentamente por entre as casas e ouvindo as palavras trocadas pelos moradores. O porquê de estares aqui é-te desconhecido, mas sabes que todos os caminhos irão dar, invariavelmente, ao mesmo destino. 
 
 Não sabes que destino é esse nem o caminho que tens de percorrer para o atingires, mas tens a certeza de uma coisa: as tuas escolhas não o são realmente até lá chegares, pois todos os caminhos vão dar ao mesmo lugar. Depois… é uma incógnita.
-&lt;div id=&quot;pares&quot;&gt;&lt;div id=&quot;esquerda&quot;&gt;&lt;img src=&quot;https://cdn.discordapp.com/attachments/954851768657928242/1109765673908969492/bifurcacao.png&quot;&gt;&lt;/div&gt;&lt;div id=&quot;direita&quot;&gt;Chegas ao fim da rua e encontras uma bifurcação:
+&lt;div id=&quot;pares&quot;&gt;&lt;div id=&quot;esquerda&quot;&gt;&lt;img src=&quot;data/images/bifurcacao.png&quot;&gt;&lt;/div&gt;&lt;div id=&quot;direita&quot;&gt;Chegas ao fim da rua e encontras uma bifurcação:
 
 [[=&gt; Viras à esquerda para uma ruela decadente|0.d]]
 [[=&gt; Viras à direita para uma rua semelhante àquela em que te encontras|0.e]]
 &lt;/div&gt;
 &lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="16" name="0.d" tags="exterior" position="700,1025" size="100,100">&lt;div id=&quot;esquerda&quot;&gt;&lt;img src=&quot;https://cdn.discordapp.com/attachments/954851768657928242/1109765256198226011/vista_ao_longe.png&quot;&gt;&lt;/div&gt;
-&lt;div id=&quot;direita&quot;&gt;A descida à tua frente é abrupta e tens de andar cautelosamente para garantir que não cais nos paralelos desnivelados da calçada. À medida que avanças, a redução de luminosidade é notória. As casas que te rodeiam estão cada vez mais degradadas e ouvem-se bocados de conversas trocadas aos berros de uma janela para outra, ao longo de toda a largura da rua. Ao virar uma esquina avistas ao fundo um edifício velho que te chama à atenção. 
+</tw-passagedata><tw-passagedata pid="16" name="0.d" tags="exterior" position="700,1025" size="100,100">A descida à tua frente é abrupta e tens de andar cautelosamente para garantir que não cais nos paralelos desnivelados da calçada. À medida que avanças, a redução de luminosidade é notória. As casas que te rodeiam estão cada vez mais degradadas e ouvem-se bocados de conversas trocadas aos berros de uma janela para outra, ao longo de toda a largura da rua. Ao virar uma esquina avistas ao fundo um edifício velho que te chama à atenção. 
+
 [[=&gt; Admirar o prédio|0.g]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="17" name="0.e" tags="exterior" position="700,1150" size="100,100">Viras à direita e entras numa rua ampla e luminosa. Algumas pessoas bem vestidas andam apressadamente, cumprimentando-se umas às outras de forma educada. Continuas a andar em frente e as palavras trocadas por um casal jovem que sai de um prédio chegam-te aos ouvidos por entre os ruídos da rua. 
+</tw-passagedata><tw-passagedata pid="17" name="0.e" tags="exterior" position="700,1150" size="100,100">Viras à direita e entras numa rua ampla e luminosa. Algumas pessoas bem vestidas andam apressadamente, cumprimentando-se umas às outras de forma educada. Continuas a andar em frente e as palavras trocadas por um casal jovem que sai de um prédio chegam-te aos ouvidos por entre os ruídos da rua. 
 
 -Não dá jeito nenhum que estejam a fazer obras no fim da rua, temos de fazer um desvio enorme para chegar às caves.
 -Porque não vamos pela rua de baixo e damos a volta às obras, em vez de voltarmos todo o caminho para trás?
@@ -609,19 +617,22 @@ As palavras do casal perdem-se por entre o som das buzinas de dois carros que qu
 
 [[=&gt; Segues o desvio e desces a ruela decadente|0.f]]
 [[=&gt; Voltas para trás e segues o casal|0.h]]
-</tw-passagedata><tw-passagedata pid="18" name="0.g" tags="exterior" position="900,1075" size="100,100">À medida que desces a rua na sua direção os prédios que te rodeiam cobrem cada vez mais a luz do sol e o ambiente torna-se estranhamente abafado. Quando dás conta estás imediatamente em frente a uma tabuleta onde um conjunto de letras tortas mostra a designação do edifício: &#39;&#39;Prédio das Portas Vermelhas&#39;&#39;. 
-
-Não é a primeira vez que ouves este nome, pois são vários os rumores que circulam pela cidade sobre a história deste prédio e dos moradores que habitam por detrás das suas portas vermelhas. Ninguém sabe ao certo há quantos séculos foi construído, mas é do conhecimento geral que em tempos passados não era tão decadente como atualmente e que nem sempre albergou gente de tão baixa estirpe. 
+</tw-passagedata><tw-passagedata pid="18" name="0.g" tags="exterior" position="900,1075" size="100,100">À medida que desces a rua na sua direção os prédios que te rodeiam cobrem cada vez mais a luz do sol e o ambiente torna-se estranhamente abafado. 
+&lt;div id=&quot;pares&quot;&gt;&lt;div id=&quot;esquerda&quot;&gt;&lt;img src=&quot;data/images/bifurcacao.png&quot;&gt;&lt;/div&gt;&lt;div id=&quot;direita&quot;&gt;Quando dás conta estás imediatamente em frente a uma tabuleta onde um conjunto de letras tortas mostra a designação do edifício: &#39;&#39;Prédio das Portas Vermelhas&#39;&#39;. 
+&lt;/div&gt;
+&lt;/div&gt;Não é a primeira vez que ouves este nome, pois são vários os rumores que circulam pela cidade sobre a história deste prédio e dos moradores que habitam por detrás das suas portas vermelhas. Ninguém sabe ao certo há quantos séculos foi construído, mas é do conhecimento geral que em tempos passados não era tão decadente como atualmente e que nem sempre albergou gente de tão baixa estirpe. 
 
 O último morador a percorrer os largos corredores e escadarias da antiga casa senhorial foi um pequeno empresário de vinhos do Porto, que viu a sua reputação diminuir de dia para dia, devido aos rumores que deixavam as paredes do prédio pelas palavras sussurradas dos seus empregados indiscretos. A empresa fechou de um momento para o outro e os habitantes do prédio desapareceram de forma praticamente instantânea, deixando o casarão mergulhado na escuridão. O pouco que se sabe sobre o antigo dono do prédio e respetiva família está confinado à memória quase esquecida das pessoas mais velhas, que ainda hoje se referem a ele misteriosamente como Sr. M., por desconhecerem a sua verdadeira identidade.
 
 &lt;&lt;link &quot;=&gt; Aproximas-te do prédio&quot; &quot;0.i&quot;&gt;&gt;&lt;&lt;set $chapter to &quot;O Prédio&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 
 
-</tw-passagedata><tw-passagedata pid="19" name="0.f" tags="exterior" position="825,1200" size="100,100">&lt;div id=&quot;esquerda&quot;&gt;&lt;img src=&quot;data/images/vista_ao_longe.png&quot;&gt;&lt;/div&gt;
-&lt;div id=&quot;direita&quot;&gt;A ruela à tua esquerda desce estreitamente a pique para uma rua ligeiramente mais larga mas igualmente decadente e sinuosa, ao fundo da qual se encontra um edifício velho que te chama à atenção.
+</tw-passagedata><tw-passagedata pid="19" name="0.f" tags="exterior" position="825,1200" size="100,100">&lt;div id=&quot;pares&quot;&gt;&lt;div id=&quot;esquerda&quot;&gt;&lt;img src=&quot;data/images/vista_ao_longe.png&quot;&gt;&lt;/div&gt;&lt;div id=&quot;direita&quot;&gt;A ruela à tua esquerda desce estreitamente a pique para uma rua ligeiramente mais larga mas igualmente decadente e sinuosa, ao fundo da qual se encontra um edifício velho que te chama à atenção.
+
 [[=&gt; Admirar o prédio|0.g]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="20" name="0.h" tags="exterior" position="825,950" size="100,100">Voltas para trás e apressas o passo até voltares a ouvir as palavras trocadas pelo casal, que ainda parece debater os caminhos alternativos para as caves:
+&lt;/div&gt;
+&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="20" name="0.h" tags="exterior" position="825,950" size="100,100">Voltas para trás e apressas o passo até voltares a ouvir as palavras trocadas pelo casal, que ainda parece debater os caminhos alternativos para as caves:
 
 - … razão válida e talvez até estejas certa. Mas tenho um mau pressentimento em relação àquele lugar. 
 - Não, eu compreendo. Numa rua estreita e escura como aquela nunca se sabe o que pode acontecer...
@@ -634,11 +645,12 @@ O último morador a percorrer os largos corredores e escadarias da antiga casa s
 As palavras do jovem rapaz deixam de ser audíveis quando regressas ao topo da rua, seguindo pelo lado esquerdo da bifurcação. 
 
 [[=&gt; Continuar|0.d]]
-</tw-passagedata><tw-passagedata pid="21" name="0.i" tags="exterior" position="1000,1075" size="100,100">Os teus pensamentos são interrompidos por um estrondo vindo do rés-do-chão do prédio. Aproximas-te da entrada e deparas-te com duas portas vermelhas. Na porta da esquerda encontra-se uma pequena tabuleta onde se pode ler &#39;Mercearia&#39;. A porta do lado direito encontra-se entreaberta e consegues ver o começo de uma escadaria.
+</tw-passagedata><tw-passagedata pid="21" name="0.i" tags="exterior" position="1025,1075" size="100,100">Os teus pensamentos são interrompidos por um estrondo vindo do rés-do-chão do prédio. Aproximas-te da entrada e deparas-te com duas portas vermelhas. Na porta da esquerda encontra-se uma pequena tabuleta onde se pode ler &#39;Mercearia&#39;. A porta do lado direito encontra-se entreaberta e consegues ver o começo de uma escadaria.
 
 [[=&gt; Entras na mercearia, seguindo o estrondo que ouviste anteriormente|1.a]] 
-[[=&gt; Abres a porta que dá acesso ao prédio, por detrás da qual se ouvem vozes agitadas|1.b]]</tw-passagedata><tw-passagedata pid="22" name="1.a" tags="" position="1125,950" size="100,100">Abres a porta que dá para a mercearia, entrando num espaço decadente com algumas pilhas de mercadoria cobertas de pó e um pequeno galinheiro com cerca de uma dezena de galinhas misantropas. No chão, perto da caixa registadora, encontra-se estendido um homem inconsciente, cuja queda deve ter provocado o estrondo que ouviste inicialmente. 
-
+[[=&gt; Abres a porta que dá acesso ao prédio, por detrás da qual se ouvem vozes agitadas|1.b]]</tw-passagedata><tw-passagedata pid="22" name="1.a" tags="" position="1125,950" size="100,100">&lt;div id=&quot;pares&quot;&gt;&lt;div id=&quot;esquerda&quot;&gt;&lt;img src=&quot;data/images/mercearia.png&quot;&gt;&lt;/div&gt;&lt;div id=&quot;direita&quot;&gt;Abres a porta que dá para a mercearia, entrando num espaço decadente com algumas pilhas de mercadoria cobertas de pó e um pequeno galinheiro com cerca de uma dezena de galinhas misantropas. No chão, perto da caixa registadora, encontra-se estendido um homem inconsciente, cuja queda deve ter provocado o estrondo que ouviste inicialmente. 
+&lt;/div&gt;
+&lt;/div&gt;
 Uma mulher abre a porta do armazém, entra e olha à sua volta, parecendo confusa. A sua roupa longa cobre praticamente toda a pele abaixo do seu pescoço e a mulher parece não reparar no homem inconsciente. 
 
 - Onde estará o Bernardo…? Porque não está a passar revista às contas da mercearia como é habitual?
@@ -686,8 +698,11 @@ Bernardo levanta-se de um pulo, e dirige-se à caixa registadora, puxando de um 
 Fátima e Bernardo ligam à polícia, agitados com o sucedido. Enquanto nada de mais interessante se passa, decides vaguear pelo prédio na esperança de recolher algumas informações úteis. 
 
 &lt;&lt;link &quot;=&gt; Vaguear pelo prédio&quot; &quot;2.0&quot;&gt;&gt;&lt;&lt;set $chapter to &quot;2.Investigação&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-</tw-passagedata><tw-passagedata pid="25" name="1.c." tags="" position="1225,800" size="100,100">Fátima abandona o quarto e  segue em direção à mercearia. Tu vais atrás para onde se ouviu inicialmente o estrondo. Deparas-te com um espaço decadente com algumas pilhas de mercadoria cobertas de pó e um pequeno galinheiro com cerca de uma dezena de galinhas misantropas. No chão, perto da caixa registadora, encontra-se estendido um homem no qual Fátima demora a reparar.
+</tw-passagedata><tw-passagedata pid="25" name="1.c." tags="" position="1225,800" size="100,100">Fátima abandona o quarto e  segue em direção à mercearia. Tu vais atrás para onde se ouviu inicialmente o estrondo. 
 
+&lt;div id=&quot;pares&quot;&gt;&lt;div id=&quot;esquerda&quot;&gt;&lt;img src=&quot;data/images/mercearia.png&quot;&gt;&lt;/div&gt;&lt;div id=&quot;direita&quot;&gt;Deparas-te com um espaço decadente com algumas pilhas de mercadoria cobertas de pó e um pequeno galinheiro com cerca de uma dezena de galinhas misantropas. No chão, perto da caixa registadora, encontra-se estendido um homem no qual Fátima demora a reparar.
+&lt;/div&gt;
+&lt;/div&gt;
 - Onde estará ele…? Porque não está a passar revista às contas da mercearia como é habitual?
 
 Quando finalmente repara no corpo estendido no chão, Fátima solta um &#39;Valha-me Deus!&#39; estridente, fazendo o sinal da cruz. Dirige-se prontamente ao marido, batendo-lhe levemente na cara na tentativa de o acordar. 
@@ -719,7 +734,6 @@ Os miúdos continuam a conversa que o homem tenta despachar. Ouves um estridente
 &lt;&lt;audio &quot;door2&quot; fadeout&gt;&gt;\
 &lt;&lt;audio &quot;door3&quot; fadeout&gt;&gt;\
 &lt;&lt;audio &quot;door4&quot; fadeout&gt;&gt;\
-
 &lt;&lt;if visited(&quot;2.1&quot;) &amp;&amp; visited(&quot;2.2&quot;) &amp;&amp; visited(&quot;2.4&quot;) &amp;&amp; visited(&quot;3.0&quot;)==0&gt;&gt;
 Ao saíres do último apartamento que consegues investigar és imediatamente confrontado com uma barulheira descomunal, proveniente do rés do chão da casa. À medida que desces as escadas para te dirigires à mercearia, o ruído torna-se cada vez mais ensurdecedor e consegues apanhar pequenos fragmentos da discussão acalorada entre os moradores do prédio:
 
@@ -732,10 +746,8 @@ Uma voz com um sotaque russo carregado faz-se ouvir no meio da discussão, calan
 - Estás muito defensivo dos Três Carlos, há alguma coisa que nos queiras dizer? Foram vocês que roubaram o meu marido?
 - Não devo nada àqueles três e muito me devem eles a mim, não tenho nada a esconderm só estou a constatar uma realidade. De ti não se pode dizer o mesmo… segredos não te faltam.
 
-[[=&gt; Entras na mercearia|2.0]]
-&lt;&lt;else&gt;&gt;
-	Escolhe uma porta para visitares.
-&lt;&lt;if visited(&quot;2.1&quot;)&gt;&gt;&lt;a data-passage=&quot;2.1&quot;&gt;&lt;img src=&quot;data/images/door1open.png&quot; style=&quot;margin-right:2%&quot;&gt;&lt;/a&gt;&lt;&lt;else&gt;&gt;&lt;a data-passage=&quot;2.1&quot;&gt;&lt;img src=&quot;data/images/door1closed.png&quot; style=&quot;margin-left:2%&quot;&gt;&lt;/a&gt;&lt;&lt;endif&gt;&gt;&lt;&lt;if visited(&quot;2.2&quot;)&gt;&gt;&lt;a data-passage=&quot;2.2&quot;&gt;&lt;img src=&quot;data/images/door2open.png&quot;&gt;&lt;/a&gt;&lt;&lt;else&gt;&gt;&lt;a data-passage=&quot;2.2&quot;&gt;&lt;img src=&quot;data/images/door2closed.png&quot;&gt;&lt;/a&gt;&lt;&lt;endif&gt;&gt; &lt;a data-passage=&quot;2.3&quot;&gt;&lt;img src=&quot;data/images/door3closed.png&quot;&gt;&lt;/a&gt;&lt;&lt;if visited(&quot;2.4&quot;)&gt;&gt;&lt;a data-passage=&quot;2.4&quot;&gt;&lt;img src=&quot;data/images/door4open.png&quot; style=&quot;margin-right:2%&quot;&gt;&lt;/a&gt;&lt;&lt;else&gt;&gt;&lt;a data-passage=&quot;2.4&quot;&gt;&lt;img src=&quot;data/images/door4closed.png&quot; style=&quot;margin-right:2%&quot;&gt;&lt;/a&gt;&lt;&lt;endif&gt;&gt;
+[[=&gt; Entras na mercearia|2.0]]&lt;&lt;else&gt;&gt;&lt;div id=&quot;portas&quot;&gt;&lt;div id=&quot;textoporta&quot;&gt;&#39;&#39;Escolhe uma porta para visitares:&#39;&#39;&lt;/div&gt;
+&lt;&lt;if visited(&quot;2.1&quot;)&gt;&gt;&lt;a data-passage=&quot;2.1&quot;&gt;&lt;img src=&quot;data/images/door1open.png&quot; style=&quot;margin-right:2%&quot;&gt;&lt;/a&gt;&lt;&lt;else&gt;&gt;&lt;a data-passage=&quot;2.1&quot;&gt;&lt;img src=&quot;data/images/door1closed.png&quot; style=&quot;margin-left:2%&quot;&gt;&lt;/a&gt;&lt;&lt;endif&gt;&gt;&lt;&lt;if visited(&quot;2.2&quot;)&gt;&gt;&lt;a data-passage=&quot;2.2&quot;&gt;&lt;img src=&quot;data/images/door2open.png&quot;&gt;&lt;/a&gt;&lt;&lt;else&gt;&gt;&lt;a data-passage=&quot;2.2&quot;&gt;&lt;img src=&quot;data/images/door2closed.png&quot;&gt;&lt;/a&gt;&lt;&lt;endif&gt;&gt; &lt;a data-passage=&quot;2.3&quot;&gt;&lt;img src=&quot;data/images/door3closed.png&quot;&gt;&lt;/a&gt;&lt;&lt;if visited(&quot;2.4&quot;)&gt;&gt;&lt;a data-passage=&quot;2.4&quot;&gt;&lt;img src=&quot;data/images/door4open.png&quot; style=&quot;margin-right:2%&quot;&gt;&lt;/a&gt;&lt;&lt;else&gt;&gt;&lt;a data-passage=&quot;2.4&quot;&gt;&lt;img src=&quot;data/images/door4closed.png&quot; style=&quot;margin-right:2%&quot;&gt;&lt;/a&gt;&lt;&lt;endif&gt;&gt;&lt;/div&gt;
 &lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="2.1" tags="" position="1575,675" size="100,100">&lt;&lt;audio &quot;door1&quot; fadein loop play&gt;&gt;\
 &lt;&lt;if visited(&quot;2.1.f&quot;)&gt;&gt;Voltas a entrar no apartamento espaçoso onde habita a família de Bernardo e Fátima. A sala de estar está completamente vazia e não se ouve qualquer som, criando um ambiente pesado que contrasta com os rabiscos coloridos nas paredes.
 
@@ -799,7 +811,9 @@ No meio da confusão consegues distinguir uma ou outra frase proferida por uma v
 
 - Mas que gritaria é esta no andar de baixo? Será que o sovina finalmente percebeu que não é o pai das crianças? Com esta barulheira toda é bom que o velho tenha finalmente batido a bota.
 
-Agora com a curiosidade mais aguçada, decides entrar pela porta. A visão de uma sala de estar pequena, suja e pobre em mobília, surge através dos umbrais da porta. Nada te podia preparar para o ambiente que acabas de encontrar: o que falta em estilo e gosto, compensa na quantidade de restos de comida espalhados por todos os cantos, sacos de batatas fritas, bolachas, caixas de pizza, copos descartáveis de bebidas pegajosas que mancham o chão. Esta confusão só pode ser obra dos três homens de aparência voluptuosa sentados no sofá a devorar uma perna de presunto cada um.
+Agora com a curiosidade mais aguçada, decides entrar pela porta. 
+&lt;div id=&quot;esquerda&quot;&gt;&lt;img src=&quot;data/images/apartamento4.png&quot; style=&quot;width:100%;&quot;&gt;&lt;/div&gt;
+A visão de uma sala de estar pequena, suja e pobre em mobília, surge através dos umbrais da porta. Nada te podia preparar para o ambiente que acabas de encontrar: o que falta em estilo e gosto, compensa na quantidade de restos de comida espalhados por todos os cantos, sacos de batatas fritas, bolachas, caixas de pizza, copos descartáveis de bebidas pegajosas que mancham o chão. Esta confusão só pode ser obra dos três homens de aparência voluptuosa sentados no sofá a devorar uma perna de presunto cada um.
 
 Se não fossem os restos de comida a criar mau ambiente, seriam os vários pedaços de decoração partida espalhados pela sala. Estilhaços de jarras e de loiça e uma moldura partida de onde espreita uma fotografia. Pela raiva com que as duas figuras de sotaque forte gritam uma com a outra, até é de admirar o vidro das janelas ainda estar intacto...
 
