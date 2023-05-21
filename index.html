@@ -141,19 +141,18 @@ h1 {
   color:red;
 }
 #ui-bar {
-  background-color: transparent;
+  background-color:#e81d30;
   border: none;
+  height:100%;
   cursor: default;
+  border:solid #4f2440 3px;
 }
 
 #ui-bar-body {
   position:absolute;
   margin-top:0%;
-  height:auto;
+  height:auto%;
   bottom:0;
-  border:solid #4f2440 3px;
-  /*background-image:url(" https://cdn.discordapp.com/attachments/954851768657928242/1108359893846605866/light-brown-cartoon-wood-texture-pattern-wallpaper-background-free-vector.jpg");*/
-  background-color:#e81d30;
   background-attachment: fixed;
   background-repeat:repeat;
   margin-bottom:0;
@@ -171,8 +170,15 @@ h1 {
 	display:none;
 }
 
-#story-title {
-  width:100%
+#story-title{
+  height:100%;
+  text-align:center;
+  margin:0;
+  background-color:transparent;
+  width:100%;
+}
+#story-title img{
+  width:100%;
   text-align:center;
   margin:0 auto;
 }
@@ -183,12 +189,13 @@ h1 {
   color:white;
   text-transform:uppercase;
   letter-spacing: .1rem;
-  padding-top:.3rem;
-  padding-bottom:0;
+  padding-top:1rem;
+  padding-bottom:1rem;
+  margin:50% 0;
 }
 
 #letrinhas{
-  color:black;
+  color:white;
   padding:0;
   margin:0;
   height:auto;
@@ -196,6 +203,11 @@ h1 {
 
 
 #menu{
+  position:absolute;
+  bottom:0;
+  margin:auto;
+  width:80%;
+  padding-bottom:10%;
 }
 
 #menu-item-saves a::before, #menu-item-settings a::before, #menu-item-restart a::before {
@@ -373,26 +385,43 @@ button:disabled {
 
 @media screen and (max-width: 800px) {
   #ui-bar-toggle {
-	display: block;
+display: block;
   color: var(--text);
-  background-color: transparent;
   border: none;
 }
 #ui-bar-toggle:hover {
-  background-color: transparent;
   border: none;
   color: var(--silver);
 }
   #ui-bar {
 	width: 100vw;
-	background-color: var(--body);
+	background-color:#e81d30;
   }
 	#ui-bar.stowed {
     left: -90vw;
 }
+ #story-title img{
+  width:60%;
+  text-align:center;
+  margin:0 auto;
+}
+  
+  #menu{
+  position:relative;
+  bottom:0;
+  margin:auto;
+  width:80%;
+  padding-bottom:0%;
+}
+  
+  #story-caption {
+  margin:0;
+}
+  
   #ui-bar.stowed ~ #story {margin-left:10vw;}
+  #ui-bar.stowed{background-color:transparent; border:none;}
   #passages {padding: 5vh 5vw 0vh 0vw;width:90vw;}
-  h1 {text-align:center;}
+  h1 {text-align:center;font-size:1.7em; margin-top:10%;padding:5%;}
   #ui-dialog {top:0;left:0;width: calc(100vw - 32px);height: calc(100vh - 32px);}
   #ui-dialog-body, #ui-dialog-titlebar {width:100%;}
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">//long return
@@ -430,21 +459,18 @@ Setting.addList("fontSize", {
 	onInit		: resizeFont,
 	onChange	: resizeFont
 });
-</script><tw-tag name="ui" color="green"></tw-tag><tw-tag name="game-info" color="orange"></tw-tag><tw-tag name="code" color="red"></tw-tag><tw-tag name="portas" color="orange"></tw-tag><tw-tag name="em-falta" color="red"></tw-tag><tw-tag name="letras" color="orange"></tw-tag><tw-tag name="final" color="green"></tw-tag><tw-tag name="interior" color="yellow"></tw-tag><tw-tag name="exterior" color="yellow"></tw-tag><tw-passagedata pid="1" name="0.start" tags="exterior" position="250,1100" size="100,100">&lt;&lt;set $chapter to &quot;Tutorial&quot;&gt;&gt;
-Bem vindo ao &#39;&#39;Prédio das Portas Vermelhas&#39;&#39;, um livro interativo em que as tuas escolhas decidem o rumo da história! 
+</script><tw-tag name="ui" color="green"></tw-tag><tw-tag name="game-info" color="orange"></tw-tag><tw-tag name="code" color="red"></tw-tag><tw-tag name="portas" color="orange"></tw-tag><tw-tag name="em-falta" color="red"></tw-tag><tw-tag name="letras" color="orange"></tw-tag><tw-tag name="final" color="green"></tw-tag><tw-tag name="interior" color="yellow"></tw-tag><tw-tag name="exterior" color="yellow"></tw-tag><tw-passagedata pid="1" name="0.start" tags="exterior" position="250,1100" size="100,100">Bem vindo ao &#39;&#39;Prédio das Portas Vermelhas&#39;&#39;, um livro interativo em que as tuas escolhas decidem o rumo da história! 
 
-Antes de embarcares nesta aventura, precisas de estar familiarizado com a estrutura do livro e, por isso, deves ler este pequeno tutorial até ao fim. Neste livro irás encontrar diferentes tipos de interações, conforme a fase do jogo em que estejas. Por vezes ser-te-á pedido que escolhas qual das partes do Prédio queres explorar a seguir, o que pode ser decidido selecionando uma das portas vermelhas que dão acesso às diferentes casas. Ao entrares numa casa, poderás interagir com pessoas e objetos que se encontram no seu interior. A ordem pela qual visitas os moradores é inteiramente decidida por ti e irá influenciar o modo como interpretas a história!
+Antes de embarcares nesta aventura, precisas de estar familiarizado com a estrutura do livro e, por isso, deves ler este pequeno tutorial até ao fim. Neste livro irás encontrar diferentes tipos de interações, conforme a fase do jogo em que estejas. Por vezes ser-te-á pedido que escolhas qual das partes do Prédio queres explorar a seguir, o que pode ser decidido selecionando uma das portas vermelhas que dão acesso às diferentes casas. A ordem pela qual visitas os moradores é inteiramente decidida por ti e irá influenciar o modo como interpretas a história!
+
+Ao entrares numa casa, poderás interagir com pessoas e objetos que se encontram no seu interior. Neste livro, o jogador é uma presença que pode interagir com a cena e alterar o rumo da história. 
 
 Aqui está um exemplo de uma escolha, basta clicares no rumo que queres seguir:
 
-[[=&gt; Quero ouvir falar sobre os momentos narrativos antes de abrir o livro|0.a]]
-[[=&gt; Quero terminar o tutorial e abrir o livro|0.b]]</tw-passagedata><tw-passagedata pid="2" name="StoryDisplayTitle" tags="ui" position="400,300" size="100,100">&lt;&lt;if visited(&quot;1.a&quot;) || visited(&quot;1.b&quot;)&gt;&gt;
-&lt;img src=&quot;data/images/building.png&quot;&gt;
-&lt;&lt;else&gt;&gt;
-&lt;&lt;if visited(&quot;0.g&quot;)&gt;&gt;&lt;img src=&quot;data/images/buildingoutside.png&quot;&gt;
-&lt;&lt;endif&gt;&gt;
-&lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="StoryAuthor" tags="ui" position="400,500" size="100,100"></tw-passagedata><tw-passagedata pid="4" name="StoryCaption" tags="ui data" position="400,400" size="100,100">Inventário: 
-&lt;div id=&quot;letrinhas&quot;&gt;&lt;&lt;if $hasLetterL is true&gt;&gt;L&lt;&lt;/if&gt;&gt;&lt;&lt;if $hasLetterO is true&gt;&gt; O&lt;&lt;/if&gt;&gt;&lt;&lt;if $hasLetterG is true&gt;&gt; G&lt;&lt;/if&gt;&gt;&lt;&lt;if $hasLetterR is true&gt;&gt; R&lt;&lt;/if&gt;&gt;
+&lt;&lt;link &quot;=&gt; Quero ouvir falar sobre os momentos narrativos antes de abrir o livro&quot; &quot;0.a&quot;&gt;&gt;&lt;&lt;set $chapter to &quot;Tutorial&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;link &quot;=&gt; Quero terminar o tutorial e abrir o livro&quot; &quot;0.b&quot;&gt;&gt;&lt;&lt;set $chapter to &quot;Tutorial&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="StoryDisplayTitle" tags="ui" position="400,300" size="100,100">&lt;&lt;if visited(&quot;1.a&quot;) || visited(&quot;1.b&quot;)&gt;&gt;&lt;img src=&quot;data/images/building.png&quot; style=&quot;height=auto&quot;&gt;&lt;&lt;else&gt;&gt;&lt;img src=&quot;data/images/buildingoutside.png&quot;&gt;&lt;&lt;endif&gt;&gt;
+</tw-passagedata><tw-passagedata pid="3" name="StoryAuthor" tags="ui" position="400,500" size="100,100"></tw-passagedata><tw-passagedata pid="4" name="StoryCaption" tags="ui data" position="400,400" size="100,100">Inventário: 
+&lt;div id=&quot;letrinhas&quot;&gt;&lt;&lt;if $hasLetterL is true&gt;&gt;L&lt;&lt;/if&gt;&gt;&lt;&lt;if $hasLetterO is true&gt;&gt;O&lt;&lt;/if&gt;&gt;&lt;&lt;if $hasLetterG is true&gt;&gt;G&lt;&lt;/if&gt;&gt;&lt;&lt;if $hasLetterR is true&gt;&gt;R&lt;&lt;/if&gt;&gt;
 &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="5" name="Character" tags="character game-info no-return" position="500,400" size="100,100">character page</tw-passagedata><tw-passagedata pid="6" name="StoryMenu" tags="ui" position="300,400" size="100,100">&lt;&lt;link &quot;Collection&quot; &quot;Character&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;link &quot;Inventário&quot; &quot;Codex&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
@@ -480,7 +506,7 @@ passages.scrollTop = 0;
 &lt;&lt;cacheaudio &quot;final_good&quot; &quot;data/audio/final_good.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;final_bad&quot; &quot;data/audio/final_bad.mp3&quot;&gt;&gt;
 
-</tw-passagedata><tw-passagedata pid="9" name="0.a" tags="exterior" position="400,1000" size="100,100">Grande parte deste livro é focada na observação das diferentes habitações do prédio e na escuta atenta das interações estabelecidas pelos seus moradores. São as tuas escolhas que definem estas interações, levando a momentos narrativos de exposição que te permitem progredir na história. 
+</tw-passagedata><tw-passagedata pid="9" name="0.a" tags="exterior" position="350,1100" size="100,100">Grande parte deste livro é focada na observação das diferentes habitações do prédio e na escuta atenta das interações estabelecidas pelos seus moradores. São as tuas escolhas que definem estas interações, levando a momentos narrativos de exposição que te permitem progredir na história. 
 
 Como exemplo, avança para terminares o tutorial!
 
@@ -507,26 +533,24 @@ h1 {text-align:center;margin-top:25vh;}
 &lt;/style&gt;
 
 &lt;h1&gt;O Prédio das Portas Vermelhas&lt;/h1&gt;
-&lt;&lt;if Save.autosave.ok() and Save.autosave.has()&gt;&gt;&lt;&lt;link &quot;Resume Game&quot;&gt;&gt;&lt;&lt;script&gt;&gt;Save.autosave.load()&lt;&lt;/script&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;/if&gt;&gt;&lt;&lt;link &quot;Novo Jogo&quot; &quot;0.start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Carregar Jogo&quot;&gt;&gt;&lt;&lt;run UI.saves()&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Definições&quot;&gt;&gt;&lt;&lt;run UI.settings()&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="0.b" tags="exterior" position="400,1200" size="100,100">&lt;&lt;set $chapter to &quot;Introdução&quot;&gt;&gt;
-A tua primeira escolha está feita e estás prontíssimo para começar a jogar! Não te esqueças que neste livro nem sempre vais interagir diretamente com os moradores do prédio. Mas atenção! Isso não significa que não podes influenciar o rumo das suas conversas! Depressa verás que uma presença passiva pode ter tanto ou mais impacto na vida dos moradores como uma presença ativa…
+&lt;&lt;if Save.autosave.ok() and Save.autosave.has()&gt;&gt;&lt;&lt;link &quot;Resume Game&quot;&gt;&gt;&lt;&lt;script&gt;&gt;Save.autosave.load()&lt;&lt;/script&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;/if&gt;&gt;&lt;&lt;link &quot;Novo Jogo&quot; &quot;0.start&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Carregar Jogo&quot;&gt;&gt;&lt;&lt;run UI.saves()&gt;&gt;&lt;&lt;/link&gt;&gt; | &lt;&lt;link &quot;Definições&quot;&gt;&gt;&lt;&lt;run UI.settings()&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="0.b" tags="exterior" position="450,1100" size="100,100">A tua primeira escolha está feita e estás prontíssimo para começar a jogar! Não te esqueças que neste livro nem sempre vais interagir diretamente com os moradores do prédio. Mas atenção! Isso não significa que não podes influenciar o rumo das suas conversas! Depressa verás que uma presença passiva pode ter tanto ou mais impacto na vida dos moradores como uma presença ativa…
 
-[[=&gt; Vamos começar!|0.c]]
-</tw-passagedata><tw-passagedata pid="15" name="0.c" tags="exterior" position="525,1100" size="100,100">&lt;&lt;audio &quot;introduction&quot; loop play&gt;&gt;\
+&lt;&lt;link &quot;=&gt; Vamos começar!&quot; &quot;0.c&quot;&gt;&gt;&lt;&lt;set $chapter to &quot;Introdução&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+</tw-passagedata><tw-passagedata pid="15" name="0.c" tags="exterior" position="550,1100" size="100,100">&lt;&lt;audio &quot;introduction&quot; fadein loop play&gt;&gt;\
 &lt;div id=&quot;esquerda&quot;&gt;&lt;img src=&quot;data/images/bifurcacao.png&quot;&gt;&lt;/div&gt;
 &lt;div id=&quot;direita&quot;&gt;Caminhas por uma rua abaixo, sem rumo, avançando lentamente por entre as casas e ouvindo as palavras trocadas pelos moradores. O porquê de estares aqui é-te desconhecido, mas sabes que todos os caminhos irão dar, invariavelmente, ao mesmo destino. Não sabes que destino é esse nem o caminho que tens de percorrer para o atingires, mas tens a certeza de uma coisa: as tuas escolhas não o são realmente até lá chegares, pois todos os caminhos vão dar ao mesmo lugar. Depois… é uma incógnita.
 
 Chegas ao fim da rua e encontras uma bifurcação:
 [[=&gt; Viras à esquerda para uma ruela decadente|0.d]]
 [[=&gt; Viras à direita para uma rua semelhante àquela em que te encontras|0.e]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="16" name="0.d" tags="exterior" position="675,1000" size="100,100">&lt;div id=&quot;esquerda&quot;&gt;&lt;img src=&quot;data/images/vista_ao_longe.png&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="16" name="0.d" tags="exterior" position="700,1025" size="100,100">&lt;div id=&quot;esquerda&quot;&gt;&lt;img src=&quot;data/images/vista_ao_longe.png&quot;&gt;&lt;/div&gt;
 &lt;div id=&quot;direita&quot;&gt;A descida à tua frente é abrupta e tens de andar cautelosamente para garantir que não cais nos paralelos desnivelados da calçada. À medida que avanças, a redução de luminosidade é notória. As casas que te rodeiam estão cada vez mais degradadas e ouvem-se bocados de conversas trocadas aos berros de uma janela para outra, ao longo de toda a largura da rua. Ao virar uma esquina avistas ao fundo um edifício velho que te chama à atenção. 
-
 [[=&gt; Admirar o prédio|0.g]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="17" name="0.e" tags="exterior" position="675,1175" size="100,100">Viras à direita e entras numa rua ampla e luminosa. Algumas pessoas bem vestidas andam apressadamente, cumprimentando-se umas às outras de forma educada. Continuas a andar em frente e as palavras trocadas por um casal jovem que sai de um prédio chegam-te aos ouvidos por entre os ruídos da rua. 
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="17" name="0.e" tags="exterior" position="700,1150" size="100,100">Viras à direita e entras numa rua ampla e luminosa. Algumas pessoas bem vestidas andam apressadamente, cumprimentando-se umas às outras de forma educada. Continuas a andar em frente e as palavras trocadas por um casal jovem que sai de um prédio chegam-te aos ouvidos por entre os ruídos da rua. 
 
-- Não dá jeito nenhum que estejam a fazer obras no fim da rua, temos de fazer um desvio enorme para chegar às caves.
-- Porque não vamos pela rua de baixo e damos a volta às obras, em vez de voltarmos todo o caminho para trás?
-- Não me sinto nada confortável a descer por essa rua…
+-Não dá jeito nenhum que estejam a fazer obras no fim da rua, temos de fazer um desvio enorme para chegar às caves.
+-Porque não vamos pela rua de baixo e damos a volta às obras, em vez de voltarmos todo o caminho para trás?
+-Não me sinto nada confortável a descer por essa rua…
 	
 As palavras do casal perdem-se por entre o som das buzinas de dois carros que quase chocam a tentar inverter a marcha. Reparas que a rua está em obras e termina abruptamente à tua frente, sugerindo um desvio por uma ruela duvidosa que associas às palavras do casal.
 
@@ -538,7 +562,7 @@ Não é a primeira vez que ouves este nome, pois são vários os rumores que cir
 
 O último morador a percorrer os largos corredores e escadarias da antiga casa senhorial foi um pequeno empresário de vinhos do Porto, que viu a sua reputação diminuir de dia para dia, devido aos rumores que deixavam as paredes do prédio pelas palavras sussurradas dos seus empregados indiscretos. A empresa fechou de um momento para o outro e os habitantes do prédio desapareceram de forma praticamente instantânea, deixando o casarão mergulhado na escuridão. O pouco que se sabe sobre o antigo dono do prédio e respetiva família está confinado à memória quase esquecida das pessoas mais velhas, que ainda hoje se referem a ele misteriosamente como Sr. M., por desconhecerem a sua verdadeira identidade.
 
-[[=&gt; Aproximas-te do prédio|0.i]]
+&lt;&lt;link &quot;=&gt; Aproximas-te do prédio&quot; &quot;0.i&quot;&gt;&gt;&lt;&lt;set $chapter to &quot;O Prédio&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 
 
 </tw-passagedata><tw-passagedata pid="19" name="0.f" tags="exterior" position="825,1200" size="100,100">&lt;div id=&quot;esquerda&quot;&gt;&lt;img src=&quot;data/images/vista_ao_longe.png&quot;&gt;&lt;/div&gt;
@@ -557,11 +581,10 @@ O último morador a percorrer os largos corredores e escadarias da antiga casa s
 As palavras do jovem rapaz deixam de ser audíveis quando regressas ao topo da rua, seguindo pelo lado esquerdo da bifurcação. 
 
 [[=&gt; Continuar|0.d]]
-</tw-passagedata><tw-passagedata pid="21" name="0.i" tags="exterior" position="1050,1075" size="100,100">Os teus pensamentos são interrompidos por um estrondo vindo do rés-do-chão do prédio. Aproximas-te da entrada e deparas-te com duas portas vermelhas. Na porta da esquerda encontra-se uma pequena tabuleta onde se pode ler &#39;Mercearia&#39;. A porta do lado direito encontra-se entreaberta e consegues ver o começo de uma escadaria.
+</tw-passagedata><tw-passagedata pid="21" name="0.i" tags="exterior" position="1000,1075" size="100,100">Os teus pensamentos são interrompidos por um estrondo vindo do rés-do-chão do prédio. Aproximas-te da entrada e deparas-te com duas portas vermelhas. Na porta da esquerda encontra-se uma pequena tabuleta onde se pode ler &#39;Mercearia&#39;. A porta do lado direito encontra-se entreaberta e consegues ver o começo de uma escadaria.
 
 [[=&gt; Entras na mercearia, seguindo o estrondo que ouviste anteriormente|1.a]] 
-[[=&gt; Abres a porta que dá acesso ao prédio, por detrás da qual se ouvem vozes agitadas|1.b]]</tw-passagedata><tw-passagedata pid="22" name="1.a" tags="" position="1125,950" size="100,100">&lt;&lt;set $chapter to &quot;O Prédio&quot;&gt;&gt;
-Abres a porta que dá para a mercearia, entrando num espaço decadente com algumas pilhas de mercadoria cobertas de pó e um pequeno galinheiro com cerca de uma dezena de galinhas misantropas. No chão, perto da caixa registadora, encontra-se estendido um homem inconsciente, cuja queda deve ter provocado o estrondo que ouviste inicialmente. 
+[[=&gt; Abres a porta que dá acesso ao prédio, por detrás da qual se ouvem vozes agitadas|1.b]]</tw-passagedata><tw-passagedata pid="22" name="1.a" tags="" position="1125,950" size="100,100">Abres a porta que dá para a mercearia, entrando num espaço decadente com algumas pilhas de mercadoria cobertas de pó e um pequeno galinheiro com cerca de uma dezena de galinhas misantropas. No chão, perto da caixa registadora, encontra-se estendido um homem inconsciente, cuja queda deve ter provocado o estrondo que ouviste inicialmente. 
 
 Uma mulher abre a porta do armazém, entra e olha à sua volta, parecendo confusa. A sua roupa longa cobre praticamente toda a pele abaixo do seu pescoço e a mulher parece não reparar no homem inconsciente. 
 
@@ -569,9 +592,8 @@ Uma mulher abre a porta do armazém, entra e olha à sua volta, parecendo confus
 
 Quando finalmente repara no corpo estendido no chão, a mulher solta um estridente &#39;Valha-me Deus, o meu marido!&#39;, fazendo o sinal da cruz. Dirige-se prontamente ao marido, batendo-lhe levemente na cara na tentativa de o acordar.
 
-[[=&gt; Continuar|1.f]]</tw-passagedata><tw-passagedata pid="23" name="1.b" tags="" position="1100,800" size="100,100">&lt;&lt;set $chapter to &quot;O Prédio&quot;&gt;&gt;
-&lt;&lt;audio &quot;introduction&quot; stop&gt;&gt;\
-&lt;&lt;audio &quot;door1&quot; loop play&gt;&gt;\
+[[=&gt; Continuar|1.f]]</tw-passagedata><tw-passagedata pid="23" name="1.b" tags="" position="1100,800" size="100,100">&lt;&lt;audio &quot;introduction&quot; fadeout&gt;&gt;\
+&lt;&lt;audio &quot;door1&quot; loop fadein&gt;&gt;\
 Sobes a escadaria e chegas ao primeiro piso, onde encontras a Porta Número 1. Abres a porta, entrando num apartamento espaçoso mas completamente degradado. A redução da quantidade de mobília ao mínimo indispensável e a ausência de decoração faz o espaço parecer ainda mais amplo, dando destaque à camada de sujidade acumulada em todas as superfícies. 
 
 A conversa abafada que ouviste anteriormente continua atrás de uma porta que abres, revelando duas pessoas que discutem.
@@ -610,7 +632,8 @@ Bernardo levanta-se de um pulo, e dirige-se à caixa registadora, puxando de um 
 
 Fátima e Bernardo ligam à polícia, agitados com o sucedido. Enquanto nada de mais interessante se passa, decides vaguear pelo prédio na esperança de recolher algumas informações úteis. 
 
-[[=&gt; Voltas para a entrada e exploras outra porta|2]]</tw-passagedata><tw-passagedata pid="25" name="1.c." tags="" position="1225,800" size="100,100">Fátima abandona o quarto e  segue em direção à mercearia. Tu vais atrás para onde se ouviu inicialmente o estrondo. Deparas-te com um espaço decadente com algumas pilhas de mercadoria cobertas de pó e um pequeno galinheiro com cerca de uma dezena de galinhas misantropas. No chão, perto da caixa registadora, encontra-se estendido um homem no qual Fátima demora a reparar.
+&lt;&lt;link &quot;=&gt; Vaguear pelo prédio&quot; &quot;2.0&quot;&gt;&gt;&lt;&lt;set $chapter to &quot;2.Investigação&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+</tw-passagedata><tw-passagedata pid="25" name="1.c." tags="" position="1225,800" size="100,100">Fátima abandona o quarto e  segue em direção à mercearia. Tu vais atrás para onde se ouviu inicialmente o estrondo. Deparas-te com um espaço decadente com algumas pilhas de mercadoria cobertas de pó e um pequeno galinheiro com cerca de uma dezena de galinhas misantropas. No chão, perto da caixa registadora, encontra-se estendido um homem no qual Fátima demora a reparar.
 
 - Onde estará ele…? Porque não está a passar revista às contas da mercearia como é habitual?
 
@@ -639,13 +662,12 @@ Os miúdos continuam a conversa que o homem tenta despachar. Ouves um estridente
 [[=&gt; Continuar|1.e]]
 </tw-passagedata><tw-passagedata pid="27" name="1.e" tags="" position="1350,800" size="100,100">Atravessas a casa e a porta que dá para a mercearia, entrando num espaço decadente com algumas pilhas de mercadoria cobertas de pó e um pequeno galinheiro com cerca de uma dezena de galinhas misantropas. No chão, perto da porta que dá para a caixa registadora, encontra-se estendido um homem sobre o qual Fátima se debruça, batendo-lhe levemente na cara na tentativa de o acordar.
 
-[[=&gt; Continuar|1.f]]</tw-passagedata><tw-passagedata pid="28" name="2" tags="portas" position="1475,975" size="100,100">&lt;&lt;set $chapter to &quot;O Prédio&quot;&gt;&gt;
-&lt;&lt;audio &quot;door1&quot; stop&gt;&gt;\
-&lt;&lt;audio &quot;door2&quot; stop&gt;&gt;\
-&lt;&lt;audio &quot;door3&quot; stop&gt;&gt;\
-&lt;&lt;audio &quot;door4&quot; stop&gt;&gt;\
+[[=&gt; Continuar|1.f]]</tw-passagedata><tw-passagedata pid="28" name="2" tags="portas" position="1475,975" size="100,100">&lt;&lt;audio &quot;door1&quot; fadeout&gt;&gt;\
+&lt;&lt;audio &quot;door2&quot; fadeout&gt;&gt;\
+&lt;&lt;audio &quot;door3&quot; fadeout&gt;&gt;\
+&lt;&lt;audio &quot;door4&quot; fadeout&gt;&gt;\
 
-&lt;&lt;if visited(&quot;2.1&quot;) &amp;&amp; visited(&quot;2.2&quot;) &amp;&amp; visited(&quot;2.4&quot;) &amp;&amp; visited(&quot;2.0&quot;)==0&gt;&gt;
+&lt;&lt;if visited(&quot;2.1&quot;) &amp;&amp; visited(&quot;2.2&quot;) &amp;&amp; visited(&quot;2.4&quot;) &amp;&amp; visited(&quot;3.0&quot;)==0&gt;&gt;
 Ao saíres do último apartamento que consegues investigar és imediatamente confrontado com uma barulheira descomunal, proveniente do rés do chão da casa. À medida que desces as escadas para te dirigires à mercearia, o ruído torna-se cada vez mais ensurdecedor e consegues apanhar pequenos fragmentos da discussão acalorada entre os moradores do prédio:
 
 - … porque ambos sabem muito bem que assalto é aquilo que nos fazem com as rendas e não este roubo de meia dúzia de produtos estragados. Para além disso, quem me diz que isto não é encenado? Tenho a certeza que algum seguro há-de cobrir estes danos muito acima do seu valor real!
@@ -661,15 +683,14 @@ Uma voz com um sotaque russo carregado faz-se ouvir no meio da discussão, calan
 &lt;&lt;else&gt;&gt;
 	Escolhe uma porta para visitares.
 &lt;&lt;if visited(&quot;2.1&quot;)&gt;&gt;&lt;a data-passage=&quot;2.1&quot;&gt;&lt;img src=&quot;data/images/door1open.png&quot; style=&quot;margin-right:2%&quot;&gt;&lt;/a&gt;&lt;&lt;else&gt;&gt;&lt;a data-passage=&quot;2.1&quot;&gt;&lt;img src=&quot;data/images/door1closed.png&quot; style=&quot;margin-left:2%&quot;&gt;&lt;/a&gt;&lt;&lt;endif&gt;&gt;&lt;&lt;if visited(&quot;2.2&quot;)&gt;&gt;&lt;a data-passage=&quot;2.2&quot;&gt;&lt;img src=&quot;data/images/door2open.png&quot;&gt;&lt;/a&gt;&lt;&lt;else&gt;&gt;&lt;a data-passage=&quot;2.2&quot;&gt;&lt;img src=&quot;data/images/door2closed.png&quot;&gt;&lt;/a&gt;&lt;&lt;endif&gt;&gt; &lt;a data-passage=&quot;2.3&quot;&gt;&lt;img src=&quot;data/images/door3closed.png&quot;&gt;&lt;/a&gt;&lt;&lt;if visited(&quot;2.4&quot;)&gt;&gt;&lt;a data-passage=&quot;2.4&quot;&gt;&lt;img src=&quot;data/images/door4open.png&quot; style=&quot;margin-right:2%&quot;&gt;&lt;/a&gt;&lt;&lt;else&gt;&gt;&lt;a data-passage=&quot;2.4&quot;&gt;&lt;img src=&quot;data/images/door4closed.png&quot; style=&quot;margin-right:2%&quot;&gt;&lt;/a&gt;&lt;&lt;endif&gt;&gt;
-&lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="2.1" tags="" position="1575,675" size="100,100">&lt;&lt;set $chapter to &quot;Porta Número 1&quot;&gt;&gt;
-&lt;&lt;audio &quot;door1&quot; loop play&gt;&gt;\
+&lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="2.1" tags="" position="1575,675" size="100,100">&lt;&lt;audio &quot;door1&quot; fadein loop play&gt;&gt;\
 &lt;&lt;if visited(&quot;2.1.f&quot;)&gt;&gt;Voltas a entrar no apartamento espaçoso onde habita a família de Bernardo e Fátima. A sala de estar está completamente vazia e não se ouve qualquer som, criando um ambiente pesado que contrasta com os rabiscos coloridos nas paredes.
 
 [[=&gt; Analisas os desenhos espalhados pelas paredes da sala|2.1.c]]
 [[=&gt; Voltas para a entrada e exploras outra porta|2]] 
 &lt;&lt;else&gt;&gt;
 &lt;&lt;if visited(&quot;1.b&quot;)&gt;&gt;Entras no apartamento espaçoso que anteriormente te conduziu ao caloroso debate entre Fátima e o seu acompanhante. No canto da sala, 4 crianças de cabelo muito escuro brincam com um conjunto de lápis de cera, rindo-se dos rabiscos coloridos que fazem nas paredes da divisão.
-&lt;&lt;else&gt;&gt;Abres a &#39;&#39;Porta Número 1&#39;&#39;, entrando num apartamento espaçoso mas completamente degradado. A redução da quantidade de mobília ao mínimo indispensável e a ausência de decoração faz o espaço parecer ainda mais amplo, dando destaque à camada de sujidade acumulada em todas as superfícies. No canto da sala, 4 crianças brincam com um conjunto de lápis de cera, rindo-se dos rabiscos coloridos que fazem nas paredes da divisão.
+&lt;&lt;else&gt;&gt;Abres a porta com o número 1, entrando num apartamento espaçoso mas completamente degradado. A redução da quantidade de mobília ao mínimo indispensável e a ausência de decoração faz o espaço parecer ainda mais amplo, dando destaque à camada de sujidade acumulada em todas as superfícies. No canto da sala, 4 crianças brincam com um conjunto de lápis de cera, rindo-se dos rabiscos coloridos que fazem nas paredes da divisão.
 &lt;&lt;endif&gt;&gt;
 [[=&gt; Aproximas-te das crianças, que começaram a conversar alegremente|2.1.a]] 
 [[=&gt; Analisas os desenhos espalhados pelas paredes da sala|2.1.c]]
@@ -682,8 +703,7 @@ Uma voz com um sotaque russo carregado faz-se ouvir no meio da discussão, calan
 
 
 
-</tw-passagedata><tw-passagedata pid="30" name="2.2" tags="" position="2200,725" size="100,100">&lt;&lt;set $chapter to &quot;Porta Número 2&quot;&gt;&gt;
-&lt;&lt;audio &quot;door2&quot; loop play&gt;&gt;\
+</tw-passagedata><tw-passagedata pid="30" name="2.2" tags="" position="2200,725" size="100,100">&lt;&lt;audio &quot;door2&quot; loop fadein&gt;&gt;\
 &lt;&lt;if visited(&quot;2.2.a&quot;) || visited(&quot;2.2.b&quot;) || visited(&quot;2.2.c&quot;)&gt;&gt;Voltas a entrar na casa do segundo andar. Amanda e Artur não se encontram na minúscula divisão e Pedro dorme calmamente na cama, que ocupa grande parte do espaço da casa. Uma vez que nada acontece, decides regressar à entrada e prosseguir as tuas investigações.
 
 [[=&gt; Voltas para a entrada e exploras outra porta|2]] 
@@ -709,9 +729,8 @@ Pedro espreguiça-se e espalha o seu corpo preguiçosamente pela cama ao mesmo t
 &lt;&lt;if visited(&quot;2.2.i&quot;)==0&gt;&gt;
 &lt;&lt;set $hasLetterG to true&gt;&gt;
 Tentas decidir para onde te dirigir de seguida quando um pequeno papel caído perto da porta misteoriosa chama a tua atenção. Curioso para descobrir o seu conteúdo, desdobras cuidadosamente o papel e lês as palavras nele escritas. A caligrafia é um tanto trémula, mas é possível discernir o seguinte: &quot;Apartamento número 3, 00h01. - G.&quot;. A letra vermelha chama-te à atenção e rasgas o pedaço de papel à sua volta, certo de ter encontrado uma nova pista.
-&lt;&lt;endif&gt;&gt;[[=&gt; Voltas para a entrada e exploras outra porta|2]]</tw-passagedata><tw-passagedata pid="32" name="2.4" tags="" position="1150,1200" size="100,100">&lt;&lt;set $chapter to &quot;Porta Número 3&quot;&gt;&gt;
-&lt;&lt;audio &quot;door4&quot; loop play&gt;&gt;\
-&lt;&lt;if visited(&quot;2.4.i&quot;)&gt;&gt;Voltas a entrar na &#39;&#39;Porta Número 4&#39;&#39;. Neste momentos, apenas os Três Carlos se encontram no seu interior, sentados no sofá a devorar o seu manjar enquanto vêm televisão. 
+&lt;&lt;endif&gt;&gt;[[=&gt; Voltas para a entrada e exploras outra porta|2]]</tw-passagedata><tw-passagedata pid="32" name="2.4" tags="" position="1150,1200" size="100,100">&lt;&lt;audio &quot;door4&quot; loop fadein&gt;&gt;\
+&lt;&lt;if visited(&quot;2.2.i&quot;)&gt;&gt;Voltas a entrar na casa do quarto andar cujos únicos habitantes são neste momento os Três Carlos, sentados no sofá a devorar o seu manjar enquanto vêm televisão. 
 
 &lt;&lt;if $hasLetterR&gt;&gt;
 Nada de interessante parece acontecer e, por isso, decides regressar à entrada e prosseguir as tuas investigações.
@@ -845,7 +864,7 @@ A conversa entre os irmãos termina e preparas-te para abandonar a casa. No enta
 [[=&gt; Pegas na moldura |2.4.i]]
 </tw-passagedata><tw-passagedata pid="39" name="2.4.i" tags="letras" position="1375,1975" size="100,100">Decides seguir as instruções de Magalhães, afastando os estilhaços e pegando na moldura antiga e na fotografia que se esconde debaixo dela. A moldura é de uma madeira acastanhada e de aparência rústica, contrastanfo com o resto da mobilia do apartamento, bastante mais banalizada, barata e comercial. Aproxima-la de ti para poderes analisar a fotografia com maior detalhe. 
 
-A fotografia analógica encontra-se marcada pelo tempo e pelo grão típico da impressão dos anos 80. Apesar da cor esbatida, tudo se distingue com clareza, com exceção da lateral esquerda onde um pedaço tinha sido rasgado. Na imagem, é visível um conjunto de pessoas com caras ligeiramemente familiares, posicionadas em pé, em frente a um prédio com um charme único e inconfundível, com uma fachada renovada e de portas tão vermelhas que parecem acabadinhas de pintar. O grupo é formado por várias pessoas nos seus 20/30 anos e o braço de um indíviduo impossível identificar graças ao rasgão da fotografia. Analisando com mais atenção, é fácil distinguir as feições de várias das pessoas que conheceste hoje, apesar de bem mais novas e de olhar bem mais inocente. 
+A fotograifia analógica encontra-se marcada pelo tempo e pelo grão típico da impressão dos anos 80. Apesar da cor esbatida, tudo se distingue com clareza, com exceção da lateral esquerda onde um pedaço tinha sido rasgado. Na imagem, é visível um conjunto de pessoas com caras ligeiramemente familiares, posicionadas em pé, em frente a um prédio com um charme único e inconfundível, com uma fachada renovada e de portas tão vermelhas que parecem acabadinhas de pintar. O grupo é formado por várias pessoas nos seus 20/30 anos e o braço de um indíviduo impossível identificar graças ao rasgão da fotografia. Analisando com mais atenção, é fácil distinguir as feições de várias das pessoas que conheceste hoje, apesar de bem mais novas e de olhar bem mais inocente. 
 
 Aproveitas para virar a imagem, em busca de mais informações sobre os moradores no prédio. No verso é visível um carimbo vermelho e consegues ler &quot;Dia da Grande Mudança - M.&quot;.
 
@@ -868,19 +887,19 @@ Surpreendido com a abordagem direta do homem, olhas em redor, verificando que ma
 
 O homem aponta para uma moldura de madeira antiga rodeada por estilhaços e, sem qualquer aviso prévio, desata a correr, abandonando a sala.
 
-[[=&gt; Pegas na moldura |2.4.i]]</tw-passagedata><tw-passagedata pid="41" name="3.3" tags="final" position="2575,1250" size="100,100">Olhas sobre o ombro esquerdo e acenas na direção do louco, que recebe o teu sinal com visível entusiasmo. Magalhães abre a porta e atravessa a entrada, dirigindo-se ao fundo da sala, sem esperar que o sigas.
+[[=&gt; Pegas na moldura |2.4.i]]</tw-passagedata><tw-passagedata pid="41" name="4.3magalhaes" tags="final" position="2575,1250" size="100,100">Olhas sobre o ombro esquerdo e acenas na direção do louco, que recebe o teu sinal com visível entusiasmo. Magalhães abre a porta e atravessa a entrada, dirigindo-se ao fundo da sala, sem esperar que o sigas.
 
 Entras cautelosamente na divisão estranhamente espaçosa. Depressa te apercebes que a sensação de espaço é uma mera ilusão resultante do facto de a única mobília presente ser a secretária sobre a qual Magalhães se debruça e a respetiva cadeira, encostadas na parede mais afastada. O ambiente é sombrio e o chão está coberto de pó, como se não fosse pisado há décadas.
 
 Atravessas a divisão na direção da secretária, perto da qual o velho louco remexe freneticamente num conjunto de papéis soltos. A primeira coisa que te chama à atenção é a claridade que circunda uma velha máquina de escrever, um círculo áureo sem origem aparente, uma vez que a divisão não tem qualquer janela. Quando os teus olhos se habituam à luz, reparas numa folha velha encravada na máquina. Pegas nela e lês em voz alta as palavras que tem escrita:
 
-&#39;&#39;Mais uma versão deste prédio, mais um fim, igual a todos os outros. As chances de redenção acabaram e os moradores estão, como sempre, à beira do colapso. Qualquer pequeno distúrbio irá levantar intrigas, gerar o caos, acabar com tudo. Só há uma questão: o que vou fazer? 
-M.&#39;&#39;
+Mais uma versão deste prédio, mais um fim, igual a todos os outros. As chances de redenção acabaram e os moradores estão, como sempre, à beira do colapso. Qualquer pequeno distúrbio irá levantar intrigas, gerar o caos, acabar com tudo. Só há uma questão: o que vou fazer? 
+M.
 
 Quando acabas de ler a mensagem do antigo dono do prédio, voltas a tua atenção para Magalhães, que ainda está focado no pequeno conjunto de folhas soltas que encontrou na secretária. Com a folha que arrancaste ainda na mão, diriges-te a Magalhães:
 
-[[=&gt; Porque estás tão interessado nessas folhas? |3.3.a]]
-[[=&gt; Foste tu que escreveste isto?  |3.3.b]]</tw-passagedata><tw-passagedata pid="42" name="3.2" tags="final" position="2575,1125" size="100,100">Olhas uma última vez à tua volta e tentas absorver todas as sensações que te rodeiam, tentando memorizar, uma vez mais, todo o ambiente que estiveste a investigar nas últimas horas.
+[[=&gt; Porque estás tão interessado nessas folhas? |4.3.a]]
+[[=&gt; Foste tu que escreveste isto?  |4.3.b]]</tw-passagedata><tw-passagedata pid="42" name="4.2default" tags="final" position="2575,1125" size="100,100">Olhas uma última vez à tua volta e tentas absorver todas as sensações que te rodeiam, tentando memorizar, uma vez mais, todo o ambiente que estiveste a investigar nas últimas horas.
 
 Não sabes exatamente porquê, mas desde o momento em que abriste a porta, um peso formou-se sobre o teu coração, talvez um agouro do que pudesse vir depois. Olhas em volta em jeito de captar todos os últimos pormenores, a tinta acizentada da parede decrépita, que denuncia mais anos e ciclos do que podias contar, o tom vibrante das portas vermelhas, e a palavra ORGULHO bem vísivel no topo da porta, os sons das crianças que no andar de baixo soltam gritos animados enquanto correm atrás das galinhas, os murmúrios, grunhos e discussões que consegues ouvir por todo o prédio. Todo um conjunto de vidas e memórias que algo dentro de ti te diz para contemplares, quase como um sussurro de uma idosa a espreitar, murmurando “Outro ciclo prestes a fechar...”
 
@@ -888,8 +907,8 @@ Com uma última respiração profunda, decides finalmente abrir a porta, totalme
 
 A primeira coisa que te chama à atenção é a claridade que circunda a máquina de escrever, um círculo áureo sem origem aparente, uma vez que a divisão não tem qualquer janela. Quando os teus olhos se habituam à luz, reparas numa folha velha encravada na máquina. Pegas nela e lês em voz alta as palavras que tem escrita:
 
-&#39;&#39;Mais uma década, mais uma versão deste prédio, mais um fim, igual a todos os outros. As chances de redenção acabaram e os moradores estão, como sempre, à beira do colapso. Qualquer pequeno distúrbio irá levantar intrigas, gerar o caos, acabar com tudo. Só há uma questão: o que vou fazer? 
-M.&#39;&#39;
+\\Mais uma década, mais uma versão deste prédio, mais um fim, igual a todos os outros. As chances de redenção acabaram e os moradores estão, como sempre, à beira do colapso. Qualquer pequeno distúrbio irá levantar intrigas, gerar o caos, acabar com tudo. Só há uma questão: o que vou fazer? 
+M.\\
 
 Quando acabas de ler a mensagem recordas-te das longas horas passadas nesta sala, das palavras sem fim digitadas nas teclas gastas da máquina de escrever, a delinear a vida de cada um dos moradores do prédio, a escrutinar os seus pecados ao mais ínfimo detalhe.
 
@@ -899,7 +918,7 @@ Uma vez mais, os teus dedos vagueiam sobre o teclado da antiga máquina de escre
 
 As palavras que escreves começam a ganhar forma no papel que conta toda a história das vidas, relações, memórias e detalhes dos habitantes do prédio:
 
-[[=&gt; Assaltar a mercearia|3.a]]</tw-passagedata><tw-passagedata pid="43" name="3.1" tags="final" position="2575,1000" size="100,100">Olhas sobre o ombro direito para confirmares que a Sebastiana ainda se encontra atrás de ti e verificas que esta não se moveu um milímetro. A sua expressão misteriosa transforma-se pela primeira vez num sorriso bondoso e a mulher incita-te a entrar na habitação, indicando a porta vermelha com a mão.
+[[=&gt; Assaltar a mercearia|5.1mau]]</tw-passagedata><tw-passagedata pid="43" name="4.1sebastiana" tags="final" position="2575,1000" size="100,100">Olhas sobre o ombro direito para confirmares que a Sebastiana ainda se encontra atrás de ti e verificas que esta não se moveu um milímetro. A sua expressão misteriosa transforma-se pela primeira vez num sorriso bondoso e a mulher incita-te a entrar na habitação, indicando a porta vermelha com a mão.
 
 Abres a porta e entras cautelosamente numa divisão estranhamente espaçosa. Depressa te apercebes que a sensação de espaço é uma mera ilusão resultante do facto de a única mobília presente ser uma secretária com uma máquina de escrever e a respetiva cadeira, encostadas na parede mais afastada. O ambiente é sombrio e o chão está coberto de pó, como se não fosse pisado há décadas.
 
@@ -907,8 +926,8 @@ Atravessas cautelosamente a divisão na direção da secretária, olhando period
 
 A primeira coisa que te chama à atenção é a claridade que circunda a máquina de escrever, um círculo áureo sem origem aparente, uma vez que a divisão não tem qualquer janela. Quando os teus olhos se habituam à luz, reparas numa folha velha encravada na máquina. Pegas nela e lês em voz alta as palavras que tem escrita:
 
-&#39;&#39;Mais uma versão deste prédio, mais um fim, igual a todos os outros. As chances de redenção acabaram e os moradores estão, como sempre, à beira do colapso. Qualquer pequeno distúrbio irá levantar intrigas, gerar o caos, acabar com tudo. Só há uma questão: o que vou fazer? 
-M.&#39;&#39;
+Mais uma versão deste prédio, mais um fim, igual a todos os outros. As chances de redenção acabaram e os moradores estão, como sempre, à beira do colapso. Qualquer pequeno distúrbio irá levantar intrigas, gerar o caos, acabar com tudo. Só há uma questão: o que vou fazer? 
+M.
 
 Quando acabas de ler a mensagem do antigo dono do prédio, Sebastiana fala pela primeira vez desde que entraram na sala.
 
@@ -920,24 +939,23 @@ Quando Sebastiana se dirije a ti pelo teu nome pela primeira vez, todas as tuas 
 
 Olhas uma vez mais para a folha e pensas novamente: o que vou fazer? Colocas o papel na máquina de escrever e digitas…
 
-[[=&gt; Assaltar a mercearia |3.a]]
-[[=&gt; Deixar os residentes em paz |3.1.a]]</tw-passagedata><tw-passagedata pid="44" name="3.1.a" tags="" position="2900,1050" size="100,100">&lt;&lt;set $chapter to &quot;O Fim&quot;&gt;&gt;
-&lt;&lt;audio &quot;door3&quot; stop&gt;&gt;\
-&lt;&lt;audio &quot;final_good&quot; loop play&gt;&gt;\
+[[=&gt; Assaltar a mercearia |5.1mau]]
+[[=&gt; Deixar os residentes em paz |4.1.a]]</tw-passagedata><tw-passagedata pid="44" name="4.1.a" tags="" position="2900,1050" size="100,100">&lt;&lt;audio &quot;door3&quot; fadeout&gt;&gt;\
+&lt;&lt;audio &quot;final_good&quot; loop fadein&gt;&gt;\
 Escreves as palavras apressadamente na máquina, decidido a mudar o desfecho habitual do jogo que tens vindo a conduzir nas últimas décadas. Quando terminas de escrever, nada acontece. Não te consegues mexer e o silêncio que te rodeia é horrorizante. Esperas desesperado por um sinal que te indique que tudo mudou. Quando sentes a mão da Sebastiana pousar no teu ombro, toda a tensão desaparece e uma sensação desconhecida percorre o teu corpo.
 
 - Estás livre, M., tu e todos eles. Fizeste a escolha certa.
 
-[[=&gt; Como sabias que o que ia fazer? |3.1.b]]
-[[=&gt; Porque está tudo em silêncio, onde está toda a gente? |3.1.c]]
+[[=&gt; Como sabias que o que ia fazer? |4.1.b]]
+[[=&gt; Porque está tudo em silêncio, onde está toda a gente? |4.1.c]]
 
-</tw-passagedata><tw-passagedata pid="45" name="3.1.b" tags="" position="3075,1000" size="100,100">- Não sabia. Como te disse, a decisão era unicamente tua. Deixa a máquina, agora que os libertaste eu tomarei conta do resto. Sabes que estão em boas mãos.
+</tw-passagedata><tw-passagedata pid="45" name="4.1.b" tags="" position="3075,1000" size="100,100">- Não sabia. Como te disse, a decisão era unicamente tua. Deixa a máquina, agora que os libertaste eu tomarei conta do resto. Sabes que estão em boas mãos.
 
-[[=&gt; Avançar |3.b]]
+[[=&gt; Avançar |6.1bom]]
 
-</tw-passagedata><tw-passagedata pid="46" name="3.1.c" tags="" position="3075,1125" size="100,100">- Não te preocupes com o silêncio, os moradores estão bem e com o tempo expiarão os seus pecados. Deixa a máquina, agora que os libertaste eu tomarei conta do resto. Sabes que estão em boas mãos.
+</tw-passagedata><tw-passagedata pid="46" name="4.1.c" tags="" position="3075,1125" size="100,100">- Não te preocupes com o silêncio, os moradores estão bem e com o tempo expiarão os seus pecados. Deixa a máquina, agora que os libertaste eu tomarei conta do resto. Sabes que estão em boas mãos.
 
-[[=&gt; Avançar |3.b]]</tw-passagedata><tw-passagedata pid="47" name="2.2.a" tags="" position="2425,475" size="100,100">A muito custo, atravessas a porta entreaberta e aproximas-te de Amanda, que continua a falar para o marido:
+[[=&gt; Avançar |6.1bom]]</tw-passagedata><tw-passagedata pid="47" name="2.2.a" tags="" position="2425,475" size="100,100">A muito custo, atravessas a porta entreaberta e aproximas-te de Amanda, que continua a falar para o marido:
 
 - Já não basta vivermos neste cubículo e ainda temos de ouvir a barulheira dos outros. Estas vozes exaltadas parecem vir da casa do senhorio...
 
@@ -1067,12 +1085,12 @@ O ambiente entre as crianças fica tenso por uns instantes, até que Mateus se j
 
 As crianças riem-se da piada mas são interrompidas por um grito estridente da sua mãe, que se depara com a nova pintura da sala ao entrar em casa.
 
-[[=&gt; Continuar|2.1.f]] </tw-passagedata><tw-passagedata pid="56" name="2.1.f" tags="" position="1575,100" size="100,100">&lt;&lt;if visited(&quot;2.1.g&quot;)==0&gt;&gt;
+[[=&gt; Continuar|2.1.f]] </tw-passagedata><tw-passagedata pid="56" name="2.1.f" tags="" position="1575,100" size="100,100">&lt;&lt;if visited(&quot;2.1.b&quot;)&gt;&gt;
 No fundo da sala, as crianças riem-se de uma piada mas são interrompidas por um grito estridente da sua mãe, que se depara com a nova pintura da sala ao entrar em casa.
 &lt;&lt;endif&gt;&gt;
 - João, Lucas, Marcos, Mateus! O que é que estão a fazer? Como se não bastasse terem libertado as galinhas… e o assalto… o vosso pai vai ficar furioso.
 - Assalto?
-&lt;&lt;if visited(&quot;2.1.b&quot;) || visited(&quot;1.d&quot;)&gt;&gt;
+&lt;&lt;if visited(&quot;2.1.c&quot;) || visited(&quot;1.d&quot;)&gt;&gt;
 É Eva que coloca a questão, ao entrar na sala de estar, com Adão ao seu lado. 
 &lt;&lt;else&gt;&gt;
 A pergunta é colocada por uma pequena menina loira que acaba de entrar na sala, acompanhada por um rapaz de feições praticamente idênticas às suas.
@@ -1080,9 +1098,12 @@ A pergunta é colocada por uma pequena menina loira que acaba de entrar na sala,
 - A mercearia foi assaltada, levaram tudo o que estava nas prateleiras. Eva, Adão, por favor digam-me que não andaram a fazer nada de mal…
 
 Fátima abandona a casa em direção à mercearia, levando as 6 crianças consigo.
-&lt;&lt;if visited(&quot;2.1.c&quot;)==0&gt;&gt;
+&lt;&lt;if visited(&quot;2.1.b&quot;)&gt;&gt;
+[[=&gt; Voltas para a entrada e exploras outra porta|2]] 
+&lt;&lt;else&gt;&gt;
 [[=&gt; Analisas os desenhos espalhados pelas paredes da sala|2.1.c]] 
-&lt;&lt;endif&gt;&gt;[[=&gt; Voltas para a entrada e exploras outra porta|2]] </tw-passagedata><tw-passagedata pid="57" name="2.1.g" tags="" position="1875,175" size="100,100">Admiras a partida planeada pelos dois, certo de que alguém cairá na armadilha, colocando os irmãos em apuros. Eva volta a falar, substituindo a brincadeira por um tom esperançoso:
+[[=&gt; Voltas para a entrada e exploras outra porta|2]] 
+&lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="57" name="2.1.g" tags="" position="1850,200" size="100,100">Admiras a partida planeada pelos dois, certo de que alguém cairá na armadilha, colocando os irmãos em apuros. Eva volta a falar, substituindo a brincadeira por um tom esperançoso:
 
 - E se fosse o Sr. Carteiro a cair…
 - Porque é que o queres apanhar na nossa partida? É o único a quem não desejo esse mal. Bem, ele e tu.
@@ -1094,19 +1115,19 @@ Fátima abandona a casa em direção à mercearia, levando as 6 crianças consig
 	
 As crianças são interrompidas por um grito estridente da mãe, na divisão ao lado, dirigindo-se apressadamente na sua direção.  
 
-[[=&gt; Continuar|2.1.f]] </tw-passagedata><tw-passagedata pid="58" name="3.3.a" tags="" position="2775,1300" size="100,100">Magalhães para de remexer nas folhas por um segundo e fala agitadamente:
+[[=&gt; Continuar|2.1.f]] </tw-passagedata><tw-passagedata pid="58" name="4.3.a" tags="" position="2775,1300" size="100,100">Magalhães para de remexer nas folhas por um segundo e fala agitadamente:
 
 - Eles vão todos morrer, eu tentei avisá-los. Esta é a única hipótese que tenho de os salvar. Tens de te lembrar, tens de te lembrar…
 
 O velho continua a mexer freneticamente nas folhas até que chega a uma decisão em relação à forma como as deve ordenar. Com a mão que tem livre retira do bolso o seu caderno, envelhecido pelo tempo. Percorre-o de uma ponta à outra, colocando as folhas soltas em lugares de onde parecem ter sido arrancadas páginas.
 
-[[=&gt; Aproxima-te para veres o caderno completo |3.3.c]]</tw-passagedata><tw-passagedata pid="59" name="3.3.b" tags="" position="2775,1425" size="100,100">Magalhães para de remexer nas folhas por um segundo e olha na tua direção com uma expressão confusa.
+[[=&gt; Aproxima-te para veres o caderno completo |4.3.c]]</tw-passagedata><tw-passagedata pid="59" name="4.3.b" tags="" position="2775,1425" size="100,100">Magalhães para de remexer nas folhas por um segundo e olha na tua direção com uma expressão confusa.
 
 - Eles vão todos morrer, eu tentei avisá-los. Mas ainda vou a tempo, não é impossível salvá-los. Mas está tudo dependente de ti… não pode ser…
 
 O velho continua a mexer freneticamente nas folhas até  que chega a uma decisão em relação à forma como as deve ordenar. Com a mão que tem livre retira do bolso o seu caderno, envelhecido pelo tempo. Percorre-o de uma ponta à outra, colocando as folhas soltas em lugares de onde parecem ter sido arrancadas páginas.
 
-[[=&gt; Aproxima-te para veres o caderno completo |3.3.c]]</tw-passagedata><tw-passagedata pid="60" name="3.3.c" tags="" position="2925,1375" size="100,100">Começas a ler as palavras escritas no velho caderno e depressa te apercebes que descrevem detalhadamente a vida dos moradores do prédio, desde momentos do quotidiano aos detalhes mais íntimos. 
+[[=&gt; Aproxima-te para veres o caderno completo |4.3.c]]</tw-passagedata><tw-passagedata pid="60" name="4.3.c" tags="" position="2925,1375" size="100,100">Começas a ler as palavras escritas no velho caderno e depressa te apercebes que descrevem detalhadamente a vida dos moradores do prédio, desde momentos do quotidiano aos detalhes mais íntimos. 
 
 Um conjunto de memórias atinge-te repentinamente e recordas-te das longas horas passadas nesta sala, das palavras sem fim digitadas nas teclas gastas da máquina de escrever, a delinear a vida de cada um dos moradores do prédio, a escrutinar os seus pecados ao mais ínfimo detalhe. A figura de Magalhães, ao teu lado, olha-te contemplativamente e dirige-se a ti, oferecendo-te o caderno:
 
@@ -1118,18 +1139,16 @@ Olhas para trás no tempo e recordas todos aqueles que vieram antes dos atuais h
 
 Olhas uma vez mais para a folha e pensas novamente: o que vou fazer? Colocas o papel na máquina de escrever e digitas…
 
-[[=&gt; Assaltar a mercearia |3.a]]
-[[=&gt; Deixar os residentes em paz |3.3.d]]</tw-passagedata><tw-passagedata pid="61" name="3.a" tags="" position="2900,1200" size="100,100">&lt;&lt;set $chapter to &quot;O Fim&quot;&gt;&gt;
-&lt;&lt;audio &quot;door3&quot; stop&gt;&gt;\
-&lt;&lt;audio &quot;final_bad&quot; loop play&gt;&gt;\
+[[=&gt; Assaltar a mercearia |5.1mau]]
+[[=&gt; Deixar os residentes em paz |8.e]]</tw-passagedata><tw-passagedata pid="61" name="5.1mau" tags="" position="2900,1175" size="100,100">&lt;&lt;audio &quot;door3&quot; fadeout&gt;&gt;\
+&lt;&lt;audio &quot;final_bad&quot; loop fadein&gt;&gt;\
 Assim que a última letra acaba de ser marcada no papel, a sala passa de vazia a completamente cheia. Estás rodeado pelos produtos da loja do Sr. Bernardo e o tumulto nas restantes casas do prédio é evidente. Olhas em volta, mas mais ninguém está contigo. Sentes o ódio a crescer dentro de ti, pois sabes que Sebastiana interveio para salvar as crianças e o louco, impedindo-te de levares também os inocentes na tua viagem infernal. 
 
 Deixas o quarto para trás e atravessas o corredor do primeiro andar, onde os vizinhos discutem agressivamente sem qualquer sentido. Quando sais para a rua a tabuleta da entrada parece mais descaída, mais torta, prestes a colapsar. 
 
 Aprecias uma última vez a fachada do Prédio das Portas Vermelhas, de onde se soltam gritos de vozes angustiadas, tal e qual um transporte direto para o Inferno, a arder em pecados. O teu trabalho está feito. Em breve os sons morrerão e o prédio ficará vazio até um novo conjunto de pecadores o vir habitar e tu ditares o seu destino. 
-</tw-passagedata><tw-passagedata pid="62" name="3.3.d" tags="" position="3075,1350" size="100,100">&lt;&lt;set $chapter to &quot;O Fim&quot;&gt;&gt;
-&lt;&lt;audio &quot;door3&quot; stop&gt;&gt;\
-&lt;&lt;audio &quot;final_good&quot; loop play&gt;&gt;\
+</tw-passagedata><tw-passagedata pid="62" name="8.e" tags="" position="3075,1350" size="100,100">&lt;&lt;audio &quot;door3&quot; fadeout&gt;&gt;\
+&lt;&lt;audio &quot;final_good&quot; loop fadein&gt;&gt;\
 Escreves as palavras apressadamente na máquina, decidido a mudar o desfecho habitual do jogo que tens vindo a conduzir nas últimas décadas. 
 
 Quando terminas de escrever, nada acontece. Não te consegues mexer e o silêncio que te rodeia é horrorizante. Esperas desesperado por um sinal que te indique que tudo mudou. A tensão que sentes é subitamente quebrada pelas palavras de Magalhães. 
@@ -1138,17 +1157,16 @@ Quando terminas de escrever, nada acontece. Não te consegues mexer e o silênci
 
 Sem esperar por uma resposta, Magalhães corre para o exterior do quarto. Depressa ouves os seus gritos de alegria, ao encontrar os restantes moradores. Sorris com a alegria do velho e lanças um último olhar à máquina de escrever, deixando para trás a divisão.
 
-[[=&gt; Avançar |3.b]]</tw-passagedata><tw-passagedata pid="63" name="3.b" tags="" position="3250,1100" size="100,100">Ao abandonares o quarto, notas que o nível de claridade no interior do prédio é maior do que te lembravas. À medida que passas pelos apartamentos, apanhas conversas indistintas, em vozes muito menos revoltosas que anteriormente, embora ainda agitadas. Sabes que, com o tempo, tudo irá ao sítio. Muito do mal que fizeste tem ainda de ser desfeito.
+[[=&gt; Avançar |6.1bom]]</tw-passagedata><tw-passagedata pid="63" name="6.1bom" tags="" position="3250,1100" size="100,100">Ao abandonares o quarto, notas que o nível de claridade no interior do prédio é maior do que te lembravas. À medida que passas pelos apartamentos, apanhas conversas indistintas, em vozes muito menos revoltosas que anteriormente, embora ainda agitadas. Sabes que, com o tempo, tudo irá ao sítio. Muito do mal que fizeste tem ainda de ser desfeito.
 
 Quando sais para a rua a tabuleta da entrada captura a tua atenção. Diriges-te a ela e puxas a ponta descaída para cima, na tentativa de a endireitar. Admiras uma última vez a fachada do Prédio das Portas Vermelhas, nostálgico, pois sabes que não voltarás a cruzar a sua entrada. A partir de agora, apenas irás ditar o teu próprio destino. 
-</tw-passagedata><tw-passagedata pid="64" name="2.3" tags="" position="2325,1100" size="100,100">&lt;&lt;set $chapter to &quot;Porta Número 3&quot;&gt;&gt;
-&lt;&lt;audio &quot;door3&quot; loop play&gt;&gt;\
+</tw-passagedata><tw-passagedata pid="64" name="4.0" tags="" position="2325,1100" size="100,100">&lt;&lt;audio &quot;door3&quot; loop fadein&gt;&gt;\
 &lt;&lt;if $hasLetterO &amp;&amp; $hasLetterR &amp;&amp; $hasLetterG &amp;&amp; $hasLetterL&gt;&gt;
 Aproximas-te da porta número 3, constantando que já colecionaste letras suficientes para preencher o enigmático quadro que se encontra à tua frente. 
 
 &lt;&lt;textbox &quot;$codeWord&quot; &quot;O??U?H?&quot;&gt;&gt;
 
-[[=&gt; Testa o teu palpite|3]]
+[[=&gt; Testa o teu palpite|4.0.1]]
 &lt;&lt;else&gt;&gt;
 Aproximas-te da porta número 3 e analisas o quadro enigmático que se encontra na sua entrada: &#39;&#39;O??U?H?&#39;&#39;. Depressa constatas que não tens conhecimento suficiente para completar a informação em falta e decides retomar a tua investigação.
 
@@ -1243,33 +1261,40 @@ Magalhães afasta-se rapidamente na direção da saída da casa número 1. Antes
 
 - Ainda bem que não o perdi, meses de pesquisa… horas sem dormir… tenho de sair daqui… 
 
-&lt;&lt;if visited(&quot;2.1.i&quot;)&gt;&gt;Magalhães afasta-se rapidamente na direção da saída da casa número 1. Antes de sair do teu campo de visão, volta-se para trás e diz:
+&lt;&lt;if visited(&quot;5.a&quot;)&gt;&gt;
+Magalhães afasta-se rapidamente na direção da saída da casa número 1. Antes de sair do teu campo de visão, volta-se para trás e diz:
 
 - Obrigado pela ajuda!
 &lt;&lt;else&gt;&gt;Magalhães olha para ti com desconfiança uma última vez e afasta-se rapidamente na direção da saída da casa número 1, resmungando para si mesmo:
 
 - Aquela mulher… E agora este… Estamos condenados!
 &lt;&lt;endif&gt;&gt;
-[[=&gt; Voltas para a entrada e exploras outra porta|2]] </tw-passagedata><tw-passagedata pid="75" name="3" tags="" position="2325,1250" size="100,100">&lt;&lt;if $codeWord==&quot;ORGULHO&quot;&gt;&gt;
+[[=&gt; Voltas para a entrada e exploras outra porta|2]] </tw-passagedata><tw-passagedata pid="75" name="4.0.1" tags="" position="2325,1250" size="100,100">&lt;&lt;if $codeWord==&quot;ORGULHO&quot;&gt;&gt;
 Ao proferires a palavra &#39;&#39;ORGULHO&#39;&#39; em voz alta, ouves um “click” e reparas que o cadeado está aberto, permitindo-te entrar. Apesar de teres finalmente conseguido o que ansiavas há tanto tempo, sentes algo estranho no interior do teu corpo que te faz repensar se queres entrar no quarto sozinho.
 
-&lt;&lt;if visited(&quot;2.1.i&quot;) || visited(&quot;2.1.n&quot;) || visited(&quot;2.2.h&quot;)&gt;&gt;&lt;&lt;if visited(&quot;2.1.i&quot;) || visited(&quot;2.1.n&quot;)&gt;&gt;Do teu lado esquerdo, Magalhães lança-te um olhar esperançoso, agarrando com as duas mãos o seu caderno quase destruído.
+&lt;&lt;if visited(&quot;5.a&quot;) || visited(&quot;5.e&quot;) || visited(&quot;2.2.h&quot;)&gt;&gt;
+&lt;&lt;if visited(&quot;5.a&quot;) || visited(&quot;5.e&quot;)&gt;&gt;
+Do teu lado esquerdo, Magalhães lança-te um olhar esperançoso, agarrando com as duas mãos o seu caderno quase destruído.
 
 - Por favor, deixa-me entrar contigo. Preciso de ir, a salvação está do outro lado...
 &lt;&lt;endif&gt;&gt;
-&lt;&lt;if visited(&quot;2.2.h&quot;)&gt;&gt;Do teu lado direito, Sebastiana olha calmamente na tua direção. Os seus lábios formam uma linha reta e a idosa inclina a cabeça na tua direção, como que a convidar-te a entrar.
+&lt;&lt;if visited(&quot;2.2.h&quot;)&gt;&gt;
+Do teu lado direito, Sebastiana olha calmamente na tua direção. Os seus lábios formam uma linha reta e a idosa inclina a cabeça na tua direção, como que a convidar-te a entrar.
 
-[[=&gt; Relembras as palavras de Sebastiana e pedes-lhe que te acompanhe|3.1]] 
-&lt;&lt;endif&gt;&gt;&lt;&lt;if visited(&quot;2.1.i&quot;) || visited(&quot;2.1.n&quot;)&gt;&gt;[[=&gt; Acedes ao pedido de Magalhães e deixas que te acompanhe|3.3]]
+[[=&gt; Relembras as palavras de Sebastiana e pedes-lhe que te acompanhe|4.1sebastiana]] 
+&lt;&lt;endif&gt;&gt;
+&lt;&lt;if visited(&quot;5.a&quot;) || visited(&quot;5.e&quot;)&gt;&gt;
+[[=&gt; Acedes ao pedido de Magalhães e deixas que te acompanhe|4.3magalhaes]]
 &lt;&lt;endif&gt;&gt;
 &lt;&lt;else&gt;&gt;Olhas à volta mas és a única pessoa presente no corredor. A tua única hipótese é atravessar a porta sozinho.
 
-[[=&gt; Entrar no quarto sozinho|3.2]] 
+[[=&gt; Entrar no quarto sozinho|4.2default]] 
 &lt;&lt;endif&gt;&gt;
 
-&lt;&lt;else&gt;&gt;Confiante no teu palpite, proferes a palavra &#39;&#39;$codeWord&#39;&#39; em voz alta... Mas nada acontece. Se queres entrar na &#39;&#39;Porta Número 3&#39;&#39;, deverás voltar atrás e tentar resolver o enigma novamente.
+&lt;&lt;else&gt;&gt;
+Confiante no teu palpite, proferes a palavra &quot;$codeWord&quot; em voz alta... Mas nada acontece. Se queres entrar na casa número 3, deverás voltar atrás e tentar resolver o enigma novamente.
 
-[[=&gt; Tentas resolver o enigma novamente|2.3]]
+[[=&gt; Tentas resolver o enigma novamente|4.0]]
 [[=&gt; Voltas para a entrada e exploras outra porta|2]] 
 &lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="76" name="2.4.j" tags="" position="1250,1550" size="100,100">Magalhães olha para ti intrigado, puxando o caderno para o peito como se estivesse a tentar protegê-lo da tua curiosidade.
 
@@ -1316,12 +1341,11 @@ Abandonas a sala, convencido de que descobriste quem é o responsável pelo assa
 
 - O louco caiu na nossa armadilha, ahahahah! Foi tão divertido!
 - Sim, foi mesmo engraçado. Andava ali a vaguear e a dizer parvoíces e de repente… CABOOM!
-- “Seguir a velha… destrancar o cadeado… cair ao chão...”
+- “Seguir a velha… destrancar o cadeado… cair ao chão”.
 
 As crianças desatam a rir com a imitação nada realista de Magalhães que Adão acaba de fazer.
 
-[[=&gt; Aproximas-te das crianças|2.0.b]]</tw-passagedata><tw-passagedata pid="80" name="2.0" tags="" position="1750,1300" size="100,100">&lt;&lt;set $chapter to &quot;Mercearia&quot;&gt;&gt;
-Entras na mercearia a tempo de ver Ivan apontar indiscretamente na direção de Adão e Eva que estão nesse momento a abandonar a divisão a correr, sem repararem na insinuação do eslavo. Fátima solta um conjunto de insultos na direção do casal de estrangeiros, reacendendo a discussão. 
+[[=&gt; Aproximas-te das crianças|2.0.b]]</tw-passagedata><tw-passagedata pid="80" name="2.0" tags="" position="1750,1300" size="100,100">Entras na mercearia a tempo de ver Ivan apontar indiscretamente na direção de Adão e Eva que estão nesse momento a abandonar a divisão a correr, sem repararem na insinuação do eslavo. Fátima solta um conjunto de insultos na direção do casal de estrangeiros, reacendendo a discussão. 
 
 Contemplas o espaço que te rodeia e só consegues pensar numa palavra: caos. As caixas seladas que não tinham sido roubadas estão espalhadas pela mercearia, e algumas encontram-se caídas no chão, provavelmente devido a algum acesso de raiva dos moradores do prédio. Os casais das casas 1, 2 e 4 discutem agressivamente, libertando insultos gratuitos e acusando-se mutuamente de terem perpetrado o assalto. A discussão escala perigosamente e as acusações viram-se também para os moradores que não estão presentes: parece que toda a gente tem um motivo para ter cometido o crime. Abstrais-te das vozes que te rodeiam e tentas formular a tua própria opinião.
 
@@ -1352,7 +1376,7 @@ A expressão de Artur mostra algum desapontamento ao constatar que ninguém se e
 
 - O que é isso aí no chão? 
 - Deve ser o chapéu da prima Sebastiana.
-- Se é dela, qual a razão de ter um &#39;&#39;G&#39;&#39; estampado na aba. Deve ser de alguém com essa inicial no nome.
+- Se é dela, qual a razão de ter um “G” estampado na aba. Deve ser de alguém com essa inicial no nome.
 
 &lt;img src=&quot;data/images/chapeu.png&quot; style=&quot;width=auto; text-align:center;margin:auto,0;&quot;&gt;
 Decides guardar esta letra na tua memória, pois pode ser importante para o futuro. Afinal de contas, nada acontece por acaso...
@@ -1370,7 +1394,7 @@ A mulher cala-se quando encontra o que procurava nos bolsos, segurando uma peque
 
 - A vantagem de ter uma casa pequena e de ser a única pessoa atenta naquela casa é que encontro o que os outros perdem com facilidade. Vamos lá ver se é desta que se revela o enigma...
 
-[[=&gt; Esperas enquanto Amanda tenta abrir a porta misteriosa|2.2.j]]</tw-passagedata><tw-passagedata pid="84" name="2.0.b" tags="" position="1900,1300" size="100,100">&lt;&lt;set $hasLetterO to true&gt;&gt;
+[[=&gt; Esperas enquanto Amanda tenta abrir a porta misteriosa|2.2.j]]</tw-passagedata><tw-passagedata pid="84" name="2.0.b" tags="" position="1925,1300" size="100,100">&lt;&lt;set $hasLetterO to true&gt;&gt;
 Aproximas-te de Adão e Eva, ouvindo as palavras que a menina dirige ao irmão:
 
 - E deixou cair isto. Quem é que quer um bocado de madeira vermelha em forma de O?
@@ -1378,10 +1402,12 @@ Aproximas-te de Adão e Eva, ouvindo as palavras que a menina dirige ao irmão:
 
 Reparas no pedaço de madeira que a menina segura na mão e decides guardar a letra na tua memória, convicto de que a existência do objeto vermelho não deriva apenas dos ataques de insanidade de Magalhães.
 
-&lt;&lt;if visited(&quot;2.1.b&quot;)&gt;&gt;Recordas-te da montagem da armadilha em que Magalhães caiu e afastas-te das crianças, dirigindo-te à &#39;&#39;Porta Número 1&#39;&#39; na esperança de encontrares o homem louco.
+&lt;&lt;if visited(&quot;2.1.c&quot;)&gt;&gt;
+Recordas-te da montagem da armadilha em que Magalhães caiu e afastas-te das crianças, dirigindo-te à casa número 1 na esperança de encontrares o homem louco.
 
 [[=&gt; Procuras Magalhães na armadilha de Adão e Eva|2.1.h]]
-&lt;&lt;else&gt;&gt;Infelizmente, não sabes onde as crianças montaram a armadilha e, por isso, não consegues procurar Magalhães.
+&lt;&lt;else&gt;&gt;
+Infelizmente, não sabes onde as crianças montaram a armadilha e, por isso, não consegues procurar Magalhães.
 
 [[=&gt; Voltas para a entrada e exploras outra porta|2]] 
 &lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="85" name="2.4.m" tags="" position="1700,1575" size="100,100">&lt;&lt;set $hasLetterR to true&gt;&gt;
