@@ -183,16 +183,6 @@ h1 {
   margin:0 auto;
 }
 
-#story-caption {
-  border: solid white 3px;
-  height:auto;
-  color:white;
-  text-transform:uppercase;
-  letter-spacing: .1rem;
-  padding-top:1rem;
-  padding-bottom:1rem;
-  margin:50% 0;
-}
 
 #letrinhas{
   color:white;
@@ -207,7 +197,17 @@ h1 {
   bottom:0;
   margin:auto;
   width:80%;
-  padding-bottom:10%;
+  padding-bottom:auto;
+}
+
+#story-caption {
+  border: solid white 3px;
+  height:auto;
+  color:white;
+  text-transform:uppercase;
+  letter-spacing: .1rem;
+  padding-top:1rem;
+  margin:auto;
 }
 
 #menu-item-saves a::before, #menu-item-settings a::before, #menu-item-restart a::before {
@@ -468,7 +468,7 @@ Ao entrares numa casa, poderás interagir com pessoas e objetos que se encontram
 Aqui está um exemplo de uma escolha, basta clicares no rumo que queres seguir:
 
 &lt;&lt;link &quot;=&gt; Quero ouvir falar sobre os momentos narrativos antes de abrir o livro&quot; &quot;0.a&quot;&gt;&gt;&lt;&lt;set $chapter to &quot;Tutorial&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;link &quot;=&gt; Quero terminar o tutorial e abrir o livro&quot; &quot;0.b&quot;&gt;&gt;&lt;&lt;set $chapter to &quot;Tutorial&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="StoryDisplayTitle" tags="ui" position="400,300" size="100,100">&lt;&lt;if visited(&quot;1.a&quot;) || visited(&quot;1.b&quot;)&gt;&gt;&lt;img src=&quot;data/images/building.png&quot; style=&quot;height=auto&quot;&gt;&lt;&lt;else&gt;&gt;&lt;img src=&quot;data/images/buildingoutside.png&quot;&gt;&lt;&lt;endif&gt;&gt;
+&lt;&lt;link &quot;=&gt; Quero terminar o tutorial e abrir o livro&quot; &quot;0.b&quot;&gt;&gt;&lt;&lt;set $chapter to &quot;Tutorial&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="StoryDisplayTitle" tags="ui" position="400,300" size="100,100">&lt;&lt;if visited(&quot;1.a&quot;) || visited(&quot;1.b&quot;)&gt;&gt;&lt;img src=&quot;data/images/building.png&quot; style=&quot;width:100%&quot;&gt;&lt;&lt;else&gt;&gt;&lt;img src=&quot;data/images/buildingoutside.png&quot;&gt;&lt;&lt;endif&gt;&gt;
 </tw-passagedata><tw-passagedata pid="3" name="StoryAuthor" tags="ui" position="400,500" size="100,100"></tw-passagedata><tw-passagedata pid="4" name="StoryCaption" tags="ui data" position="400,400" size="100,100">Inventário: 
 &lt;div id=&quot;letrinhas&quot;&gt;&lt;&lt;if $hasLetterL is true&gt;&gt;L&lt;&lt;/if&gt;&gt;&lt;&lt;if $hasLetterO is true&gt;&gt;O&lt;&lt;/if&gt;&gt;&lt;&lt;if $hasLetterG is true&gt;&gt;G&lt;&lt;/if&gt;&gt;&lt;&lt;if $hasLetterR is true&gt;&gt;R&lt;&lt;/if&gt;&gt;
 &lt;/div&gt;
@@ -537,13 +537,19 @@ h1 {text-align:center;margin-top:25vh;}
 
 &lt;&lt;link &quot;=&gt; Vamos começar!&quot; &quot;0.c&quot;&gt;&gt;&lt;&lt;set $chapter to &quot;Introdução&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 </tw-passagedata><tw-passagedata pid="15" name="0.c" tags="exterior" position="550,1100" size="100,100">&lt;&lt;audio &quot;introduction&quot; fadein loop play&gt;&gt;\
-&lt;div id=&quot;esquerda&quot;&gt;&lt;img src=&quot;data/images/bifurcacao.png&quot;&gt;&lt;/div&gt;
-&lt;div id=&quot;direita&quot;&gt;Caminhas por uma rua abaixo, sem rumo, avançando lentamente por entre as casas e ouvindo as palavras trocadas pelos moradores. O porquê de estares aqui é-te desconhecido, mas sabes que todos os caminhos irão dar, invariavelmente, ao mesmo destino. Não sabes que destino é esse nem o caminho que tens de percorrer para o atingires, mas tens a certeza de uma coisa: as tuas escolhas não o são realmente até lá chegares, pois todos os caminhos vão dar ao mesmo lugar. Depois… é uma incógnita.
+Caminhas por uma rua abaixo, sem rumo, avançando lentamente por entre as casas e ouvindo as palavras trocadas pelos moradores. O porquê de estares aqui é-te desconhecido, mas sabes que todos os caminhos irão dar, invariavelmente, ao mesmo destino. 
 
-Chegas ao fim da rua e encontras uma bifurcação:
+Não sabes que destino é esse nem o caminho que tens de percorrer para o atingires, mas tens a certeza de uma coisa: as tuas escolhas não o são realmente até lá chegares, pois todos os caminhos vão dar ao mesmo lugar. Depois… é uma incógnita.
+&lt;div id=&quot;esquerda&quot;&gt;&lt;img src=&quot;data/images/bifurcacao.png&quot; style=&quot;width:100%;&quot;&gt;&lt;/div&gt;
+
+&lt;div id=&quot;direita&quot;&gt;Chegas ao fim da rua e encontras uma bifurcação:
+
 [[=&gt; Viras à esquerda para uma ruela decadente|0.d]]
 [[=&gt; Viras à direita para uma rua semelhante àquela em que te encontras|0.e]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="16" name="0.d" tags="exterior" position="700,1025" size="100,100">&lt;div id=&quot;esquerda&quot;&gt;&lt;img src=&quot;data/images/vista_ao_longe.png&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+
+</tw-passagedata><tw-passagedata pid="16" name="0.d" tags="exterior" position="700,1025" size="100,100">&lt;div id=&quot;esquerda&quot;&gt;&lt;img src=&quot;https://cdn.discordapp.com/attachments/954851768657928242/1109765256198226011/vista_ao_longe.png&quot;&gt;&lt;/div&gt;
 &lt;div id=&quot;direita&quot;&gt;A descida à tua frente é abrupta e tens de andar cautelosamente para garantir que não cais nos paralelos desnivelados da calçada. À medida que avanças, a redução de luminosidade é notória. As casas que te rodeiam estão cada vez mais degradadas e ouvem-se bocados de conversas trocadas aos berros de uma janela para outra, ao longo de toda a largura da rua. Ao virar uma esquina avistas ao fundo um edifício velho que te chama à atenção. 
 [[=&gt; Admirar o prédio|0.g]]
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="17" name="0.e" tags="exterior" position="700,1150" size="100,100">Viras à direita e entras numa rua ampla e luminosa. Algumas pessoas bem vestidas andam apressadamente, cumprimentando-se umas às outras de forma educada. Continuas a andar em frente e as palavras trocadas por um casal jovem que sai de um prédio chegam-te aos ouvidos por entre os ruídos da rua. 
