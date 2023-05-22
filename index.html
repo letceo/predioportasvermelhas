@@ -1347,8 +1347,7 @@ Magalhães afasta-se rapidamente na direção da saída da casa número 1. Antes
 [[=&gt; Voltas para a entrada e exploras outra porta|2]] </tw-passagedata><tw-passagedata pid="75" name="3" tags="" position="2175,1250" size="100,100">&lt;&lt;if $codeWord==&quot;ORGULHO&quot;&gt;&gt;
 Ao proferires a palavra &#39;&#39;ORGULHO&#39;&#39; em voz alta, ouves um “click” e reparas que o cadeado está aberto, permitindo-te entrar. Apesar de teres finalmente conseguido o que ansiavas há tanto tempo, sentes algo estranho no interior do teu corpo que te faz repensar se queres entrar no quarto sozinho.
 
-&lt;&lt;if visited(&quot;2.1.i&quot;) || visited(&quot;2.1.n&quot;) || visited(&quot;2.2.h&quot;)&gt;&gt;&lt;&lt;if visited(&quot;2.1.i&quot;) || visited(&quot;2.1.n&quot;)&gt;&gt;
-Do teu lado esquerdo, Magalhães lança-te um olhar esperançoso, agarrando com as duas mãos o seu caderno quase destruído.
+&lt;&lt;if visited(&quot;2.1.i&quot;) || visited(&quot;2.1.n&quot;) || visited(&quot;2.2.h&quot;)&gt;&gt;&lt;&lt;if visited(&quot;2.1.i&quot;) || visited(&quot;2.1.n&quot;)&gt;&gt;Do teu lado esquerdo, Magalhães lança-te um olhar esperançoso, agarrando com as duas mãos o seu caderno quase destruído.
 
 - Por favor, deixa-me entrar contigo. Preciso de ir, a salvação está do outro lado...
 &lt;&lt;endif&gt;&gt;
@@ -1356,7 +1355,7 @@ Do teu lado esquerdo, Magalhães lança-te um olhar esperançoso, agarrando com 
 
 [[=&gt; Relembras as palavras de Sebastiana e pedes-lhe que te acompanhe|3.1]] 
 &lt;&lt;endif&gt;&gt;&lt;&lt;if visited(&quot;2.1.i&quot;) || visited(&quot;2.1.n&quot;)&gt;&gt;[[=&gt; Acedes ao pedido de Magalhães e deixas que te acompanhe|3.3]]
-&lt;&lt;endif&gt;&gt;&lt;&lt;else&gt;&gt;Olhas à volta mas és a única pessoa presente no corredor. A tua única hipótese é atravessar a porta sozinho.
+&lt;&lt;endif&gt;&gt;[[=&gt; Entrar no quarto sozinho|3.2]]&lt;&lt;else&gt;&gt;Olhas à volta mas és a única pessoa presente no corredor. A tua única hipótese é atravessar a porta sozinho.
 
 [[=&gt; Entrar no quarto sozinho|3.2]] 
 &lt;&lt;endif&gt;&gt;&lt;&lt;else&gt;&gt;
