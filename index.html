@@ -536,7 +536,7 @@ Setting.addList("fontSize", {
 	onInit		: resizeFont,
 	onChange	: resizeFont
 });
-</script><tw-tag name="ui" color="green"></tw-tag><tw-tag name="game-info" color="orange"></tw-tag><tw-tag name="code" color="red"></tw-tag><tw-tag name="portas" color="purple"></tw-tag><tw-tag name="em-falta" color="red"></tw-tag><tw-tag name="letras" color="orange"></tw-tag><tw-tag name="final" color="green"></tw-tag><tw-tag name="interior" color="yellow"></tw-tag><tw-tag name="exterior" color="yellow"></tw-tag><tw-passagedata pid="1" name="0.start" tags="" position="250,1100" size="100,100">Bem vindo ao &#39;&#39;Prédio das Portas Vermelhas&#39;&#39;, um livro interativo em que as tuas escolhas decidem o rumo da história! 
+</script><tw-tag name="ui" color="green"></tw-tag><tw-tag name="game-info" color="orange"></tw-tag><tw-tag name="code" color="red"></tw-tag><tw-tag name="portas" color="purple"></tw-tag><tw-tag name="em-falta" color="red"></tw-tag><tw-tag name="letras" color="orange"></tw-tag><tw-tag name="final" color="yellow"></tw-tag><tw-tag name="interior" color="yellow"></tw-tag><tw-tag name="exterior" color="yellow"></tw-tag><tw-tag name="possiveisfinais" color="blue"></tw-tag><tw-passagedata pid="1" name="0.start" tags="" position="250,1100" size="100,100">Bem vindo ao &#39;&#39;Prédio das Portas Vermelhas&#39;&#39;, um livro interativo em que as tuas escolhas decidem o rumo da história! 
 
 Antes de embarcares nesta aventura, precisas de estar familiarizado com a estrutura do livro e, por isso, deves ler este pequeno tutorial até ao fim. Neste livro irás encontrar diferentes tipos de interações, conforme a fase do jogo em que estejas. Por vezes ser-te-á pedido que escolhas qual das partes do Prédio queres explorar a seguir, o que pode ser decidido selecionando uma das portas vermelhas que dão acesso às diferentes casas. Ao entrares numa casa, poderás interagir com pessoas e objetos que se encontram no seu interior. A ordem pela qual visitas os moradores é inteiramente decidida por ti e irá influenciar o modo como interpretas a história!
 
@@ -588,12 +588,13 @@ Como exemplo, avança para terminares o tutorial!
 	&lt;li&gt;Fonts &lt;a href=&quot;https://fonts.google.com/&quot;&gt;Google fonts&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;Combination Lock &lt;a href=&#39;https://pngtree.com/so/combination&#39;&gt;combination png from pngtree.com/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</tw-passagedata><tw-passagedata pid="11" name="Key" tags="" position="200,300" size="100,100">ORANGE: Game info - character page, codex, credits. Populate these with what you like.
-GREEN: UI &amp; game set-up elements. These can be edited to suit your needs.
-RED: Code. Everything in these passages should be labelled; things might break if you mess with them.
-
-
-&#39;&#39; &#39;&#39; - negrito</tw-passagedata><tw-passagedata pid="12" name="StorySubtitle" tags="ui" position="300,300" size="100,100"></tw-passagedata><tw-passagedata pid="13" name="Startup" tags="nobr title ui" position="150,1100" size="100,100">&lt;!-- styling for the splash screen - hides all the menus only on this passage --&gt;
+</tw-passagedata><tw-passagedata pid="11" name="Key" tags="" position="200,300" size="100,100">LARANJA: Letras Escondidas
+VERDE: Elementos de Setup, User Interface;
+VERMELHO: Código: não mexer
+ROXO: Acesso às portas
+AZUL: Possíveis finais
+AMARELO: Entradas para os finais
+</tw-passagedata><tw-passagedata pid="12" name="StorySubtitle" tags="ui" position="300,300" size="100,100"></tw-passagedata><tw-passagedata pid="13" name="Startup" tags="nobr title ui" position="150,1100" size="100,100">&lt;!-- styling for the splash screen - hides all the menus only on this passage --&gt;
 &lt;style&gt;
 #ui-bar {display:none;}
 #passages {width:100vw;margin:0;background-image:var(--banner-top),var(--banner-bottom);background-repeat:no-repeat;background-size:50%;background-position:top center, bottom center;overflow:hidden;scrollbar-width:none;font-family:var(--header-font);transition:0s;padding:0;}
@@ -749,7 +750,7 @@ Os miúdos continuam a conversa que o homem tenta despachar. Ouves um estridente
 &lt;&lt;audio &quot;door3&quot; stop&gt;&gt;\
 &lt;&lt;audio &quot;door4&quot; stop&gt;&gt;\
 &lt;&lt;audio &quot;mercearia&quot; stop&gt;&gt;\
-&lt;div id=&quot;mercearia&quot;&gt;&lt;&lt;if visited(&quot;2.1&quot;) &amp;&amp; visited(&quot;2.2&quot;) &amp;&amp; visited(&quot;2.4&quot;) &amp;&amp; visited(&quot;2.0&quot;)==0&gt;&gt;&lt;&lt;audio &quot;mercearia&quot; loop play&gt;&gt;\
+&lt;&lt;if visited(&quot;2.1&quot;) &amp;&amp; visited(&quot;2.2&quot;) &amp;&amp; visited(&quot;2.4&quot;) &amp;&amp; visited(&quot;2.0&quot;)==0&gt;&gt;&lt;&lt;audio &quot;mercearia&quot; loop play&gt;&gt;\
 Ao saíres do último apartamento que consegues investigar és imediatamente confrontado com uma barulheira descomunal, proveniente do rés do chão da casa. À medida que desces as escadas para te dirigires à mercearia, o ruído torna-se cada vez mais ensurdecedor e consegues apanhar pequenos fragmentos da discussão acalorada entre os moradores do prédio:
 
 - … porque ambos sabem muito bem que assalto é aquilo que nos fazem com as rendas e não este roubo de meia dúzia de produtos estragados. Para além disso, quem me diz que isto não é encenado? Tenho a certeza que algum seguro há-de cobrir estes danos muito acima do seu valor real!
@@ -761,7 +762,8 @@ Uma voz com um sotaque russo carregado faz-se ouvir no meio da discussão, calan
 - Estás muito defensivo dos Três Carlos, há alguma coisa que nos queiras dizer? Foram vocês que roubaram o meu marido?
 - Não devo nada àqueles três e muito me devem eles a mim, não tenho nada a esconderm só estou a constatar uma realidade. De ti não se pode dizer o mesmo… segredos não te faltam.
 
-[[=&gt; Entras na mercearia|2.0]]&lt;/div&gt;&lt;&lt;else&gt;&gt;&lt;div id=&quot;portas&quot;&gt;&lt;div id=&quot;textoporta&quot;&gt;&#39;&#39;Escolhe uma porta para visitares:&#39;&#39;&lt;/div&gt;
+[[=&gt; Entras na mercearia|2.0]]&lt;&lt;else&gt;&gt;
+&lt;div id=&quot;portas&quot;&gt;&lt;div id=&quot;textoporta&quot;&gt;&#39;&#39;Escolhe uma porta para visitares:&#39;&#39;&lt;/div&gt;
 &lt;&lt;if visited(&quot;2.1&quot;)&gt;&gt;&lt;a data-passage=&quot;2.1&quot;&gt;&lt;img src=&quot;data/images/door1open.png&quot; style=&quot;margin-right:2%&quot;&gt;&lt;/a&gt;&lt;&lt;else&gt;&gt;&lt;a data-passage=&quot;2.1&quot;&gt;&lt;img src=&quot;data/images/door1closed.png&quot; style=&quot;margin-left:2%&quot;&gt;&lt;/a&gt;&lt;&lt;endif&gt;&gt;&lt;&lt;if visited(&quot;2.2&quot;)&gt;&gt;&lt;a data-passage=&quot;2.2&quot;&gt;&lt;img src=&quot;data/images/door2open.png&quot;&gt;&lt;/a&gt;&lt;&lt;else&gt;&gt;&lt;a data-passage=&quot;2.2&quot;&gt;&lt;img src=&quot;data/images/door2closed.png&quot;&gt;&lt;/a&gt;&lt;&lt;endif&gt;&gt; &lt;a data-passage=&quot;2.3&quot;&gt;&lt;img src=&quot;data/images/door3closed.png&quot;&gt;&lt;/a&gt;&lt;&lt;if visited(&quot;2.4&quot;)&gt;&gt;&lt;a data-passage=&quot;2.4&quot;&gt;&lt;img src=&quot;data/images/door4open.png&quot; style=&quot;margin-right:2%&quot;&gt;&lt;/a&gt;&lt;&lt;else&gt;&gt;&lt;a data-passage=&quot;2.4&quot;&gt;&lt;img src=&quot;data/images/door4closed.png&quot; style=&quot;margin-right:2%&quot;&gt;&lt;/a&gt;&lt;&lt;endif&gt;&gt;&lt;/div&gt;
 &lt;&lt;endif&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="2.1" tags="" position="1575,675" size="100,100">&lt;&lt;audio &quot;door1&quot; loop play&gt;&gt;\
 &lt;&lt;if visited(&quot;2.1.f&quot;)&gt;&gt;Voltas a entrar no apartamento espaçoso onde habita a família de Bernardo e Fátima. A sala de estar está completamente vazia e não se ouve qualquer som, criando um ambiente pesado que contrasta com os rabiscos coloridos nas paredes.
@@ -1211,7 +1213,7 @@ Olhas para trás no tempo e recordas todos aqueles que vieram antes dos atuais h
 Olhas uma vez mais para a folha e pensas novamente: o que vou fazer? Colocas o papel na máquina de escrever e digitas…
 
 [[=&gt; Assaltar a mercearia |3.a]]
-[[=&gt; Deixar os residentes em paz |3.3.d]]</tw-passagedata><tw-passagedata pid="61" name="3.a" tags="" position="2750,1175" size="100,100">&lt;&lt;audio &quot;door3&quot; stop&gt;&gt;\
+[[=&gt; Deixar os residentes em paz |3.3.d]]</tw-passagedata><tw-passagedata pid="61" name="3.a" tags="possiveisfinais" position="2750,1175" size="100,100">&lt;&lt;audio &quot;door3&quot; stop&gt;&gt;\
 &lt;&lt;audio &quot;final_bad&quot; loop play&gt;&gt;\
 Assim que a última letra acaba de ser marcada no papel, a sala passa de vazia a completamente cheia. Estás rodeado pelos produtos da loja do Sr. Bernardo e o tumulto nas restantes casas do prédio é evidente. Olhas em volta, mas mais ninguém está contigo. Sentes o ódio a crescer dentro de ti, pois sabes que Sebastiana interveio para salvar as crianças e o louco, impedindo-te de levares também os inocentes na tua viagem infernal. 
 
@@ -1229,7 +1231,7 @@ Quando terminas de escrever, nada acontece. Não te consegues mexer e o silênci
 
 Sem esperar por uma resposta, Magalhães corre para o exterior do quarto. Depressa ouves os seus gritos de alegria, ao encontrar os restantes moradores. Sorris com a alegria do velho e lanças um último olhar à máquina de escrever, deixando para trás a divisão.
 
-[[=&gt; Avançar |3.b]]</tw-passagedata><tw-passagedata pid="63" name="3.b" tags="" position="3100,1100" size="100,100">Ao abandonares o quarto, notas que o nível de claridade no interior do prédio é maior do que te lembravas. À medida que passas pelos apartamentos, apanhas conversas indistintas, em vozes muito menos revoltosas que anteriormente, embora ainda agitadas. Sabes que, com o tempo, tudo irá ao sítio. Muito do mal que fizeste tem ainda de ser desfeito.
+[[=&gt; Avançar |3.b]]</tw-passagedata><tw-passagedata pid="63" name="3.b" tags="possiveisfinais" position="3100,1100" size="100,100">Ao abandonares o quarto, notas que o nível de claridade no interior do prédio é maior do que te lembravas. À medida que passas pelos apartamentos, apanhas conversas indistintas, em vozes muito menos revoltosas que anteriormente, embora ainda agitadas. Sabes que, com o tempo, tudo irá ao sítio. Muito do mal que fizeste tem ainda de ser desfeito.
 
 Quando sais para a rua a tabuleta da entrada captura a tua atenção. Diriges-te a ela e puxas a ponta descaída para cima, na tentativa de a endireitar. Admiras uma última vez a fachada do Prédio das Portas Vermelhas, nostálgico, pois sabes que não voltarás a cruzar a sua entrada. A partir de agora, apenas irás ditar o teu próprio destino. 
 
